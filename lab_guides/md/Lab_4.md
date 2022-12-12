@@ -1,31 +1,6 @@
 Lab 4: Overview of the Automation Anywhere Development Interface 
 ===========================================================================================
 
-
-With all software development platforms, it is vital that you understand
-the development interface. This interface is where you convert logical
-steps into instructional steps. In the past, most programming languages
-used some form of scripting. This is where you write your code while
-adhering to a very specific structure. The structure is dependent on the
-programming language used. Development in Automation Anywhere varies
-from this standard. It doesn\'t involve writing instructions using
-scripts. The Automation Anywhere development interface allows the
-developer to drag and drop instructions. These instructions have
-properties and attributes that are configured to perform specific
-actions.
-
-In the previous lab, you got an overview of the **Control Room**
-interface. Hopefully, you feel confident in navigating the different
-sections of Automation Anywhere. As you have learned about setting up
-users and managing bots, you must be keen to learn about actually
-building bots. In this lab, you will learn about the development
-interface. We will take a close look at what functionality bots can
-perform, as well as how to deploy these actions. We will also look at
-the whole interface and what other tools are available to enhance and
-help with your bot development, including debugging and triggers. As
-well as the interface, we will also explore a number of basic
-programming techniques including variables, actions, and triggers.
-
 In this lab, we will cover the following topics:
 
 -   Bot development interface
@@ -35,9 +10,6 @@ In this lab, we will cover the following topics:
 -   Debugging and dependencies
 
 
-
-
-
 Technical requirements 
 ======================
 
@@ -45,22 +17,10 @@ Technical requirements
 In order to install the Automation Anywhere Bot agent, the following is
 required:
 
--   Windows OS version 7 or higher
--   A processor with a minimum speed of 3 GHz
--   A minimum of 4 GB RAM
--   At least 100 MB of hard disk space
--   Web browser: Internet Explorer v10 or higher *or* Chrome v49 or
-    higher
--   A minimum screen resolution of 1024\*768
--   An internet connection with a minimum speed of 10 Mb/sec
--   Completed registration with Automation Anywhere  Community
-    Edition
+-   Web browser: Google Chrome
+-   Completed registration with Automation Anywhere  Community Edition
 -   Successful logon to Automation Anywhere  Community Edition
 -   Successful registration of a local device
-
-
-
-
 
 Bot development interface 
 =========================
@@ -83,36 +43,21 @@ of creating a new bot:
 
 1.  Log in to the **Control Room**.
 
-2.  Navigate to the **BOTS** section.
+2.  Navigate to the **Automation** section.
 
 3.  Select the **My bots** sub-section:
-
     
-    ![Figure 4.1 -- The My bots
-    interface](./images/Figure_4.1_B15646.jpg)
-    
-
-
+    ![](./images/Figure_4.1_B15646.jpg)
 
 4.  Click on the **Create a bot** icon from the
     icon options in the top-right corner:
 
-    
-    ![Figure 4.2 -- Creating a new
-    bot](./images/Figure_4.2_B15646.jpg)
-    
-
-
+    ![](./images/Figure_4.2_B15646.jpg)
 
 5.  The following bot properties dialog is presented:
-
+ 
+    ![](./images/Figure_4.3_B15646.jpg)
     
-    ![Figure 4.3 -- Bot properties
-    dialog](./images/Figure_4.3_B15646.jpg)
-    
-
-
-
 6.  Set the following properties for your bot:
 
     **Name**: `Test`
@@ -125,24 +70,7 @@ of creating a new bot:
     development interface:
 
     
-    ![Figure 4.4 -- Development
-    interface](./images/Figure_4.4_B15646.jpg)
-    
-
-
-
-8.  We can hide the sections menu pane in order to get a better view of
-    the development interface. Just click on the collapse icon at the
-    top of the screen.
-
-
-
-
-![](./images/Figure_4.5_B15646.jpg)
-
-
-
-
+    ![](./images/Figure_4.4_B15646.jpg)
 
 
 Great! You have now created a new bot and have
@@ -168,53 +96,7 @@ a collection of individual actions. Here you can see the list pane
 showing all the available packages:
 
 
-
-
-![Figure 4.6 -- The packages list
-pane](./images/Figure_4.6_B15646.jpg)
-
-
-
-
-
-
-You can see all the packages and actions available
-in this list. This list is in alphabetical order and is searchable,
-allowing quick access to your actions. Each package can be expanded or
-collapsed to view or hide the actions available. As you can see, the
-usual functionality available in most programming languages is
-available, including the following:
-
--   Working with files and folders
--   Conditional logic operands, that is, if/else
--   Iterations
--   Text manipulation
-
-In addition, there are packages with more advanced actions that are not
-always available as standard functions of most common programming
-languages. Some of these advanced packages include the following:
-
--   IBM Watson Speech to Text
--   Image recognition
--   Fuzzy matching
--   G-Suite apps
--   MS LYUIS **NLP** (**Natural Language Processing**)
-
-In the packages list pane, you\'ll find a comprehensive list of packages
-that will allow your bots to perform almost any foreseeable task. In
-some cases, we may come across an action that may
-not be available in the list. Automation Anywhere has thought of this
-and does have packages to help overcome this. You can call VBScript and
-Python scripts directly. This is a fully featured action allowing you to
-pass parameters to and from your scripts. If you need more
-functionality, Automation Anywhere also allows you to work directly with
-independent DLLs. You can use distributed DLLs as well as creating your
-own using a standard suitable development platform.
-
-You can see now what actions your bot will be able to perform. In the
-next section, we will look at how to implement these actions using
-Automation Anywhere. There are a number of techniques available to
-deploy actions to build your bot functionality.
+![](./images/Figure_4.6_B15646.jpg)
 
 
 
@@ -239,10 +121,7 @@ tab located on the top pane of the interface, as shown in the following
 screenshot:
 
 
-
-
-![Figure 4.7 -- Bot development visual
-aids](./images/Figure_4.7_B15646.jpg)
+![](./images/Figure_4.7_B15646.jpg)
 
 
 
@@ -559,14 +438,7 @@ following walk-through:
     **Message Box** with your name:
 
 
-
-
-![Figure 4.27 -- Output message from the
-bot](./images/Figure_4.27_B15646.jpg)
-
-
-
-
+![](./images/Figure_4.27_B15646.jpg)
 
 
 You have successfully created a `String` type variable and
@@ -588,33 +460,22 @@ trigger:
 
 3.  Click on **Show** on the **Triggers** tab from the option pane on
     the left:
-
+ 
+    ![](./images/Figure_4.28_B15646.jpg)
     
-    ![Figure 4.28 -- Viewing
-    Triggers](./images/Figure_4.28_B15646.jpg)
-    
-
-
 
 4.  Expand the **Files & folders** trigger group:
 
     
-    ![Figure 4.29 -- Trigger
-    groups](./images/Figure_4.29_B15646.jpg)
-    
-
-
+    ![](./images/Figure_4.29_B15646.jpg)
 
 5.  To create a new file trigger, select and drag the **File trigger**
     option to the **Triggers** section in your development window. Your
     interface should look like this:
 
     
-    ![Figure 4.30 -- Adding a file
-    trigger](./images/Figure_4.30_B15646.jpg)
+    ![](./images/Figure_4.30_B15646.jpg)
     
-
-
 
 6.  Set the following properties for the new
     **Files & folders: File trigger**:
@@ -638,8 +499,7 @@ trigger:
     and, from the dropdown, select **Run with triggers**:
 
     
-    ![Figure 4.32 -- Running a bot with a
-    trigger](./images/Figure_4.32_B15646.jpg)
+    ![](./images/Figure_4.32_B15646.jpg)
     
 
 
@@ -663,10 +523,10 @@ trigger:
 
 
 
-![Figure 4.34 -- Successful execution
-message](./images/Figure_4.34_B15646.jpg)
+![](./images/Figure_4.34_B15646.jpg)
 
 
+You can `Stop` the bot now.
 
 
 
@@ -701,11 +561,8 @@ perform the following steps:
     **1** and update the following properties:
 
     
-    ![Figure 4.35 -- Updated Message box
-    properties](./images/Figure_4.35_B15646.jpg)
+    ![](./images/Figure_4.35_B15646.jpg)
     
-
-
 
 2.  Click on **Save**.
 
@@ -844,8 +701,7 @@ interface:
     top-right corner of the screen, select **Dependencies**:
 
     
-    ![Figure 4.46 -- Bot
-    dependencies](./images/Figure_4.46_B15646.jpg)
+    ![](./images/Figure_4.46_B15646.jpg)
     
 
 

@@ -2,19 +2,6 @@ Lab 3: Overview of Automation Anywhere Control Room
 ==============================================================================
 
 
-Understanding the **Control Room** interface is key when building,
-deploying, and managing bots. **Control Room** is used to perform all
-these tasks. It has a very *easy-to-use* intuitive interface. The
-interface is designed with a pane on the left-hand side used as a
-navigation bar, which lists the main sections and sub-sections of the
-control room. The main desktop area has all the functionality and
-features for each section.
-
-In the previous lab, you learned how to connect your device to the
-control room and get ready to start building bots. Before we actually
-build a bot, it is important that you have a clear understanding of the
-user interface.
-
 In this lab, we go greater into detail about the **Control Room**
 interface. Each section is explored, giving you hands-on experience with
 the interface. You will learn about the dashboard, monitoring bot
@@ -38,82 +25,30 @@ manage your RPA solution. We will cover the following sections of
 
 
 
-
 Technical requirements 
 ======================
 
+The following requirements are necessary:
 
-In order to install Automation Anywhere  Community Edition, the
-following requirements are necessary:
 
--   Windows operating system version 7 or higher
--   A processor with a minimum speed of 3 GHz
--   Minimum of 4 GB RAM
--   At least 100 MB hard disk space
--   Internet Explorer v10 or higher OR Chrome v49 or higher
--   A minimum screen resolution of 1024\*768
--   An internet connection with a minimum speed of 10 Mb/sec
--   Completed registration with Automation Anywhere  Community
-    Edition
--   Logged on successfully to Automation Anywhere  Community
-    Edition
+-   Google Chrome
+-   Logged on successfully to Automation Anywhere Community Edition
 -   A successfully registered local device
 
 
 
+Exploring the Explore screen 
+============================
 
 
-Exploring the home screen 
-=========================
-
-
-The home screen is the first interface presented
-to you when you initially log on to **Control
-Room**. You will notice shortcuts to some of the exciting features
-available for you to explore:
-
+The explore screen is the first interface presented
+to you when you initially log on to **Control Room**. You will notice shortcuts to some of the exciting features available for you to explore:
 
 
 
 ![](./images/Figure_3.1_B15646.jpg)
 
 
-
-
-
-
-There are a number of options and information available in the top-right
-panel. These are as follows:
-
-
-
-
-![](./images/Figure_3.2_B15646.jpg)
-
-
-
-
-
-
-The main navigation menu is on the left-hand side of the home
-screen. This will take you into the different
-sections of **Control Room**. We will explore each section further in
-this lab.
-
-On the main window of the home screen, there are four shortcuts
-available. These are for the following:
-
--   **Create a Bot**: Launches the interface to quickly get you started
-    in building your bots
--   **Launch IQ Bot**: Launches the artificial intelligence and machine
-    learning tool
--   **Open Bot Insight**: Launches the data collection and analysis tool
--   **BotStore**: When available, this will launch the platform to
-    market and sell your bots to a wide consumer marketplace.
-
-The home screen serves as the landing screen when you log on to the new
-Automation Anywhere platform. It provides you with an introduction to
-the features available to support your bot production and management.
 
 Getting familiar with the **Control Room** interface is important so
 that you have a clearer understanding of how to best utilize all its
@@ -125,7 +60,7 @@ information on the status of your activity and bots.
 
 
 
-Understanding the dashboard 
+Understanding the Homepage 
 ===========================
 
 
@@ -135,12 +70,7 @@ few shortcuts, while the bottom section shows bot metric data, as shown
 in the following screenshot:
 
 
-
-
 ![](./images/Figure_3.3_B15646.jpg)
-
-
-
 
 
 
@@ -176,13 +106,7 @@ By clicking on the **ACTIVITY** option from the menu pane, you will see
 the following interface:
 
 
-
-
 ![](./images/Figure_3.4_B15646.jpg)
-
-
-
-
 
 
 You can quickly identify which bot is running on which device. A device
@@ -197,10 +121,6 @@ progress** and **Historical**:
 
 
 ![](./images/Figure_3.5_B15646.jpg)
-
-
-
-
 
 
 Both of these sub-sections display a list of your
@@ -272,23 +192,8 @@ Managing bots
 
 
 Bot management and deployment are performed in
-this section. This is broken down into four sub-sections, which are
-accessible from the main menu pane on the left:
-
-
-
-
-![Figure 3.9 -- Bot management
-options](./images/Figure_3.9_B15646.jpg)
-
-
-
-
-
-
-The **BOTS** section is one of the key sections when it comes to
-building and managing bots. We will look further
-into each sub-section in greater detail.
+this section. The **BOTS** section is one of the key sections when it comes to
+building and managing bots.
 
 
 
@@ -303,29 +208,17 @@ your account. Within the root folder, you can create new folders, the
 standard practice being to create a folder for each individual bot or a
 bot category.
 
-As you can see, the folder structure is displayed
+Click on `Automation` from the left menu. As you can see, the folder structure is displayed
 on the left pane and the contents on the right:
 
 
-
-
 ![](./images/Figure_3.10_B15646.jpg)
-
-
-
-
-
 
 There are a few options available for each file and folder within this
 interface, as shown in the following screenshot:
 
 
-
-
 ![](./images/Figure_3.11_B15646.jpg)
-
-
-
 
 
 
@@ -341,68 +234,18 @@ describes a feature used to manage these credentials.
 Credentials 
 -----------
 
-For any application that requires credentials, it
-is recommended not to store these credentials within your task bots. For
-added security, all credentials should be secured in **Automation
-Anywhere\'s Credential Vault**. To achieve this, the following steps
-should be executed:
-
-1.  Create a credential with the required attributes; that is, a
-    username/password.
-2.  Add this credential to a locker.
-3.  Grant the bot access to the locker.
-
-The bot can now get this specific credential to access the application.
 
 The **Credentials** sub-section has three tabs. These are **MY
-CREDENTIALS**, **MY LOCKERS**, and **CREDENTIAL REQUESTS**. All
-credentials are created under the **MY CREDENTIALS** tab. These can be
-grouped and stored within lockers. Grouping can be done for applications
-or a specific category. For example, a single application may need
-multiple credentials for various tasks. In this case, you would create
-individual credentials and put them all in one locker. The final
-**CREDENTIAL REQUESTS** tab is an informative tab showing all the
-requests that have been made for any credentials. You can see in the
-following screenshot the **Credentials** interface showing the three
-different tabs:
-
-
-
+CREDENTIALS**, **LOCKERS**, and **CREDENTIAL REQUESTS**. All
+credentials are created under the **CREDENTIALS** tab.
 
 ![](./images/Figure_3.12_B15646.jpg)
 
 
 
-
-
-
-The options available for credentials are shown in
-the following screenshot:
-
-
-
-
-![](./images/Figure_3.13_B15646.jpg)
-
-
-
-
-
-
 When we build a bot, it performs a series of actions. Automation
 Anywhere has hundreds of these actions available. They are
-all categorized into groups that are known as
-**packages**.
-
-
-
-Global values 
--------------
-
-**Global values** is a way to configure constant
-values that can be used multiple times by multiple bots. This feature is
-not available with the Community version that we are using.
-
+all categorized into groups that are known as **packages**.
 
 
 Packages 
@@ -490,25 +333,17 @@ Building bots aside, we need to deploy them to
 desktops. These can come in the form of laptops, desktop machines,
 virtual machines, and so on. In this section, all your devices are
 listed. Every device that needs to be deployed should be on this list.
-By selecting the **MY DEVICES** option from the menu pane, you will see
+By selecting the **DEVICES** option from the menu pane, you will see
 the following interface:
 
-
-
-
 ![](./images/Figure_3.17_B15646.jpg)
-
-
-
-
 
 
 To set this up, a device needs to be installed with a Bot agent and
 registered and connected to the control room.
 
 In the previous lab, we went through the
-process of setting a device up and connecting it to the **Control
-Room**. All your devices that are available on the network can be set up
+process of setting a device up and connecting it to the **Control Room**. All your devices that are available on the network can be set up
 in the same way.
 
 After your devices are set up, the users need to be set up and
@@ -528,39 +363,10 @@ of license for them. By selecting **Users** from the **ADMINISTRATION**
 option on the menu pane, you will see the following interface:
 
 
-
-
-![Figure 3.18 -- Administration: Users
-interface](./images/Figure_3.18_B15646.jpg)
-
-
-
-
-
-
-Each user can be configured and roles can be
-allocated. By selecting or creating a user, you can configure all the
-details shown in the following screenshot:
-
-
-
-
-![](./images/Figure_3.19_B15646.jpg)
-
-
-
-
-
-
-All users are managed here. You can assign a specific role to a user,
-such as Bot agent (Bot agents have no access to the underlying code but
-can only run a bot), bot creator, and custom-defined roles. Also,
-a different device can be allocated to each user.
+![](./images/Figure_3.18_B15646.jpg)
 
 The easy-to-use intuitive interface of Automation Anywhere **Control
 Room** makes managing bots, devices, and users very easy.
-
-
 
 
 
