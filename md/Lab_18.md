@@ -1,0 +1,795 @@
+Lab 18: Managing Errors 
+==================================================
+
+
+In the last lab, you discovered how to run external scripts such as
+VBScripts and Python scripts. The walk-throughs showed how to call these
+scripts as well as how to send parameters with them, and finally get a
+result back to your bot. Having the ability to run scripts is a very
+useful tool to have in your automation toolbox. It opens up further
+automation opportunities, not limiting yourself only to the actions
+available in Automation Anywhere.
+
+This brings us to the final lab of the book; in this lab, we
+will be exploring error management. I hear you say *my bots never have
+any errors, so error management is not needed!* I agree with you; I am
+sure your RPA skills and knowledge are impeccable. The most common
+errors are not necessarily caused by poor development but by invalid or
+incomplete inputs. Having robust error management will allow your bots
+to continue processing even when an error or exception is encountered.
+
+With the help of the guided walk-throughs, you will learn how to
+implement an error-handling routine that will manage a real-life
+scenario as and when an error occurs. We will be looking at the
+following actions: **Try**, **Catch**, **Finally**, and **Throw**.
+
+In this lab, we will be using the following packages:
+
+![](./images/Figure_18.1_B15646.jpg)
+
+
+There is a real-life scenario walk-through example in this lab. The
+walk-through will take you through each stage step by step, giving you
+valuable practical experience. The input file needed for the
+walk-through is included as part of the GitHub repository.
+
+In this lab, we will cover the following:
+
+-   Error handling with Automation Anywhere
+-   Understanding **Try**, **Catch**, **Finally**, and **Throw** actions
+-   Building an error-handling routine
+
+
+
+
+
+Technical requirements 
+======================
+
+
+In order to install the Automation Anywhere Bot agent, the following
+requirements are necessary:
+
+-   Windows operating system version 7 or higher
+-   A processor with a minimum speed of 3 GHz
+-   A minimum of 4 GB RAM
+-   At least 100 MB hard disk space
+-   Internet Explorer v10 or higher or Chrome v49 or higher
+-   A minimum screen resolution of 1024\*768
+-   An internet connection with a minimum speed of 10 Mbps
+-   You must have completed registration with Automation Anywhere 
+    Community Edition
+-   You must have logged on successfully to Automation Anywhere 
+    Community Edition
+-   A successfully registered local device
+-   Successfully downloaded sample data from GitHub
+
+
+
+
+
+Error handling with Automation Anywhere
+=======================================
+
+
+Pretty much all development platforms will have some sort of error
+handling functions. Having error handling in your
+bots is crucial when building resilient automation. The purpose of
+managing any errors or exceptions is to keep your bot processing. As an
+example, if your bot is processing a large file unattended and there is
+an error within the first few records, your bot will stop processing and
+you won\'t be aware of this until you next check your bot. Having an
+error-handling routine should log the details of the invalid record and
+continue with the rest of the file until complete.
+
+A bot works by executing a sequence of actions to complete a given task.
+While the bot is performing its task, an action may fail to complete.
+This could be caused by a number of factors, such as the following:
+
+-   Navigation on a web page where the page itself has been updated and
+    the required controls have been renamed or removed
+-   A string value is present within a dataset where a number is
+    expected
+-   The bot is unable to open a file as it may be locked
+-   A network failure
+-   The expected web page doesn\'t load for some reason
+
+When such errors occur, the bot should be able to close the applications
+that have the issue and recover from the error elegantly. A bot should
+leave the workstation in the same position it was in before it started
+to run its task. Any applications or services that are used should be
+closed, leaving a nice clean desktop.
+
+As a developer, you should also be thinking about using defensive
+coding. This is when you take a proactive approach rather than a
+reactive approach. An error-handling routine is a reactive approach as
+it will react to any errors that occur. Thinking proactively is using a
+mindset to predict any vulnerabilities in the code where the bot may be
+prone to an error. An example could be the bot being tasked with opening
+a file. In the event that the file is not present, an error would occur.
+A proactive approach would be to check first whether the file exists and
+only open it if it exists. This way the bot becomes more resilient and
+less prone to an error.
+
+Automation Anywhere  comes with an **Error
+handler** package. This package has four actions, which are designed to
+help build a robust error-handling routine:
+
+
+
+
+![](./images/Figure_18.2_B15646.jpg)
+
+
+
+
+
+
+In the next section, we will look more closely into the preceding four
+actions. You will learn what they do and how to implement them for your
+bot.
+
+
+
+
+
+Understanding Try, Catch, Finally, and Throw actions 
+====================================================
+
+
+The actions used for handling errors are all designed to manage
+different aspects of each error. We know a bot
+runs a sequence of actions. Each bot can have
+multiple error-handling routines. If there is a
+particular part of your bot that is vulnerable to an error, you would
+wrap those actions within a **Try** action. This
+would assign the action or actions as a block
+within the **Try** action. Any action within the **Try** action is
+managed by the error-handling routine. If any action was to fail from
+within the **Try** block, the bot would move directly to the **Catch**
+action for that error handler. Here, you would instruct the bot on what
+to do if an error was to occur. The most common actions would be to log
+the details to an error log file, maybe take a screenshot, or even send
+an email. The bot will continue to process any further actions in its
+routine without stopping.
+
+All the actions within the **Finally** block are expected regardless of
+whether an error occurred or not. This would be a good place to close
+any open applications that were used. Since it is good practice to close
+them anyway, it would make sense to put these tidying up actions in the
+**Finally** block.
+
+The **Throw** action is used to invoke an exception. This can be very
+useful when dealing with data. An example would be, say, your bot is
+processing a products file. This file is automatically generated and
+should not have certain products in it as they have now been
+discontinued. If such a product existed in this file, the bot would
+still process it as it wouldn\'t know it is an
+invalid entry. For this scenario, you could add a **Throw** action
+to identify such records and trigger an error.
+This way, you would still get an entry in the
+error log file of all the invalid records without
+processing them.
+
+In the next section, you will be guided through a walk-through that will
+include adding an error-handling routine using the **Try**, **Catch**,
+and **Throw** actions.
+
+
+
+
+
+Building an error-handling routine 
+==================================
+
+
+You are probably keen to see the **Error handler** package in action.
+You will be guided through a step-by-step
+walk-through on building a fully functional bot.
+You will then introduce an error by editing the input file and creating
+an invalid record. This will result in the bot failing and stopping its
+processing midway as it encounters the invalid record. The walk-through
+will then take you through the process of adding an error handler
+routine.
+
+This walk-through works with the file
+`Chapter18_Products.csv`. This file has a list of products
+within each business segment, and the contents look as shown in the
+following screenshot:
+
+
+
+
+![Figure 18.3 -- Snapshot of the input
+file](./images/Figure_18.3_B15646.jpg)
+
+
+
+
+
+
+For this scenario, the bot will perform the following tasks:
+
+1.  Read every record from the CSV file
+    `Chapter18_Products.csv`.
+2.  Apply a `10%` discount to the price.
+3.  Create a new CSV file with updated prices called
+    `Chapter18_UpdatedProducts.csv`.
+
+This should be a relatively simple bot. From the tasks, we can identify
+a few variables that will be needed. We will need four variables:
+
+-   One `Record` type variable to read the product record
+-   One `String` type variable to assign the discounted price
+    to be written to the new file
+-   Two `Number` type variables -- one for the current price
+    and the other for the calculated discounted price
+
+We can start the walk-through by building the
+outline using steps and comments and creating the variables we will
+need:
+
+1.  Log into **Control Room**.
+
+2.  Create a new bot and call it `Chapter18 – Error Handling`
+    in the `\Bot\ folder`.
+
+3.  Add a new **Comment** action as `"---------------------"`
+    on line **1** and click on **Save**.
+
+4.  Add a new **Comment** action below line **1**,
+    `"------ create new csv output file"`, and click on
+    **Save**.
+
+5.  Add a new **Comment** action below line **2**,
+    `"------ open products csv file and read each row"`, and
+    click on Save.
+
+6.  Add a **Step** just below line **3**, set the **Title** property as
+    `calculate new price and update file`, and click on
+    **Save**.
+
+7.  Add a new **Comment** action below line **4**,
+    `"------ close products csv file"`, ensuring it is not
+    within the **Step** on line **4** and click on **Save**.
+
+8.  Add a new **Comment** action below line **5**,
+    `"---------------------"`, and click on **Save**. The
+    initial development interface should look like this:
+
+    
+    ![Figure 18.4 -- Development
+    interface](./images/Figure_18.4_B15646.jpg)
+    
+
+
+
+9.  Create two `Number` type variables called
+    `numPrice` and `numNewPrice`.
+
+10. Create a `String` type variable
+    called `strNewPrice`.
+
+11. Create a `Record` type variable called
+    `recProduct`. The variables should look as shown in the
+    following screenshot:
+
+    
+    ![Figure 18.5 -- Variable
+    interface](./images/Figure_18.5_B15646.jpg)
+    
+
+
+
+12. To create our new output CSV file, we will use the **Log to file**
+    action. Starting with creating the file headers, drag the **Log to
+    file** action just below line **2**.
+
+13. Set the following properties for the **Log to file** action on line
+    **3**:
+
+    **File path**:
+    `C:\Hands-On-RPA-with-AA-Sample-Data\Chapter18_UpdatedProducts.csv`
+
+    **Enter text to log**: `Segment,Product,Price`
+
+    **Append timestamp**: *Unchecked*
+
+    **When logging**: **Overwrite existing log file**
+
+    **Encoding**: **ANSI** *(default value)*
+
+    The properties should look as shown in the
+    following screenshot:
+
+    
+    ![Figure 18.6 -- Create the output CSV
+    file](./images/Figure_18.6_B15646.jpg)
+    
+
+
+
+14. Click on **Save**.
+
+15. To create the session with our *products* CSV file, drag the
+    **CSV/TXT: Open** action just below line **4**.
+
+16. Set the following properties for the **CSV/TXT: Open** action on
+    line **5**:
+
+    **Session name**: `csv_Session`
+
+    **File path**: **Desktop file** -
+    `C:\Hands-On-RPA-with-AA-Sample-Data\Chapter18_Products.csv`
+
+    **Contains header**: *Checked*
+
+    **Delimiter**: **Comma**
+
+    The properties should look as shown in the
+    following screenshot:
+
+    
+    ![Figure 18.7 -- CSV/TXT: Open
+    properties](./images/Figure_18.7_B15646.jpg)
+    
+
+
+
+17. Click on **Save**.
+
+18. To close the session that we have just created, drag the **CSV/TXT:
+    Close** action just below line **7**.
+
+19. Set the following property for the **CSV/TXT: Close** action on line
+    **8**:
+
+    **Session name**: `csv_Session`
+
+    The property should look as shown in the following screenshot:
+
+    
+    ![Figure 18.8 -- CSV/TXT: Close
+    properties](./images/Figure_18.8_B15646.jpg)
+    
+
+
+
+    Click on **Save**. The development interface
+    for this section should look like this:
+
+    
+    ![Figure 18.9 -- Development
+    interface](./images/Figure_18.9_B15646.jpg)
+    
+
+
+
+20. Next, we can add the **Loop** to read each record from the
+    *products* file. Drag the **Loop** action just below line **6**,
+    ensuring it is within the **Step** on line **6**.
+
+21. Set the following properties for the **Loop**
+    action on line **7**:
+
+    **Loop Type**: **Iterator**
+
+    **Iterator**: **For each row in CSV/TXT**
+
+    **Session name**: `csv_Session`
+
+    **Assign the current row to variable**:
+    `recProduct - Record`
+
+    The properties should look as shown in the following screenshot:
+
+    
+    ![Figure 18.10 -- Loop through CSV/TXT file
+    properties](./images/Figure_18.10_B15646.jpg)
+    
+
+
+
+22. Click on **Save**.
+
+23. `current price` is the third column in the CSV *products*
+    file. This would give it an index value of **2**. To assign this
+    value to our variable, add the **String: To number** action just
+    below line **7**, ensuring it is within the **Loop** on line **7**.
+
+24. Set the following properties for the **String:
+    To number** action on line **8**:
+
+    **Enter the string**: `$recProduct[2]$`
+
+    **Assign the output to variable**: **numPrice - Number**
+
+    The properties should look as shown in the following screenshot:
+
+    
+    ![Figure 18.11 -- String: To number
+    properties](./images/Figure_18.11_B15646.jpg)
+    
+
+
+
+25. Click on **Save**.
+
+26. The discounted price can now be calculated. To calculate and assign
+    the new price to our variable `numNewPrice`, add the
+    **Number: Assign** action just below line **8**, ensuring it is
+    within the **Loop** on line **7**.
+
+27. Set the following properties for the **Number: Assign** action on
+    line **9**:
+
+    **Select the source string variable/ value**:
+    `$numPrice$ * 0.9`
+
+    **Select the destination number variable**: **numNewPrice - Number**
+
+    The properties should look as shown in the
+    following screenshot:
+
+    
+    ![Figure 18.12 -- Number: Assign
+    properties](./images/Figure_18.12_B15646.jpg)
+    
+
+
+
+28. Click on **Save**.
+
+29. As the new price will be saved to a file, it needs to be converted
+    to a `String`. To do this, add the **Number: To string**
+    action just below line **9**, ensuring it is within the **Loop** on
+    line **7**.
+
+30. Set the following properties for the **Number: To string** action on
+    line **10**:
+
+    **Enter a number**: `$numNewPrice$`
+
+    **Enter number of digits after decimal**: `2`
+
+    **Assign the output to variable**: **strNewPrice - String**
+
+    The properties should look as shown in the following screenshot:
+
+    
+    ![Figure 18.13 -- Number: To string
+    properties](./images/Figure_18.13_B15646.jpg)
+    
+
+
+
+31. Click on **Save**.
+
+32. The last part is to append the record with the discounted price to
+    the output CSV file. To do this, drag the **Log to file** action
+    just below line **10**, ensuring it is within the **Loop** on line
+    **7**.
+
+33. Set the following properties for the **Log to
+    file** action on line **11**:
+
+    **File path**:
+    `C:\Hands-On-RPA-with-AA-Sample-Data\Chapter18_UpdatedProducts.csv`
+
+    **Enter text to log**:
+    `$recProduct[0]$,$recProduct[1]$,$strNewPrice$`
+
+    **Append timestamp**: *Unchecked*
+
+    **When logging**: **Append to existing log file**
+
+    **Encoding**: **ANSI** *(default value)*
+
+    The properties should look as shown in the following screenshot:
+
+    
+    ![Figure 18.14 -- Append to the output CSV
+    file](./images/Figure_18.14_B15646.jpg)
+    
+
+
+
+34. Click on **Save**. The development interface
+    for this section should look like this:
+
+
+
+
+![Figure 18.15 -- Development
+interface](./images/Figure_18.15_B15646.jpg)
+
+
+
+
+
+
+That\'s great work! You have now built the bot. This bot is should be
+working with no issues. Go ahead and run the bot. A file called
+`Chapter18_UpdatedProducts.csv` should be generated. This file
+will have the same records as the input file but with the new discounted
+price.
+
+
+
+
+![Figure 18.16 -- Snapshot of the output
+file](./images/Figure_18.16_B15646.jpg)
+
+
+
+
+
+
+This is all good -- your bot will always work as
+long as the input file has no issues. But what will happen if the input
+file has an issue? How will your bot behave?
+
+
+
+Modifying the input file and introducing an error 
+-------------------------------------------------
+
+Let\'s have a look at what happens when we modify
+the input file and introduce an error:
+
+1.  Open the input file, `Chapter18_Products.csv`, in Notepad
+    and delete the value `15` for the fourth record as shown
+    here:
+
+    
+    ![Figure 18.17 -- Updated input
+    file](./images/Figure_18.17_B15646.jpg)
+    
+
+
+
+2.  Save and close the file.
+
+The bot hasn\'t been modified in any way, only the input file has. This
+reflects a real-life scenario where your bot is dependent on some source
+data. Try running the bot again with the updated input file. While
+processing, the bot will fail. You will get the following message from
+Automation Anywhere:
+
+
+
+
+![Figure 18.18 -- Error message from Automation
+Anywhere](./images/Figure_18.18_B15646.jpg)
+
+
+
+
+
+
+The message refers to line **8**. This is when the bot assigns the price
+to the variable `numPrice`. Having this value as *null* has
+caused the bot to fail. Also in the message box, you will also notice
+that the bot stopped processing at the point of
+failure. The output file will only have three records in it. As soon as
+the bot encountered the error, it stopped.
+
+
+
+
+![](./images/Figure_18.19_B15646.jpg)
+
+
+
+
+
+
+Ideally, we would like our bot to log the error details in a file
+instead of a message box. Then it would be great if the bot continued
+with the rest of the records instead of just stopping. We will now
+continue with the walk-through.
+
+In this walk-through, you will add an error handler that will manage the
+new error that we have introduced. To manage the error, we will need
+some additional variables. A `Number` type variable is needed
+to store the error line number. As this will also be added to a log
+file, a `String` type will also be required for the line
+number. Another `String` type variable will also be needed to
+store the error description.
+
+We can start the walk-through by creating the
+variables we will need as follows:
+
+1.  Log into **Control Room**.
+
+2.  Create a `Number` type variable called
+    `numErrLine`.
+
+3.  Create two `String` type variables called
+    `strErrLine` and `strErrDesc`.
+
+4.  Lines **8** to **11** are when the bot is processing each record.
+    This is what we want in our **Try** action for the error handler.
+    Add the **Error handler: Try** action just below line **7**,
+    ensuring it is with the **Loop** on line **7**, and click on
+    **Save**. The development interface should look as shown in the
+    following screenshot:
+
+    
+    ![Figure 18.20 -- Development
+    interface](./images/Figure_18.20_B15646.jpg)
+    
+
+
+
+5.  To add our processing lines within the **Error handler: Try** block,
+    select lines **10** to **13** and drag them to just under line
+    **8**, so they are within the **Error handler: Try** action on line
+    **8**, and click on **Save**. The development interface should look
+    as shown in the following screenshot:
+
+    
+    ![Figure 18.21 -- Development
+    interface](./images/Figure_18.21_B15646.jpg)
+    
+
+
+
+6.  The error block has now been created. We need to instruct the bot on
+    what to do if an error occurs from within the error block. To do
+    this, set the following properties for the **Error handler: Catch**
+    action on line **13**:
+
+    **Exception**: **AllErrors**
+
+    **Assign exception message to**: **strErrDesc - String**
+
+    **Assign line number to**: **numErrLine - Number**
+
+    The properties should look as shown in the
+    following screenshot:
+
+    
+    ![Figure 18.22 -- Error handler: Catch
+    properties](./images/Figure_18.22_B15646.jpg)
+    
+
+
+
+7.  Click on **Save**.
+
+8.  All the actions within the **Error handler: Catch** block will be
+    executed when an error occurs. We want the bot to output the error
+    to a log file. The `numErrLine` variable will need to be
+    converted to a `String` type variable for the log file. To
+    convert this, add the **Number: To string** action just below line
+    **13**, ensuring it is within the **Error handler: Catch** action on
+    line **13**.
+
+9.  Set the following properties for the **Number:
+    To string** action on line **14**:
+
+    **Enter a number**: `$numErrLine$`
+
+    **Enter number of digits after decimal**: `0`
+
+    **Assign the output to variable**: **strErrLine - String**
+
+    The properties should look as shown in the following screenshot:
+
+    
+    ![Figure 18.23 -- Number: To string
+    properties](./images/Figure_18.23_B15646.jpg)
+    
+
+
+
+10. Click on **Save**.
+
+11. The last part is to append the invalid record
+    to a log file. To do this, drag the **Log to file** action just
+    below line **14**, ensuring it is within the **Error handler:
+    Catch** action on line **13**.
+
+12. Set the following properties for the **Log to file** action on line
+    **15**:
+
+    **File path**:
+    `C:\Hands-On-RPA-with-AA-Sample-Data\Chapter18_ErrorLog.csv`
+
+    **Enter text to log**:
+    `Desc: $strErrDesc$, Line: $strErrLine$, (Record: $recProduct[0]$,$recProduct[1]$,$recProduct[2]$)`
+
+    **Append timestamp**: *Checked*
+
+    **When logging**: **Append to existing log file**
+
+    The properties should look as shown in the following screenshot:
+
+    
+    ![Figure 18.24 -- Output to error log
+    file](./images/Figure_18.24_B15646.jpg)
+    
+
+
+
+13. Click on **Save**. The development interface for this section should
+    look like this:
+
+    
+    ![Figure 18.25 -- Development
+    interface](./images/Figure_18.25_B15646.jpg)
+    
+
+
+
+    You have now added an error-handling routine
+    within your bot. If an error occurs while the bot is processing
+    lines **9** to **12**, which make up our **Try** block, it will move
+    directly to the **Catch** block on line **13**. The **Catch** block
+    will log the details in our error log file, which is created if one
+    does not already exist. Following the error, the bot will continue
+    processing the rest of the input file.
+
+14. Now run the bot once more. You will notice it will perform the task
+    without an error occurring. Once it is complete, you can examine the
+    files generated. The output file
+    `Chapter18_UpdatedProducts.csv` will have all the records
+    with the discounted prices, with the exception of the record we
+    modified. The invalid record will not be present in the output file:
+
+
+
+
+![Figure 18.26 -- Output CSV
+file](./images/Figure_18.26_B15646.jpg)
+
+
+
+
+
+
+There will also be an error log file generated,
+`Chapter18_ErrorLog.csv`. This file will have the details of
+the error and the invalid record:
+
+
+
+
+![Figure 18.27 -- Error log
+file](./images/Figure_18.27_B15646.jpg)
+
+
+
+
+
+
+Great work! You have successfully added an error-handling routine. You
+can rest assured that your bot is more resilient and can handle files
+that may have invalid data.
+
+
+
+
+
+Summary 
+=======
+
+
+This lab has been all about building robust, resilient bots that can
+get up and continue even when they fall over. We have explored the
+**Error handler** package and the actions available. The walk-through
+provided the practical skills to actually build your own error-handling
+routine. Having a good error-handling routine is key to the success of
+your bots. No matter how great the functionality of your bot, one thing
+we cannot guarantee is the quality of any source inputs. A mechanism is
+needed to manage any anomalies in the best way possible. Using error
+management and some defensive coding is a step in the right direction.
+
+This brings us to the end of this book. I hope you have enjoyed it as
+much as I enjoyed writing it. By following all the walk-throughs, you
+will have just over 20 bots already built, each one demonstrating some
+benefits of RPA. Hopefully, you have gained the skills and confidence to
+take you to the next step of your RPA journey. You are probably thinking
+about real-life scenarios where Automation Anywhere could help you save
+time and increase accuracy.
