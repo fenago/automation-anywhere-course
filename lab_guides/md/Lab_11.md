@@ -2,24 +2,6 @@ Lab 11: Automating Excel
 ========================
 
 
-You must be feeling like an XML automation guru now. In the previous
-lab, we covered all the actions available in the XML package, giving
-hands-on experience with reading and updating XML files as well as
-running XPath functions against your XML datasets.
-
-In this lab, we will be looking into using automation with Microsoft
-Excel. We will go through several walk-throughs, looking at how we can
-build bots to automate Excel workbooks and worksheets. Automation
-Anywhere 2019 has two packages offering loads of Excel actions. These
-packages are Excel basic and Excel advanced. Starting with the basics
-will enable you to feel confident with opening, closing, and saving
-workbooks. You will also learn how to read datasets from Excel as well
-as write to worksheets. This will include creating loops to iterate
-through rows of data. As we move onto the advanced package, we will look
-at manipulating worksheets by doing things such as inserting columns,
-adding formulas, and sorting tables. You will also learn how to run
-macros from a macro-enabled workbook.
-
 In this lab, we will cover the following:
 
 -   Opening, closing, and saving Excel workbooks
@@ -35,8 +17,7 @@ things structured. We will be using the following packages:
 
 
 
-![Figure 11.1 -- Packages used in this
-lab](./images/Figure_11.1_B15646.jpg)
+![](./images/Figure_11.1_B15646.jpg)
 
 
 
@@ -68,7 +49,7 @@ requirements are necessary:
 -   A processor with a minimum speed of 3 GHz
 -   A minimum of 4 GB RAM
 -   At least 100 MB hard disk space
--   Web browser: Internet Explorer v10 or higher or Chrome v49 or higher
+-   Web browser: Google Chrome
 -   A minimum screen resolution of 1024\*768
 -   An internet connection with a minimum speed of 10 Mbps
 -   You must have completed registration for Automation Anywhere 
@@ -84,17 +65,6 @@ requirements are necessary:
 
 Opening, closing, and saving Excel workbooks 
 ============================================
-
-
-Whenever we use an external
-data source, no matter what type this may be, a
-connection needs to be established. Once we have consumed the data, the
-connection needs to be closed. Not only does this apply to Automation
-Anywhere but to most development platforms. How we make this connection
-is where it differs. Automation Anywhere refers to this connection as a
-**session**. We will create various types of sessions as we progress
-through this book. We have already created sessions when connecting with
-CSV files.
 
 The first thing we need to learn about Excel is how to open, close, and
 save workbooks. So, we\'ll start off with a simple walk-through. You
@@ -158,8 +128,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look like this:
 
     
-    ![Figure 11.3 -- Excel basic: Open
-    properties](./images/Figure_11.3_B15646.jpg)
+    ![](./images/Figure_11.3_B15646.jpg)
     
 
 
@@ -178,8 +147,7 @@ Let\'s start this walk-through by executing the following steps:
     look like this:
 
     
-    ![Figure 11.4 -- Excel basic: Save workbook
-    properties](./images/Figure_11.4_B15646.jpg)
+    ![](./images/Figure_11.4_B15646.jpg)
     
 
 
@@ -199,8 +167,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look like this:
 
     
-    ![Figure 11.5 -- Excel basic: Close
-    properties](./images/Figure_11.5_B15646.jpg)
+    ![](./images/Figure_11.5_B15646.jpg)
     
 
 
@@ -219,8 +186,7 @@ workbook. Your development window should look like this:
 
 
 
-![Figure 11.6 -- Development
-interface](./images/Figure_11.6_B15646.jpg)
+![](./images/Figure_11.6_B15646.jpg)
 
 
 
@@ -325,8 +291,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look like this:
 
     
-    ![Figure 11.10 -- Loop
-    properties](./images/Figure_11.10_B15646.jpg)
+    ![](./images/Figure_11.10_B15646.jpg)
     
 
 
@@ -354,8 +319,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look like this:
 
     
-    ![Figure 11.11 -- Message box
-    properties](./images/Figure_11.11_B15646.jpg)
+    ![](./images/Figure_11.11_B15646.jpg)
     
 
 
@@ -366,11 +330,7 @@ Let\'s start this walk-through by executing the following steps:
 
 
 
-![Figure 11.12 -- Development
-interface](./images/Figure_11.12_B15646.jpg)
-
-
-
+![](./images/Figure_11.12_B15646.jpg)
 
 
 
@@ -424,8 +384,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look like this:
 
     
-    ![Figure 11.13 -- Number: Increment
-    properties](./images/Figure_11.13_B15646.jpg)
+    ![](./images/Figure_11.13_B15646.jpg)
     
 
 
@@ -474,8 +433,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look like this:
 
     
-    ![Figure 11.16 -- Number: Assign
-    properties](./images/Figure_11.16_B15646.jpg)
+    ![](./images/Figure_11.16_B15646.jpg)
     
 
 
@@ -499,8 +457,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look like this:
 
     
-    ![Figure 11.17 -- Number: To string
-    properties](./images/Figure_11.17_B15646.jpg)
+    ![](./images/Figure_11.17_B15646.jpg)
     
 
 
@@ -523,8 +480,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look like this:
 
     
-    ![Figure 11.18 -- Number: To string
-    properties](./images/Figure_11.18_B15646.jpg)
+    ![](./images/Figure_11.18_B15646.jpg)
     
 
 
@@ -548,8 +504,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look like this:
 
     
-    ![Figure 11.19 -- Excel basic: Set cell
-    properties](./images/Figure_11.19_B15646.jpg)
+    ![](./images/Figure_11.19_B15646.jpg)
     
 
 
@@ -572,8 +527,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look like this:
 
     
-    ![Figure 11.20 -- Excel basic: Set cell
-    properties](./images/Figure_11.20_B15646.jpg)
+    ![](./images/Figure_11.20_B15646.jpg)
     
 
 
@@ -584,8 +538,7 @@ Let\'s start this walk-through by executing the following steps:
 
 
 
-![Figure 11.21 -- Development
-interface](./images/Figure_11.21_B15646.jpg)
+![](./images/Figure_11.21_B15646.jpg)
 
 
 
@@ -723,8 +676,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look like this:
 
     
-    ![Figure 11.25 -- Excel advanced: Open
-    properties](./images/Figure_11.25_B15646.jpg)
+    ![](./images/Figure_11.25_B15646.jpg)
     
 
 
@@ -762,8 +714,7 @@ is named `Data`:
     The properties should look like this:
 
     
-    ![Figure 11.26 -- Excel advanced: Insert table column
-    properties](./images/Figure_11.26_B15646.jpg)
+    ![](./images/Figure_11.26_B15646.jpg)
     
 
 
@@ -801,8 +752,7 @@ value of this column is to be set as `Units Sold` \*
     The properties should look like this:
 
     
-    ![Figure 11.27 -- Excel advanced: Set cell formula
-    properties](./images/Figure_11.27_B15646.jpg)
+    ![](./images/Figure_11.27_B15646.jpg)
     
 
 
@@ -839,8 +789,7 @@ should be sorted in ascending order:
     The properties should look like this:
 
     
-    ![Figure 11.28 -- Excel advanced: Sort table
-    properties](./images/Figure_11.28_B15646.jpg)
+    ![](./images/Figure_11.28_B15646.jpg)
     
 
 
@@ -885,8 +834,7 @@ to store the cell address:
     The properties should look like this:
 
     
-    ![Figure 11.29 -- Excel advanced: Find next empty cell
-    properties](./images/Figure_11.29_B15646.jpg)
+    ![](./images/Figure_11.29_B15646.jpg)
     
 
 
@@ -910,8 +858,7 @@ to store the cell address:
     The properties should look like this:
 
     
-    ![Figure 11.30 -- Excel advanced: Set cell formula
-    properties](./images/Figure_11.30_B15646.jpg)
+    ![](./images/Figure_11.30_B15646.jpg)
     
 
 
@@ -945,8 +892,7 @@ it too:
     The properties should look like this:
 
     
-    ![Figure 11.31 -- Excel advanced: Close
-    properties](./images/Figure_11.31_B15646.jpg)
+    ![](./images/Figure_11.31_B15646.jpg)
     
 
 
@@ -961,8 +907,7 @@ and setting formulas. Your development window should look like this:
 
 
 
-![Figure 11.32 -- Development
-interface](./images/Figure_11.32_B15646.jpg)
+![](./images/Figure_11.32_B15646.jpg)
 
 
 
@@ -1061,8 +1006,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look like this:
 
     
-    ![Figure 11.35 -- Excel advanced: Open
-    properties](./images/Figure_11.35_B15646.jpg)
+    ![](./images/Figure_11.35_B15646.jpg)
     
 
 
@@ -1085,8 +1029,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look like this:
 
     
-    ![Figure 11.36 -- Excel advanced: Run macro
-    properties](./images/Figure_11.36_B15646.jpg)
+    ![](./images/Figure_11.36_B15646.jpg)
     
 
 
@@ -1097,8 +1040,7 @@ Let\'s start this walk-through by executing the following steps:
 
 
 
-![Figure 11.37 -- Development
-interface](./images/Figure_11.37_B15646.jpg)
+![](./images/Figure_11.37_B15646.jpg)
 
 
 

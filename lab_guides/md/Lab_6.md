@@ -2,42 +2,11 @@ Lab 6: Introducing Variables in Automation Anywhere
 ====================================================
 
 
-Having already built your first bot, you should now be very comfortable
-with navigating through the Automaton Anywhere interface. You should
-have no issues with logging on to the **Control Room** and creating a
-new bot. We have also looked at some of the actions the bots can
-perform, but there are many more actions available. The tasks a bot can
-perform are pretty much limited to your imagination. There really isn\'t
-much that a bot cannot be instructed to perform. A lot of this
-functionality is already available and grouped within packages using
-Automation Anywhere. In the next five chapters, we will be taking a
-closer look at the different packages and actions Automation Anywhere
-offers.
-
-In this lab, you will get hands-on experience with the basic
-essentials for developing with Automation Anywhere. You will be
-creating, assigning, and editing values stored in variables, and these
-variables will include Booleans, strings, numbers, and dates. We will
-also be using message boxes and prompts to act as inputs and outputs of
-our data. This lab will also include the continuous use of comments
-to help us stick to our specifications. When working with variables and
-their values, as developers we often need to convert the data types of
-assigned values. You will also get an opportunity to convert some data
-types between variables.
-
-Again, you will get a hands-on opportunity to build and execute bots
-using these actions through simple, step-by-step instructions. You will
-build various components throughout this lab as we walk through the
-actions.
-
 In this lab, we will cover the following topics:
 
 -   Working with different variable types
 -   Using message boxes and prompts
 -   Converting data types
-
-
-
 
 
 Technical requirements 
@@ -47,13 +16,7 @@ Technical requirements
 In order to install the Automation Anywhere Bot agent, the following is
 required:
 
--   Windows OS version 7 or higher
--   A processor with a minimum speed of 3 GHz
--   A minimum of 4 GB RAM
--   At least 100 MB of hard disk space
--   Internet Explorer v10 or higher OR Chrome v49 or higher
--   A minimum screen resolution of 1024\*768
--   An internet connection with a minimum speed of 10 Mb/sec
+-   Google Chrome 
 -   Completed registration with Automation Anywhere  Community
     Edition
 -   Successful logon to Automation Anywhere  Community Edition
@@ -61,42 +24,8 @@ required:
 -   The successful downloading of sample data from GitHub
 
 
-
-
-
 Working with different variable types 
 =====================================
-
-
-We have already used some variables for our first
-bot. In this section, we will be taking a closer look at the following
-data types: `String`, `Number`,
-`Datetime`, and `Boolean`. You will also get to
-explore the specific packages and actions available for these types of
-variables. There are other data types available in Automation Anywhere and each type is represented by a specific icon. Here, you can see the icons for each
-type of variable:
-
-
-![](./images/Figure_6.1_B15646.jpg)
-
-
-
-From the symbol, you will be able to quickly identify the variable type
-without relying on the variable name. When you
-select and use variables, they will all be displayed between the
-`$` symbol. Like most development platforms, it is good
-practice to use a naming convention when crating variable names. This
-book will be using the following variable naming notation:
-
-
-
-
-![](./images/Figure_6.2_B15646.jpg)
-
-
-
-
-
 
 In the following section, we will take a walk-through of each variable
 type. This walk-through will show how to create, assign, use, and output
@@ -112,12 +41,6 @@ boxes to check each stage of the bot.
 
 Using the String variable type 
 ------------------------------
-
-Learning how to use variables is key to pretty
-much all programming languages. A `String` type variable is
-used for alphanumeric values. `String` variables are required
-for most outputs in Automation Anywhere. This includes output to message
-boxes and log files.
 
 In the walk-through that we will look at next, we will be performing the
 following tasks:
@@ -154,8 +77,7 @@ Let\'s start this walk-through by executing the following steps:
     look like this:
 
     
-    ![Figure 6.4 -- Creating a variable
-    dialog](./images/Figure_6.4_B15646.jpg)
+    ![](./images/Figure_6.4_B15646.jpg)
     
 
 
@@ -230,8 +152,7 @@ Let\'s start this walk-through by executing the following steps:
     The action properties dialog should look like this:
 
     
-    ![Figure 6.7 -- String: Assign action
-    properties](./images/Figure_6.7_B15646.jpg)
+    ![](./images/Figure_6.7_B15646.jpg)
     
 
 
@@ -252,8 +173,7 @@ Let\'s start this walk-through by executing the following steps:
     this:
 
     
-    ![Figure 6.8 -- String: Assign action
-    properties](./images/Figure_6.8_B15646.jpg)
+    ![](./images/Figure_6.8_B15646.jpg)
     
 
 
@@ -276,8 +196,7 @@ Let\'s start this walk-through by executing the following steps:
     The action properties dialog should look like this:
 
     
-    ![Figure 6.9 -- String: Assign action
-    properties](./images/Figure_6.9_B15646.jpg)
+    ![](./images/Figure_6.9_B15646.jpg)
     
 
 
@@ -297,8 +216,7 @@ Let\'s start this walk-through by executing the following steps:
     The action properties dialog should look like this:
 
     
-    ![Figure 6.10 -- Message box
-    properties](./images/Figure_6.10_B15646.jpg)
+    ![](./images/Figure_6.10_B15646.jpg)
     
 
 
@@ -307,14 +225,7 @@ Let\'s start this walk-through by executing the following steps:
     should look something like this:
 
 
-
-
-![Figure 6.11 -- Development
-interface](./images/Figure_6.11_B15646.jpg)
-
-
-
-
+![](./images/Figure_6.11_B15646.jpg)
 
 
 In this walk-through, you have learned how to create **String** type
@@ -329,10 +240,6 @@ starting with the `Datetime` data type.
 Using the Datetime variable type 
 --------------------------------
 
-A `Datetime` type variable is used for
-date and time values. It stores the date and time as a single unit.
-Dates can be tricky as the format can vary between different regions.
-That\'s why a time zone needs to be selected.
 
 In this walk-through, we will be performing the following tasks:
 
@@ -423,8 +330,7 @@ Let\'s start this walk-through by executing the following steps:
     The **Datetime: Add** action properties should look like this:
 
     
-    ![Figure 6.14 -- Datetime: Add action
-    properties](./images/Figure_6.14_B15646.jpg)
+    ![](./images/Figure_6.14_B15646.jpg)
     
 
 
@@ -450,8 +356,7 @@ Let\'s start this walk-through by executing the following steps:
     The action properties should look like this:
 
     
-    ![Figure 6.15 -- Datetime: To string action
-    properties](./images/Figure_6.15_B15646.jpg)
+    ![](./images/Figure_6.15_B15646.jpg)
     
 
 
@@ -471,8 +376,7 @@ Let\'s start this walk-through by executing the following steps:
     The action properties dialog should look like this:
 
     
-    ![Figure 6.16 -- Message box
-    properties](./images/Figure_6.16_B15646.jpg)
+    ![](./images/Figure_6.16_B15646.jpg)
     
 
 
@@ -483,8 +387,7 @@ Let\'s start this walk-through by executing the following steps:
 
 
 
-![Figure 6.17 -- Development
-interface](./images/Figure_6.17_B15646.jpg)
+![](./images/Figure_6.17_B15646.jpg)
 
 
 
@@ -503,15 +406,6 @@ data type variable, the `Boolean` data type.
 
 Using the Boolean variable type 
 -------------------------------
-
-A `Boolean` type variable is used as a
-**Flag**. This is represented as *True*/*False*, *Yes*/*No*, or
-*On*/*Off*. However, it is represented as the underlying value being
-either `0` or `1`. There can only be one of the two
-states of the value of a `Boolean` variable at any given time.
-Usually, when a `Boolean` variable is created, it tends to be
-set as `False` by default. This can be set to `True`
-if required.
 
 In the next walk-through, we will be performing the following tasks:
 
@@ -596,8 +490,7 @@ Let\'s start this walk-through by executing the following steps:
     The action properties should look like this:
 
     
-    ![Figure 6.20 -- Boolean: Assign action
-    properties](./images/Figure_6.20_B15646.jpg)
+    ![](./images/Figure_6.20_B15646.jpg)
     
 
 
@@ -620,8 +513,7 @@ Let\'s start this walk-through by executing the following steps:
     The Boolean: Invert action properties should look like this:
 
     
-    ![Figure 6.21 -- Boolean: Invert action
-    properties](./images/Figure_6.21_B15646.jpg)
+    ![](./images/Figure_6.21_B15646.jpg)
     
 
 
@@ -642,8 +534,7 @@ Let\'s start this walk-through by executing the following steps:
     The action properties should look like this:
 
     
-    ![Figure 6.22 -- Boolean: To string action
-    properties](./images/Figure_6.22_B15646.jpg)
+    ![](./images/Figure_6.22_B15646.jpg)
     
 
 
@@ -664,8 +555,7 @@ Let\'s start this walk-through by executing the following steps:
     The action properties dialog should look like this:
 
     
-    ![Figure 6.23 -- Message box
-    properties](./images/Figure_6.23_B15646.jpg)
+    ![](./images/Figure_6.23_B15646.jpg)
     
 
 
@@ -676,8 +566,7 @@ Let\'s start this walk-through by executing the following steps:
 
 
 
-![Figure 6.24 -- Development
-interface](./images/Figure_6.24_B15646.jpg)
+![](./images/Figure_6.24_B15646.jpg)
 
 
 
@@ -697,10 +586,6 @@ variable, probably one of the most commonly used data types.
 Using the Number variable type 
 ------------------------------
 
-A `Number` type variable is used to
-store all numeric values. Automation Anywhere uses this single variable
-type to store any numeric type value, for example, an integer, currency,
-or decimal. We do not need to identify the type of number it is.
 
 In this walk-through, we will be performing the following tasks:
 
@@ -771,8 +656,7 @@ following tasks:
     The action properties should look like this:
 
     
-    ![Figure 6.26 -- Number: Random action
-    properties](./images/Figure_6.26_B15646.jpg)
+    ![](./images/Figure_6.26_B15646.jpg)
     
 
 
@@ -794,8 +678,7 @@ following tasks:
     The action properties should look like this:
 
     
-    ![Figure 6.27 -- Number: Assign action
-    properties](./images/Figure_6.27_B15646.jpg)
+    ![](./images/Figure_6.27_B15646.jpg)
     
 
 
@@ -818,8 +701,7 @@ following tasks:
     The action properties should look like this:
 
     
-    ![Figure 6.28 -- Number: To string action
-    properties](./images/Figure_6.28_B15646.jpg)
+    ![](./images/Figure_6.28_B15646.jpg)
     
 
 
@@ -839,8 +721,7 @@ following tasks:
     The action properties dialog should look like this:
 
     
-    ![Figure 6.29 -- Message box
-    properties](./images/Figure_6.29_B15646.jpg)
+    ![](./images/Figure_6.29_B15646.jpg)
     
 
 
@@ -851,12 +732,7 @@ following tasks:
 
 
 
-![Figure 6.30 -- Development
-interface](./images/Figure_6.30_B15646.jpg)
-
-
-
-
+![](./images/Figure_6.30_B15646.jpg)
 
 
 You should now have a clear understanding of how to create new variables
@@ -868,17 +744,6 @@ walk-throughs so far, you should now be comfortable with using the
 `String`, `Datetime`, `Boolean`, and
 `Number` variables. We will cover some of the other variables
 in the forthcoming chapters.
-
-Although our bot so far is performing a number of calculations, we do
-not have any user inputs or any outputs. In the next section, we will
-add prompts to get user inputs and message boxes to output the results.
-We have been assigning fixed values to variables, so using prompts will
-allow the operator to assign values given as a response to a prompt. The
-**Message box** will allow you to visually see the
-contents of these variables.
-
-
-
 
 
 Using message boxes and prompts 
@@ -911,15 +776,10 @@ Let\'s start this walk-through by performing the following steps:
 
 2.  Select the options menu for line **2**:
 
-    
-    ![Figure 6.31 -- Action line edit
-    options](./images/Figure_6.31_B15646.jpg)
+    ![](./images/Figure_6.31_B15646.jpg)
     
 
-
-
-3.  Fromoptions, select
-    **Disable action**.
+3.  From the options, select **Disable action**.
 
 4.  Repeat steps *2* and *3* for line **3**.
 
@@ -941,12 +801,8 @@ Let\'s start this walk-through by performing the following steps:
     The action properties should look like this:
 
     
-    ![Figure 6.32 -- Prompt: For value action
-    properties](./images/Figure_6.32_B15646.jpg)
+    ![](./images/Figure_6.32_B15646.jpg)
     
-
-
-
 7.  Click on **Save**.
 
 8.  Add another **Prompt: For value**
@@ -969,53 +825,11 @@ place on line **9** will output the merged variable values. The
 development interface should look something like this:
 
 
-
-
-![Figure 6.33 -- Development
-interface](./images/Figure_6.33_B15646.jpg)
-
-
-
-
-
-
-A **Message box** can be a very useful action to use as a development
-tool. Incorporating them as test points throughout
-your taskbot during development helps ensure your
-bot is doing what it is supposed to. Once the bot is ready for a
-production environment, always remember to disable or automatically
-close any message boxes as they could stop the bot as it awaits a user
-to click on **OK**.
-
-The other point to remember is, a **Message Box** can only output a
-`String` data type. If you have a number to output, you will
-have to convert this using the relevant action. In the next section, we
-will look at converting variables from one type to another.
-
-
-
+![](./images/Figure_6.33_B15646.jpg)
 
 
 Converting data types 
 =====================
-
-
-As a developer, there is a lot we have to consider
-when working with data. This applies to software development, and not
-just RPA. With Automation Anywhere, when data is initially read from a
-source, it is often assumed to be of the `String` type. If the
-data item is not a `String`, it will need to be converted to
-its actual type. Also, the most common output is also a
-`String` type. If values are outputted to a **Message Box** or
-log/text files, they need to be a `String`. If they are not,
-then again, the data item will need to be converted. Luckily, there are
-a few scenarios in our bot where data conversion will be useful.
-
-The bot we have been building so far already has some great examples of
-converting the data type. Since the outputs of each walk-through have
-been as a **Message box**, it is mandatory that the value is of the
-`String` data type. Message boxes can only show
-`String` data types.
 
 Let\'s look at the data conversions performed by the current bot. The
 first data conversion the bot performs is
@@ -1023,14 +837,7 @@ converting a `Datetime` data type to a `String` data
 type. Take a look at line **15** from the development interface:
 
 
-
-
-![Figure 6.34 -- Converting a Datetime data type to
-String](./images/Figure_6.34_B15646.jpg)
-
-
-
-
+![](./images/Figure_6.34_B15646.jpg)
 
 
 The next data conversion performed is from a `Boolean` data
@@ -1038,28 +845,14 @@ type to a `String` data type. This is demonstrated on line
 **24** of the development interface:
 
 
-
-
-![Figure 6.35 -- Converting a Boolean data type to
-String](./images/Figure_6.35_B15646.jpg)
-
-
-
-
+![](./images/Figure_6.35_B15646.jpg)
 
 
 Finally, the bot converts a `Number` data type to a
 `String` data type. This is on line `33` of the
 development interface:
 
-
-
-
-![Figure 6.36 -- Converting a Number data type to
-String](./images/Figure_6.36_B15646.jpg)
-
-
-
+![](./images/Figure_6.36_B15646.jpg)
 
 
 
@@ -1076,27 +869,6 @@ only creating and assigning, but also converting,
 data types is a great start to building your confidence with Automation
 Anywhere.
 
-
-
-
-
-Summary 
-=======
-
-
-Great work! Your bot has got some great examples of working with
-variables. To recap, you have learned how to create different types of
-variables from numbers, Booleans, and dates. Your knowledge has been
-expanded by assigning values to these variables as well as performing
-calculations. We also explored the reasons for using, and how to
-convert, different data types. Having also created prompts and message
-boxes, you are well on your way to start learning some more exciting
-Automation Anywhere packages and actions. This lab and its
-walk-throughs are essential to setting a good foundation for all
-Automation Anywhere developers. All of the skills learned, such as
-creating and assigning variables, will be used in pretty much every
-single bot you build. During the development process, you will almost
-certainly be using message boxes and comments.
 
 In the next lab, we will expand further on the packages. In
 particular, you will learn how to launch and navigate around desktop and

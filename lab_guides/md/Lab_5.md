@@ -1,31 +1,5 @@
 Lab 5: Building Your First Bot 
-=========================================================
-
-
-As a bot developer, you will use many of the different actions available
-to you. We have already looked at implementing a simple **Message box**.
-Although this shows how to apply an action, it doesn\'t really perform
-any task. In the real world, bots perform tasks that are usually done by
-humans. These tasks are often tedious, boring, and repetitive. To really
-learn how to build fully functional bots, we need a task that would be
-ideal for automation.
-
-You should now be familiar with the development interface. In the
-previous lab, we looked at the different views for visualizing your
-bot as you built it. You also got a glimpse of all the actions available
-to help automate your tasks.
-
-In this lab, we will expand on this knowledge. We will take a
-real-life business case, a relatively simple process, with the aim of
-fully automating it. The process will involve including, reading, and
-creating a CSV file, as well as carrying out some basic arithmetic
-calculations.
-
-Such scenarios need sample data to work with. There is a GitHub
-repository available that contains all the sample data to accompany this
-book. It also has all the source code for reference. Before you start to
-build your bot, you are guided on how to download this repository from
-GitHub. This data will also be needed for the forthcoming chapters.
+==============================
 
 By the end of this lab, you will have built your own RPA fully
 functioning bot. You will have learned how to take a user story and
@@ -43,8 +17,6 @@ In this lab, we will cover the following topics:
 
 
 
-
-
 Technical requirements 
 ======================
 
@@ -52,13 +24,7 @@ Technical requirements
 In order to install Automation Anywhere  Bot agent, the following
 is required:
 
--   Windows OS version 7 or higher
--   A processor with a minimum speed of 3 GHz
--   A minimum of 4 GB RAM
--   At least 100 MB of hard disk space
--   Internet Explorer v10 or higher OR Chrome v49 or higher
--   A minimum screen resolution of 1024\*768
--   An internet connection with a minimum speed of 10 Mb/sec
+-   Google Chrome 
 -   Completed registration with Automation Anywhere  Community
     Edition
 -   Successful login to Automation Anywhere  Community Edition
@@ -72,48 +38,41 @@ Downloading sample data from GitHub
 ===================================
 
 
-GitHub provides a public repository for files and source code files.
-This is ideal for hosting the necessary accompanying
-files for this book. I would recommend you
-download the whole file structure to your root
-folder. I use my `C:\` drive as my root folder. The book will
+Download the whole file structure to your root
+folder. I use my `C:\` drive as my root folder. The course will
 be referring to this folder to help identify the location of files that
 will be needed. You do not need a GitHub account to download the
 repository.
 
-To download the complete repository needed for this book, perform the
+To download the complete repository needed for this course, perform the
 following steps:
 
 1.  Navigate to the GitHub repository from your web browser using the
     following link:
-    <https://github.com/RPA-Training/Hands-On-RPA-with-AA/tree/Sample-Data>:
+    <https://github.com/fenago/automation-anywhere-course>:
 
     
-    ![Figure 5.1 -- GitHub
-    repository](./images/Figure_5.1_B15646.jpg)
-    
-
+    ![](./images/Figure_5.1_B15646.jpg)
 
 
 2.  To download, click on the green **Clone or download** button. This
     will open a small dialog box, and then click on **Download ZIP**:
 
-    
-    ![Figure 5.2 -- Repository download
-    dialog](./images/Figure_5.2_B15646.jpg)
-    
-
-
+    ![](./images/Figure_5.2_B15646.jpg)
 
 3.  This will begin the downloading of the compressed
-    `Hands-On-RPA-with-AA-Sample-Data.zip` file.
+    `automation-anywhere-course-main.zip` file.
 
 4.  Once the ZIP file has been downloaded, extract it all to your root
     folder. If you use `C:\` as your root folder, you will
     have the following path:
-    `C:\Hands-On-RPA-with-AA-Sample-Data\`.
+    `C:\automation-anywhere-course-main\`.
 
-5.  Close the GitHub page.
+5. **Important!** Rename folder name to `Hands-On-RPA-with-AA-Sample-Data`.
+
+  ![](./images/4.jpg)
+    
+6.  Close the GitHub page.
 
 You will now have the sample data file needed for
 your first bot. Before we build the bot, it is
@@ -198,6 +157,8 @@ Let\'s start by creating a new bot in **List** view:
 
 3.  Add a **Comment** action as line **1**; we will use this as our bot
     description comment.
+
+    ![](./images/5.jpg)
 
 4.  Set the **Comment** property\'s text as
     `"Task: Calculate Monthly Loan Payment to new CSV File"`.
@@ -304,24 +265,14 @@ To create the variables, perform the following steps:
 
 
 2.  Click on the **+** icon to create a variable:
-
+ 
+    ![](./images/Figure_5.6_B15646.jpg)
     
-    ![Figure 5.6 -- Creating a new
-    variable](./images/Figure_5.6_B15646.jpg)
-    
-
-
-
     The **Create variable** dialog will appear. Give your new variable
     the name `strRef`, set it as a `String` type,
     and then click on **Create**:
-
     
-    ![Figure 5.7 -- Creating a variable
-    dialog](./images/Figure_5.7_B15646.jpg)
-    
-
-
+    ![](./images/Figure_5.7_B15646.jpg)
 
 3.  Create another new variable named `numAmount` as the
     `Number` type.
@@ -386,12 +337,7 @@ To create the CSV file with headers, perform the following steps:
     Your bot development interface in **List** view should look like
     this:
 
-    
-    ![Figure 5.9 -- Adding the Log to file
-    action](./images/Figure_5.9_B15646.jpg)
-    
-
-
+    ![](./images/Figure_5.9_B15646.jpg)
 
 2.  Set the following
     properties for the **Log to file** action
@@ -408,8 +354,7 @@ To create the CSV file with headers, perform the following steps:
     this:
 
     
-    ![Figure 5.10 -- Log to file: The action properties
-    dialog](./images/Figure_5.10_B15646.jpg)
+    ![](./images/Figure_5.10_B15646.jpg)
     
 
 
@@ -472,15 +417,11 @@ perform the following steps:
 
     **Trim trailing spaces**: *Checked*
 
-    The action properties
-    dialog should look like this:
+    The action properties dialog should look like this:
 
     
-    ![Figure 5.12 -- CSV/TXT file opening properties
-    dialog](./images/Figure_5.12_B15646.jpg)
+    ![](./images/Figure_5.12_B15646.jpg)
     
-
-
 
 4.  Click on **Save** or use
     the shortcut, *Ctrl* + *S*.
@@ -794,19 +735,13 @@ output CSV file, perform the following steps:
     **File path**:
     `C:\Hands-On-RPA-with-AA-Sample-Data\Chapter05_Output.csv`
 
-    **Enter text to log**: `$strRef, $strMonthly$`
+    **Enter text to log**: `$strRef$, $strMonthly$`
 
     **When logging**: **Append to existing log file**
 
-    The action properties dialog should look like
-    this:
-
-    
-    ![Figure 5.23 -- Adding a new row to a CSV
-    file](./images/Figure_5.23_B15646.jpg)
-    
-
-
+    The action properties dialog should look like this:
+ 
+    ![](./images/Figure_5.23_B15646.jpg)
 
 6.  Click on **Save**.
 
@@ -814,12 +749,7 @@ output CSV file, perform the following steps:
     list of actions in the development window should look like this:
 
 
-
-
-![Figure 5.24 -- Completing the bot
-actions](./images/Figure_5.24_B15646.jpg)
-
-
+![](./images/Figure_5.24_B15646.jpg)
 
 
 
@@ -830,17 +760,7 @@ output CSV file containing the calculated `Monthly Payments`.
 The output file should look like this in Excel:
 
 
-
-
 ![](./images/Figure_5.25_B15646.jpg)
-
-
-
-
-
-
-
-
 
 
 Summary 

@@ -2,32 +2,9 @@ Lab 15: Working with Databases
 =========================================================
 
 
-In the preceding lab, you learned how to include PDF tasks as part
-of your automation scope. Through the use of walk-throughs, you learned
-how to extract text and images from PDF documents. The lab also
-included splitting and merging multiple documents into a single PDF
-file. We finished off the lab with an explanation of how to encrypt
-and decrypt documents as well as how to use the `Dictionary`
-variable to get file properties.
-
-In this lab, you will learn all about automating tasks using
-databases. We will explore how to connect to different types of
-databases such as Access, SQL, and Oracle. We will also look at using
-connection strings to connect to data sources. The walk-throughs will
-guide you on how to work with your datasets. This will include reading,
-updating, inserting, and deleting your data. You will also learn how to
-execute SQL `Select` statements against your databases.
-
 In this lab, we will be using the following packages:
 
-
-
-
 ![](./images/Figure_15.1_B15646.jpg)
-
-
-
-
 
 
 The walk-throughs in this lab will consist of demonstrating the
@@ -55,13 +32,7 @@ Technical requirements
 
 In order to install Automation Anywhere, the following are required:
 
--   Windows OS version 7 or higher
--   A processor with a minimum speed of 3 GHz
--   A minimum of 4 GB RAM
--   At least 100 MB of hard disk space
--   Internet Explorer v10 or higher OR Chrome v49 or higher
--   A minimum screen resolution of 1024\*768
--   An internet connection with a minimum speed of 10 Mb/sec
+-   Google Chrome 
 -   Completed registration with Automation Anywhere  Community
     Edition
 -   Successful logon to Automation Anywhere  Community Edition
@@ -534,8 +505,7 @@ Let\'s start this walk-through by performing the following steps:
 
 
 
-![Figure 15.19 -- Development
-interface](./images/Figure_15.19_B15646.jpg)
+![](./images/Figure_15.19_B15646.jpg)
 
 
 
@@ -596,7 +566,7 @@ to do the following:
 To achieve this, we will run the following SQL statement:
 
 
-``` {.language-markup}
+```
 SELECT [Item Type] As Type, Count([Item Type]) as Orders, Sum([Units Sold]) as Quantity, Sum([Total Profit]) as Profit FROM tblSales GROUP BY [Item Type] ORDER BY [Item Type]Copy
 ```
 
@@ -803,7 +773,7 @@ statements to retrieve your dataset:
 earlier:**
 
 
-``` {.language-markup}
+```
 Connection string: SELECT * FROM [Approved$$]
 SQL Statement: SELECT * FROM [Approved$$]Copy
 ```
@@ -824,7 +794,7 @@ The output CSV file should look like this:
 **SQL statement to retrieve data from the sample SQLite database:**
 
 
-``` {.language-markup}
+```
 Connection string: SqLite Database - Chapter15_SQLite.db
 SQL Statement: SELECT * FROM playlistsCopy
 ```
@@ -979,7 +949,7 @@ In the walk-through, our bot will insert a new type of product,
 insert this new record, the SQL statement would be as follows:
 
 
-``` {.language-markup}
+```
 INSERT INTO tblTypes (ItemType) VALUES 'Electrical';Copy
 ```
 
@@ -1027,7 +997,7 @@ with the `tblTypes` table. One item in the table is
 be as follows:
 
 
-``` {.language-markup}
+```
 UPDATE tblTypes SET ItemType = "Fresh Fruits" WHERE ItemType = "Fruits"Copy
 ```
 
@@ -1075,7 +1045,7 @@ value is `Cereal`. The SQL statement to apply this
 `Delete` statement would be as follows:
 
 
-``` {.language-markup}
+```
 DELETE FROM tblTypes WHERE ItemType ="Cereal";Copy
 ```
 

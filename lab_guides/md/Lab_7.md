@@ -42,8 +42,7 @@ data. This lab will be using the following packages:
 
 
 
-![Figure 7.1 -- Packages used in this
-lab](./images/Figure_7.1_B15646.jpg)
+![](./images/Figure_7.1_B15646.jpg)
 
 
 
@@ -71,9 +70,7 @@ required:
 -   A processor with a minimum speed of 3 GHz
 -   A minimum of 4 GB RAM
 -   At least 100 MB of hard disk space
--   Internet Explorer v10 or higher OR Chrome v49 or higher
--   A minimum screen resolution of 1024\*768
--   An internet connection with a minimum speed of 10 Mb/sec
+-   Google Chrome
 -   Completed registration with Automation Anywhere  Community
     Edition
 -   Successful logon to Automation Anywhere  Community Edition
@@ -264,8 +261,7 @@ properties](./images/Figure_7.3_B15646.jpg)
     properties should look like this:
 
     
-    ![Figure 7.8 -- Recorder: Capturing Object
-    properties](./images/Figure_7.8_B15646.jpg)
+    ![](./images/Figure_7.8_B15646.jpg)
     
 
 
@@ -1051,8 +1047,7 @@ implement this:
     this:
 
     
-    ![Figure 7.47 -- Window: Close
-    properties](./images/Figure_7.47_B15646.jpg)
+    ![](./images/Figure_7.47_B15646.jpg)
     
 
 

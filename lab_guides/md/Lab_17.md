@@ -63,9 +63,7 @@ requirements are necessary:
 -   A processor with a minimum speed of 3 GHz
 -   A minimum of 4 GB RAM
 -   At least 100 MB of hard disk space
--   Internet Explorer v10 or higher or Chrome v49 or higher
--   A minimum screen resolution of 1024\*768
--   An internet connection with a minimum speed of 10 Mbps
+-   Google Chrome
 -   You must have completed registration with Automation Anywhere 
     Community Edition
 -   You must have logged on successfully to Automation Anywhere 
@@ -124,8 +122,7 @@ Let\'s start this walk-through by executing the following steps:
 
 
 
-![Figure 17.2 -- Development
-interface](./images/Figure_17.2_B15646.jpg)
+![](./images/Figure_17.2_B15646.jpg)
 
 
 
@@ -182,8 +179,7 @@ Let\'s start this walk-through by executing the following steps:
     following screenshot:
 
     
-    ![Figure 17.4 -- VBScript: Open
-    properties](./images/Figure_17.4_B15646.jpg)
+    ![](./images/Figure_17.4_B15646.jpg)
     
 
 
@@ -202,8 +198,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look as shown in the following screenshot:
 
     
-    ![Figure 17.5 -- VBScript: Run function
-    properties](./images/Figure_17.5_B15646.jpg)
+    ![](./images/Figure_17.5_B15646.jpg)
     
 
 
@@ -222,8 +217,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look as shown in the following screenshot:
 
     
-    ![Figure 17.6 -- VBScript: Close
-    properties](./images/Figure_17.6_B15646.jpg)
+    ![](./images/Figure_17.6_B15646.jpg)
     
 
 
@@ -234,8 +228,7 @@ Let\'s start this walk-through by executing the following steps:
 
 
 
-![Figure 17.7 -- Development
-interface](./images/Figure_17.7_B15646.jpg)
+![](./images/Figure_17.7_B15646.jpg)
 
 
 
@@ -290,8 +283,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look as shown in the following screenshot:
 
     
-    ![Figure 17.9 -- VBScript: Open
-    properties](./images/Figure_17.9_B15646.jpg)
+    ![](./images/Figure_17.9_B15646.jpg)
     
 
 
@@ -310,8 +302,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look as shown in the following screenshot:
 
     
-    ![Figure 17.10 -- VBScript: Run function
-    properties](./images/Figure_17.10_B15646.jpg)
+    ![](./images/Figure_17.10_B15646.jpg)
     
 
 
@@ -330,8 +321,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look as shown in the following screenshot:
 
     
-    ![Figure 17.11 -- VBScript: Close
-    properties](./images/Figure_17.11_B15646.jpg)
+    ![](./images/Figure_17.11_B15646.jpg)
     
 
 
@@ -342,8 +332,7 @@ Let\'s start this walk-through by executing the following steps:
 
 
 
-![Figure 17.12 -- Development
-interface](./images/Figure_17.12_B15646.jpg)
+![](./images/Figure_17.12_B15646.jpg)
 
 
 
@@ -383,7 +372,7 @@ use a parameter within a VBScript, you need to utilize the following
 syntax:
 
 
-``` {.language-markup}
+```
 WScript.Arguments(0)Copy
 ```
 
@@ -393,7 +382,7 @@ The index number (`0`) represents the item in the
 at `0`. The contents of the script file are as follows:
 
 
-``` {.language-markup}
+```
 strValue01 = WScript.Arguments(0)
 strValue02 = WScript.Arguments(1)
 msgbox "Hello " & strValue01 & " " & strValue02,,"Input Parameters"Copy
@@ -430,8 +419,7 @@ following steps:
     The properties should look as shown in the following screenshot:
 
     
-    ![Figure 17.14 -- String: Assign
-    properties](./images/Figure_17.14_B15646.jpg)
+    ![](./images/Figure_17.14_B15646.jpg)
     
 
 
@@ -453,8 +441,7 @@ following steps:
     The properties should look as shown in the following screenshot:
 
     
-    ![Figure 17.15 -- String: Assign
-    properties](./images/Figure_17.15_B15646.jpg)
+    ![](./images/Figure_17.15_B15646.jpg)
     
 
 
@@ -477,8 +464,7 @@ following steps:
     The properties should look as shown in the following screenshot:
 
     
-    ![Figure 17.16 -- List: Add item
-    properties](./images/Figure_17.16_B15646.jpg)
+    ![](./images/Figure_17.16_B15646.jpg)
     
 
 
@@ -506,8 +492,7 @@ following steps:
     The properties should look as shown in the following screenshot:
 
     
-    ![Figure 17.17 -- VBScript: Open
-    properties](./images/Figure_17.17_B15646.jpg)
+    ![](./images/Figure_17.17_B15646.jpg)
     
 
 
@@ -531,8 +516,7 @@ following steps:
     The properties should look as shown in the following screenshot:
 
     
-    ![Figure 17.18 -- VBScript: Run function
-    properties](./images/Figure_17.18_B15646.jpg)
+    ![](./images/Figure_17.18_B15646.jpg)
     
 
 
@@ -551,8 +535,7 @@ following steps:
     The properties should look as shown in the following screenshot:
 
     
-    ![Figure 17.19 -- VBScript: Close
-    properties](./images/Figure_17.19_B15646.jpg)
+    ![](./images/Figure_17.19_B15646.jpg)
     
 
 
@@ -563,8 +546,7 @@ following steps:
 
 
 
-![Figure 17.20 -- Development
-interface](./images/Figure_17.20_B15646.jpg)
+![](./images/Figure_17.20_B15646.jpg)
 
 
 
@@ -623,8 +605,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look as shown in the following screenshot:
 
     
-    ![Figure 17.21 -- Number: Assign
-    properties](./images/Figure_17.21_B15646.jpg)
+    ![](./images/Figure_17.21_B15646.jpg)
     
 
 
@@ -648,8 +629,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look as shown in the following screenshot:
 
     
-    ![Figure 17.22 -- VBScript: Open
-    properties](./images/Figure_17.22_B15646.jpg)
+    ![](./images/Figure_17.22_B15646.jpg)
     
 
 
@@ -677,8 +657,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look as shown in the following screenshot:
 
     
-    ![Figure 17.23 -- VBScript: Run function
-    properties](./images/Figure_17.23_B15646.jpg)
+    ![](./images/Figure_17.23_B15646.jpg)
     
 
 
@@ -696,8 +675,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look as shown in the following screenshot:
 
     
-    ![Figure 17.24 -- VBScript: Close
-    properties](./images/Figure_17.24_B15646.jpg)
+    ![](./images/Figure_17.24_B15646.jpg)
     
 
 
@@ -723,8 +701,7 @@ Let\'s start this walk-through by executing the following steps:
     following screenshot:
 
     
-    ![Figure 17.25 -- Message box
-    properties](./images/Figure_17.25_B15646.jpg)
+    ![](./images/Figure_17.25_B15646.jpg)
     
 
 
@@ -735,8 +712,7 @@ Let\'s start this walk-through by executing the following steps:
 
 
 
-![Figure 17.26 -- Development
-interface](./images/Figure_17.26_B15646.jpg)
+![](./images/Figure_17.26_B15646.jpg)
 
 
 
@@ -822,8 +798,7 @@ following steps:
     The properties should look as shown in the following screenshot:
 
     
-    ![Figure 17.29 -- Number: Assign
-    properties](./images/Figure_17.29_B15646.jpg)
+    ![](./images/Figure_17.29_B15646.jpg)
     
 
 
@@ -849,8 +824,7 @@ following steps:
     The properties should look as shown in the following screenshot:
 
     
-    ![Figure 17.30 -- Python script: Open
-    properties](./images/Figure_17.30_B15646.jpg)
+    ![](./images/Figure_17.30_B15646.jpg)
     
 
 
@@ -879,8 +853,7 @@ following steps:
     The properties should look as shown in the following screenshot:
 
     
-    ![Figure 17.31 -- Python script: Execute function
-    properties](./images/Figure_17.31_B15646.jpg)
+    ![](./images/Figure_17.31_B15646.jpg)
     
 
 
@@ -899,8 +872,7 @@ following steps:
     The properties should look as shown in the following screenshot:
 
     
-    ![Figure 17.32 -- Python script: Close
-    properties](./images/Figure_17.32_B15646.jpg)
+    ![](./images/Figure_17.32_B15646.jpg)
     
 
 
@@ -924,8 +896,7 @@ following steps:
     The properties should look as shown in the following screenshot:
 
     
-    ![Figure 17.33 -- Message box
-    properties](./images/Figure_17.33_B15646.jpg)
+    ![](./images/Figure_17.33_B15646.jpg)
     
 
 
@@ -936,8 +907,7 @@ following steps:
 
 
 
-![Figure 17.34 -- Development
-interface](./images/Figure_17.34_B15646.jpg)
+![](./images/Figure_17.34_B15646.jpg)
 
 
 

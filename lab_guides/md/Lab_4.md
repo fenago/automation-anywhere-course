@@ -162,8 +162,7 @@ message box action:
 5.  Set the following properties for the **Message box** action:
 
     
-    ![Figure 4.10 -- Message box
-    properties](./images/Figure_4.10_B15646.jpg)
+    ![](./images/Figure_4.10_B15646.jpg)
     
 
 
@@ -399,8 +398,7 @@ following walk-through:
     The **Create variable** dialog box should look similar to this:
 
     
-    ![Figure 4.24 -- Create variable
-    properties](./images/Figure_4.24_B15646.jpg)
+    ![](./images/Figure_4.24_B15646.jpg)
     
 
 
@@ -413,8 +411,7 @@ following walk-through:
     `strName` variable value:
 
     
-    ![Figure 4.25 -- Editing the Message box
-    properties](./images/Figure_4.25_B15646.jpg)
+    ![](./images/Figure_4.25_B15646.jpg)
     
 
 
@@ -487,8 +484,7 @@ trigger:
     The trigger properties should look similar to this:
 
     
-    ![Figure 4.31 -- File trigger
-    properties](./images/Figure_4.31_B15646.jpg)
+    ![](./images/Figure_4.31_B15646.jpg)
     
 
 

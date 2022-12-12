@@ -2,18 +2,6 @@ Lab 13: Working with Emails
 ======================================================
 
 
-We just explored how to automate tasks using Word in *Lab 12*,
-*Automation Using Word*. Hopefully, the bot you built has given you the
-confidence to edit and update Word documents using Automation Anywhere
-. You have learned how to insert text into defined bookmarks,
-replaced selected text, and added new paragraphs. All these skills and
-practical experience will build your confidence and help you become a
-competent RPA Automation Anywhere developer. In this lab, we will be
-using the following packages:
-
-![](./images/Figure_13.1_B15646.jpg)
-
-
 This lab will explore automating tasks that use **email**. We will
 be looking at the **Email** package in Automation Anywhere. We will look
 at how to connect to different types of email accounts, such as
@@ -44,13 +32,7 @@ Technical requirements
 In order to install Automation Anywhere Bot agent, the following
 requirements are necessary:
 
--   Windows OS version 7 or higher
--   A processor with a minimum speed of 3 GHz
--   A minimum of 4 GB RAM
--   At least 100 MB hard disk space
--   Internet Explorer v10 or higher OR Chrome v49 or higher
--   A minimum screen resolution of 1024\*768
--   An internet connection with a minimum speed of 10 Mb/sec
+-   Google Chrome
 -   Completed registration with Automation Anywhere  Community
     Edition
 -   Successful log-on to Automation Anywhere  Community Edition
@@ -63,37 +45,6 @@ requirements are necessary:
 
 Connecting to mailboxes 
 =======================
-
-
-A big part of our daily routine involves working
-with email. This can be receiving attachments, such as invoices, as well
-as replying to emails with document attachments. There are different
-types of email accounts, such as **Exchange Web Services** (**EWS**),
-**POP3**, and **IMAP**. Each type of mailbox will have its own account,
-which is hosted on a mail server. These accounts
-will require credentials and mail server details in order to access
-them. In the majority of cases, applications such as Outlook are used to
-access and manage emails. Automation Anywhere can work with these
-different types of mailboxes. Account details are needed to connect,
-except when you are using Outlook. As Outlook is already connected to
-your mailbox, no credentials are needed. However, Automation Anywhere
-only supports Outlook when there is only one mailbox connected. It does
-not support multiple mailboxes in Outlook.
-
-Also, note that there are two different types of connections -- one for
-incoming email and one for outgoing email. The incoming type is required
-for reading and searching emails. The outgoing
-type is needed for sending, replying to, and forwarding emails.
-
-The **Email: Connect** action is used to create an email session. As
-with all sessions, they need to be closed once they are no longer
-required. With email, a session is closed using the **Email:
-Disconnect** action. A session with the incoming server details is
-needed whenever you need to access a mailbox for reading or searching
-emails. You will need the outgoing server details for sending, replying
-to, and forwarding any emails. For all these actions, a session is not
-needed, as a server connection to the outgoing mailbox is established
-within the action properties itself.
 
 In the first walk-through, you will learn how to create a new session by
 connecting to the following:
@@ -134,8 +85,7 @@ Let\'s start this walk-through by executing the following steps:
 
 
 
-![Figure 13.2 -- Development
-interface](./images/Figure_13.2_B15646.jpg)
+![](./images/Figure_13.2_B15646.jpg)
 
 
 
@@ -175,8 +125,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look like this:
 
     
-    ![Figure 13.3 -- Email: Connect -- Outlook
-    properties](./images/Figure_13.3_B15646.jpg)
+    ![](./images/Figure_13.3_B15646.jpg)
     
 
 
@@ -208,8 +157,7 @@ Let\'s start this walk-through by executing the following steps:
 
 
 
-![Figure 13.5 -- Development
-interface](./images/Figure_13.5_B15646.jpg)
+![](./images/Figure_13.5_B15646.jpg)
 
 
 
@@ -303,8 +251,7 @@ following steps:
     The properties should look like this:
 
     
-    ![Figure 13.7 -- Email: Connect -- POP3/IMAP
-    properties](./images/Figure_13.7_B15646.jpg)
+    ![](./images/Figure_13.7_B15646.jpg)
     
 
 
@@ -335,8 +282,7 @@ following steps:
 
 
 
-![Figure 13.9 -- Development
-interface](./images/Figure_13.9_B15646.jpg)
+![](./images/Figure_13.9_B15646.jpg)
 
 
 
@@ -411,8 +357,7 @@ Let\'s start this walk-through by executing the following steps:
 
     The properties should look like this:
 
-    ![Figure 13.11 -- Email: Connect -- EWS
-    properties](./images/Figure_13.11_B15646.png)
+    ![](./images/Figure_13.11_B15646.png)
 
 
 
@@ -442,8 +387,7 @@ Let\'s start this walk-through by executing the following steps:
 
 
 
-![Figure 13.13 -- Development
-interface](./images/Figure_13.13_B15646.jpg)
+![](./images/Figure_13.13_B15646.jpg)
 
 
 
@@ -457,8 +401,7 @@ the mailbox connections should look like this:
 
 
 
-![Figure 13.14 -- Development
-interface](./images/Figure_13.14_B15646.jpg)
+![](./images/Figure_13.14_B15646.jpg)
 
 
 
@@ -566,8 +509,7 @@ Let\'s start this walk-through by executing the following steps:
 
 
 
-![Figure 13.17 -- Development
-interface](./images/Figure_13.17_B15646.jpg)
+![](./images/Figure_13.17_B15646.jpg)
 
 
 
@@ -592,8 +534,7 @@ creating our connection to Outlook:
     The properties should look like this:
 
     
-    ![Figure 13.18 -- Email: Connect - Outlook
-    properties](./images/Figure_13.18_B15646.jpg)
+    ![](./images/Figure_13.18_B15646.jpg)
     
 
 
@@ -626,8 +567,7 @@ creating our connection to Outlook:
 
 
 
-![Figure 13.20 -- Development
-interface](./images/Figure_13.20_B15646.jpg)
+![](./images/Figure_13.20_B15646.jpg)
 
 
 
@@ -683,8 +623,7 @@ build the loop and store each email:
     look like this:
 
     
-    ![Figure 13.22 -- Email loop
-    properties](./images/Figure_13.22_B15646.jpg)
+    ![](./images/Figure_13.22_B15646.jpg)
     
 
 
@@ -726,8 +665,7 @@ specific emails, execute the following steps:
     The properties should look like this:
 
     
-    ![Figure 13.23 -- Email loop -- filter
-    properties](./images/Figure_13.23_B15646.jpg)
+    ![](./images/Figure_13.23_B15646.jpg)
     
 
 
@@ -845,8 +783,7 @@ inside our loop:
 
 
 
-![Figure 13.29 -- Development
-interface](./images/Figure_13.29_B15646.jpg)
+![](./images/Figure_13.29_B15646.jpg)
 
 
 
@@ -884,8 +821,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look like this:
 
     
-    ![Figure 13.30 -- Email: Change status
-    properties](./images/Figure_13.30_B15646.jpg)
+    ![](./images/Figure_13.30_B15646.jpg)
     
 
 
@@ -935,8 +871,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look like this:
 
     
-    ![Figure 13.31 -- If
-    properties](./images/Figure_13.31_B15646.jpg)
+    ![](./images/Figure_13.31_B15646.jpg)
     
 
 
@@ -958,8 +893,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look like this:
 
     
-    ![Figure 13.32 -- Folder: Create
-    properties](./images/Figure_13.32_B15646.jpg)
+    ![](./images/Figure_13.32_B15646.jpg)
     
 
 
@@ -986,8 +920,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look like this:
 
     
-    ![Figure 13.33 -- Email: Save attachments
-    properties](./images/Figure_13.33_B15646.jpg)
+    ![](./images/Figure_13.33_B15646.jpg)
     
 
 
@@ -1024,8 +957,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look like this:
 
     
-    ![Figure 13.34 -- Message box
-    properties](./images/Figure_13.34_B15646.jpg)
+    ![](./images/Figure_13.34_B15646.jpg)
     
 
 
@@ -1037,8 +969,7 @@ Let\'s start this walk-through by executing the following steps:
 
 
 
-![Figure 13.35 -- Development
-interface](./images/Figure_13.35_B15646.jpg)
+![](./images/Figure_13.35_B15646.jpg)
 
 
 
@@ -1130,8 +1061,7 @@ following steps:
 
 
 
-![Figure 13.37 -- Development
-interface](./images/Figure_13.37_B15646.jpg)
+![](./images/Figure_13.37_B15646.jpg)
 
 
 
@@ -1180,8 +1110,7 @@ Let\'s begin by executing the following steps:
     These property settings should look like this:
 
     
-    ![Figure 13.38 -- Email: Send -- recipient/subject
-    properties](./images/Figure_13.38_B15646.jpg)
+    ![](./images/Figure_13.38_B15646.jpg)
     
 
 
@@ -1198,8 +1127,7 @@ Let\'s begin by executing the following steps:
     These property settings should look like this:
 
     
-    ![Figure 13.39 -- Email: Send -- email body
-    properties](./images/Figure_13.39_B15646.jpg)
+    ![](./images/Figure_13.39_B15646.jpg)
     
 
 
@@ -1230,8 +1158,7 @@ Let\'s begin by executing the following steps:
     These properties should look like this:
 
     
-    ![Figure 13.40 -- Email: Send -- connection
-    properties](./images/Figure_13.40_B15646.jpg)
+    ![](./images/Figure_13.40_B15646.jpg)
     
 
 
@@ -1306,8 +1233,7 @@ email, just follow these steps:
     The properties should look like this:
 
     
-    ![Figure 13.42 -- Email: Forward -- Outlook
-    properties](./images/Figure_13.42_B15646.jpg)
+    ![](./images/Figure_13.42_B15646.jpg)
     
 
 
@@ -1347,8 +1273,7 @@ To configure your bot to reply to an email, just follow the given steps:
     The properties should look like this:
 
     
-    ![Figure 13.43 -- Email: Reply -- Outlook
-    properties](./images/Figure_13.43_B15646.jpg)
+    ![](./images/Figure_13.43_B15646.jpg)
     
 
 
@@ -1360,8 +1285,7 @@ To configure your bot to reply to an email, just follow the given steps:
 
 
 
-![Figure 13.44 -- Development
-interface](./images/Figure_13.44_B15646.jpg)
+![](./images/Figure_13.44_B15646.jpg)
 
 
 

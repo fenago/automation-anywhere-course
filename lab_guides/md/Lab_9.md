@@ -1,21 +1,6 @@
 Lab 9: Working with Conditional Logic, Loops, and the Filesystem 
 =================================================================
 
-
-In the previous lab, you discovered how to manage string
-manipulation in a number of ways. We examined the **Strings** package
-and went through actions such as **Split**, **Substring**, **Assign**,
-and **Find**, to name a few. All of these are very useful actions. We
-also applied a simple **If** statement, as well as a loop.
-
-In this lab, we will continue expanding our knowledge of Automation
-Anywhere packages and actions. We will look deeper into building loops
-and the different types of looping Automation Anywhere offers. We will
-also look at the functionality of the filesystem, which includes moving,
-deleting, and renaming files and folders. This lab will also look at
-the different types of logical conditions available and how to apply
-these.
-
 In this lab, we will cover the following topics:
 
 -   Applying different types of loops
@@ -31,15 +16,7 @@ actions into context as they are all working toward a complete task. We
 will use the following packages:
 
 
-
-
-![Figure 9.1 -- Packages that will be used in this
-lab](./images/Figure_9.1_B15646.jpg)
-
-
-
-
-
+![](./images/Figure_9.1_B15646.jpg)
 
 For this lab, the two bots we\'ll be building will be automating a
 human process. The first process involves reading each record in a CSV
@@ -63,13 +40,7 @@ Technical requirements
 You will need the following in order to install Automation Anywhere Bot
 agent:
 
--   Windows operating system version 7 or higher
--   Processor with a minimum speed of 3 GHz
--   Minimum of 4 GB RAM
--   At least 100 MB hard disk space
--   Internet Explorer v10 or higher OR Chrome v49 or higher
--   A minimum screen resolution of 1024\*768
--   An internet connection with a minimum speed of 10 Mb/sec
+-   Google Chrome
 -   Completed registration with Automation Anywhere  Community
     Edition
 -   Logged on successfully to Automation Anywhere  Community
@@ -197,8 +168,7 @@ Let\'s start this walk-through by executing the following steps:
 
 
 
-![Figure 9.2 -- Development
-interface](./images/Figure_9.2_B15646.jpg)
+![](./images/Figure_9.2_B15646.jpg)
 
 
 
@@ -207,7 +177,7 @@ interface](./images/Figure_9.2_B15646.jpg)
 
 We are now ready to start on our six sections. We
 will start with *Section 1 -- Opening the source file*. This file is
-available in this book\'s GitHub repository.
+available in this course\'s GitHub repository.
 
 
 
@@ -239,8 +209,7 @@ following steps:
     The properties window should look like this:
 
     
-    ![Figure 9.3 -- CSV/TXT: Open
-    properties](./images/Figure_9.3_B15646.jpg)
+    ![](./images/Figure_9.3_B15646.jpg)
     
 
 
@@ -251,8 +220,7 @@ following steps:
 
 
 
-![Figure 9.4 -- Development
-interface](./images/Figure_9.4_B15646.jpg)
+![](./images/Figure_9.4_B15646.jpg)
 
 
 
@@ -304,8 +272,7 @@ Follow these steps to create the variable and the loop:
     The properties window should look like this:
 
     
-    ![Figure 9.6 -- Loop
-    properties](./images/Figure_9.6_B15646.jpg)
+    ![](./images/Figure_9.6_B15646.jpg)
     
 
 
@@ -323,8 +290,7 @@ Follow these steps to create the variable and the loop:
 
 
 
-![Figure 9.7 -- Development
-interface](./images/Figure_9.7_B15646.jpg)
+![](./images/Figure_9.7_B15646.jpg)
 
 
 
@@ -380,8 +346,7 @@ used to identify the subfolder group, let\'s call this
     The properties window should look like this:
 
     
-    ![Figure 9.8 -- String: Substring
-    properties](./images/Figure_9.8_B15646.jpg)
+    ![](./images/Figure_9.8_B15646.jpg)
     
 
 
@@ -399,38 +364,9 @@ used to decide which subfolder group the surname initial belongs to.
 
 
 
-
-
 Applying logical conditions 
 ===========================
 
-
-Using logical conditions is a way to apply
-decision-making for your bots. Bots can make rule-based decisions, and
-these rules can be based on a number of scenarios. Automation Anywhere
-offers a plethora of options to base decisions on. The following is a
-breakdown of all the scenarios that conditions can be based on:
-
-
-
-
-![Figure 9.9 -- If statement
-scenarios](./images/Figure_9.9_B15646.jpg)
-
-
-
-
-
-
-As you can see, the opportunities for applying
-automation decisions are wide and varied. Getting back to our
-walk-through, we need to identify the subfolder for our surname initial.
-Our approach will be to create a list of all the subfolders and to loop
-through this list while checking if it\'s the correct folder. We will
-need a few variables for this process: an initial `String`
-variable for storing the list of subfolders, a `List` variable
-for assigning the folders to a list, and a `String` variable
-for storing the allocated folder for our surname initial.
 
 Let\'s continue with our walk-through and add our condition:
 
@@ -469,8 +405,7 @@ Let\'s continue with our walk-through and add our condition:
     The properties window should look like this:
 
     
-    ![Figure 9.11 -- String: Assign
-    properties](./images/Figure_9.11_B15646.jpg)
+    ![](./images/Figure_9.11_B15646.jpg)
     
 
 
@@ -495,8 +430,7 @@ Let\'s continue with our walk-through and add our condition:
     The properties window should look like this:
 
     
-    ![Figure 9.12 -- String: Split
-    properties](./images/Figure_9.12_B15646.jpg)
+    ![](./images/Figure_9.12_B15646.jpg)
     
 
 
@@ -525,8 +459,7 @@ Let\'s continue with our walk-through and add our condition:
     The properties window should look like this:
 
     
-    ![Figure 9.13 -- Loop
-    properties](./images/Figure_9.13_B15646.jpg)
+    ![](./images/Figure_9.13_B15646.jpg)
     
 
 
@@ -551,8 +484,7 @@ Let\'s continue with our walk-through and add our condition:
     The properties window should look like this:
 
     
-    ![Figure 9.14 -- If action
-    properties](./images/Figure_9.14_B15646.jpg)
+    ![](./images/Figure_9.14_B15646.jpg)
     
 
 
@@ -576,8 +508,7 @@ Let\'s continue with our walk-through and add our condition:
     The properties window should look like this:
 
     
-    ![Figure 9.15 -- String: Assign
-    properties](./images/Figure_9.15_B15646.jpg)
+    ![](./images/Figure_9.15_B15646.jpg)
     
 
 
@@ -593,8 +524,7 @@ look like this:
 
 
 
-![Figure 9.16 -- Development
-interface](./images/Figure_9.16_B15646.jpg)
+![](./images/Figure_9.16_B15646.jpg)
 
 
 
@@ -634,8 +564,7 @@ is added to the subfolder group. Let\'s get started:
     The properties window should look like this:
 
     
-    ![Figure 9.17 -- If action
-    properties](./images/Figure_9.17_B15646.jpg)
+    ![](./images/Figure_9.17_B15646.jpg)
     
 
 
@@ -675,8 +604,7 @@ creating the output subfolder and file:
 4.  The properties window should look like this:
 
     
-    ![Figure 9.18 -- Folder: Create
-    properties](./images/Figure_9.18_B15646.jpg)
+    ![](./images/Figure_9.18_B15646.jpg)
     
 
 
@@ -699,8 +627,7 @@ creating the output subfolder and file:
     The properties window should look like this:
 
     
-    ![Figure 9.19 -- Log to file
-    properties](./images/Figure_9.19_B15646.jpg)
+    ![](./images/Figure_9.19_B15646.jpg)
     
 
 
@@ -715,8 +642,7 @@ window for this section should look like this:
 
 
 
-![Figure 9.20 -- Development
-interface](./images/Figure_9.20_B15646.jpg)
+![](./images/Figure_9.20_B15646.jpg)
 
 
 
@@ -759,8 +685,7 @@ index). Let\'s get started:
     The properties window should look like this:
 
     
-    ![Figure 9.21 -- Log to file
-    properties](./images/Figure_9.21_B15646.jpg)
+    ![](./images/Figure_9.21_B15646.jpg)
     
 
 
@@ -773,8 +698,7 @@ interface for this section should look like this:
 
 
 
-![Figure 9.22 -- Development
-interface](./images/Figure_9.22_B15646.jpg)
+![](./images/Figure_9.22_B15646.jpg)
 
 
 
@@ -805,8 +729,7 @@ you create a session. Follow these steps to close the session:
     The properties window should look like this:
 
     
-    ![Figure 9.23 -- CSV/TXT: Close
-    properties](./images/Figure_9.23_B15646.jpg)
+    ![](./images/Figure_9.23_B15646.jpg)
     
 
 
@@ -819,8 +742,7 @@ interface for this section should look like this:
 
 
 
-![Figure 9.24 -- Development
-interface](./images/Figure_9.24_B15646.jpg)
+![](./images/Figure_9.24_B15646.jpg)
 
 
 
@@ -919,8 +841,7 @@ Let\'s start this walk-through by executing the following steps:
 
 
 
-![Figure 9.26 -- Development
-interface](./images/Figure_9.26_B15646.jpg)
+![](./images/Figure_9.26_B15646.jpg)
 
 
 
@@ -959,8 +880,7 @@ created, follow these steps:
     The properties window should look like this:
 
     
-    ![Figure 9.27 -- Loop
-    properties](./images/Figure_9.27_B15646.jpg)
+    ![](./images/Figure_9.27_B15646.jpg)
     
 
 
@@ -975,8 +895,7 @@ created, follow these steps:
 
 
 
-![Figure 9.28 -- Development
-interface](./images/Figure_9.28_B15646.jpg)
+![](./images/Figure_9.28_B15646.jpg)
 
 
 
@@ -1014,8 +933,7 @@ Let\'s get started:
     The properties window should look like this:
 
     
-    ![Figure 9.29 -- File: Rename
-    properties](./images/Figure_9.29_B15646.jpg)
+    ![](./images/Figure_9.29_B15646.jpg)
     
 
 
@@ -1053,8 +971,7 @@ wanted to demonstrate how to use the rename action. Let\'s get started:
     The properties window should look like this:
 
     
-    ![Figure 9.30 -- File: Copy
-    properties](./images/Figure_9.30_B15646.jpg)
+    ![](./images/Figure_9.30_B15646.jpg)
     
 
 
@@ -1086,8 +1003,7 @@ delete the file from our subfolder. Let\'s get started:
     The properties window should look like this:
 
     
-    ![Figure 9.31 -- File: Delete
-    properties](./images/Figure_9.31_B15646.jpg)
+    ![](./images/Figure_9.31_B15646.jpg)
     
 
 
@@ -1118,8 +1034,7 @@ file: it can be done with just one parameter. Let\'s get started:
     The properties window should look like this:
 
     
-    ![Figure 9.32 -- Folder: Delete
-    properties](./images/Figure_9.32_B15646.jpg)
+    ![](./images/Figure_9.32_B15646.jpg)
     
 
 
@@ -1132,8 +1047,7 @@ development interface should look like this:
 
 
 
-![Figure 9.33 -- Development
-interface](./images/Figure_9.33_B15646.jpg)
+![](./images/Figure_9.33_B15646.jpg)
 
 
 

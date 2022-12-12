@@ -2,39 +2,14 @@ Lab 10: Working with XML Files
 ================================
 
 
-The previous lab covered some of the most common actions that you
-will use to build automated solutions. Knowing how to apply loops and
-conditions is key for pretty much all types of software development.
-Just to recap, the previous walk-throughs also included working with
-files and folders, as well as introducing you to the `Record`
-type variable.
-
-Now that you have a better understanding of the functionalities
-Automation Anywhere provides, in this lab, we will examine XML
-files. By the end of this lab, you will know how to read, update,
-create, and delete nodes in XML files. We will also introduce you to the
-**Step** action. This action doesn\'t really serve much use but is
-helpful in organizing our bot\'s structure. Previously, we used the
-**Comment** action to show us the skeleton of our bot. Instead of doing
-this, we can use the **Step** action to group a collection of steps.
-From a visualization perspective, this allows us to collapse and expand
-all the actions within each step.
-
-To change things up a little, we will not be building a single bot to
+We will not be building a single bot to
 demonstrate XML actions. Instead, we will go through the individual
 actions within the XML package. Each walk-through will provide a
 step-by-step guide that shows you how to use each action. We will be
 using the following packages:
 
 
-
-
-![Figure 10.1 -- Packages that will be used in this
-lab](./images/Figure_10.1_B15646.jpg)
-
-
-
-
+![](./images/Figure_10.1_B15646.jpg)
 
 
 For this lab, we will go through several separate walk-throughs.
@@ -67,13 +42,7 @@ Technical requirements
 
 You will need the following to install Automation Anywhere Bot agent:
 
--   Windows operating system version 7 or higher
--   Processor with a minimum speed of 3 GHz
--   Minimum of 4 GB RAM
--   At least 100 MB hard disk space
--   Internet Explorer v10 or higher OR Chrome v49 or higher
--   A minimum screen resolution of 1024\*768
--   An internet connection with a minimum speed of 10 Mb/sec
+-   Google Chrome
 -   Completed registration with Automation Anywhere  Community
     Edition
 -   Logged on successfully to Automation Anywhere  Community
@@ -89,43 +58,17 @@ Starting, validating, and ending XML sessions
 =============================================
 
 
-Whenever we use an external
-data source, regardless of its type, a connection
-needs to be established. Once we have consumed this data, the connection
-needs to be closed. Not only does this apply to Automation Anywhere but
-to most development platforms. How we make this connection is where
-things differ. Automation Anywhere refers to this connection as a
-**session**. We will create various types of sessions as we progress
-through this book. We created some sessions previously in this book,
-when we connected to CSV files. In the coming chapters, you will come
-across more sessions as we start working with databases, emails, and
-spreadsheets.
-
-Since an XML file is an external data source, whether it be for input or
-output, a session needs to be established before we can do anything else
-with the data. Another benefit of having a specific session for each
-data source is that this allows you to work with multiple data sources
-simultaneously. Since each session has a unique name, this removes any
-confusion that may arise with having multiple simultaneous connections.
-This is why it is always a good idea to give your sessions a suitable,
-clear-cut name.
-
 For the first exercise, you\'ll learn how to start and end an XML
 session. The XML data stream can be stored as a `String`
 variable or read from an XML file. We will be using the sample XML file
-that\'s available as part of this book\'s GitHub repository. If you
-copied this book\'s GitHub repository to your `C:\` drive, the
+that\'s available as part of this course\'s GitHub repository. If you
+copied this course\'s GitHub repository to your `C:\` drive, the
 file we will be using can be found at
 `C:\Hands-On-RPA-with-AA-Sample-Data\Chapter10_SampleFile.xml`.
 The following screenshot shows a partial view of this file:
 
 
-
-
 ![](./images/Figure_10.2_B15646.jpg)
-
-
-
 
 
 
@@ -166,13 +109,8 @@ Let\'s start this walk-through by executing the following steps:
 7.  Add another **Comment** action called
     `"---------------------"` on line **5** and click on
     **Save**. Our initial development interface should look like this:
-
     
-    ![Figure 10.3 -- Development
-    interface](./images/Figure_10.3_B15646.jpg)
-    
-
-
+    ![](./images/Figure_10.3_B15646.jpg)
 
 8.  To create our XML session, go to the **XML** package and drag the
     **Start session** action just below line **2**.
@@ -190,11 +128,8 @@ Let\'s start this walk-through by executing the following steps:
     The properties window should look like this:
 
     
-    ![Figure 10.4 -- XML: Start session
-    properties](./images/Figure_10.4_B15646.jpg)
+    ![](./images/Figure_10.4_B15646.jpg)
     
-
-
 
 10. Click on **Save**.
 
@@ -218,15 +153,9 @@ create a `String` type variable called `sValidXML`:
 
     **Assign the output to variable**: **sValidXML - String**
 
-    The properties
-    window should look like
-    this:
+    The properties window should look like this:
 
-    
-    ![Figure 10.5 -- XML: Validate XML document
-    properties](./images/Figure_10.5_B15646.jpg)
-    
-
+    ![](./images/Figure_10.5_B15646.jpg)
 
 
 3.  Click on **Save**.
@@ -254,8 +183,7 @@ create a `String` type variable called `sValidXML`:
     The properties window should look like this:
 
     
-    ![Figure 10.6 -- If action
-    properties](./images/Figure_10.6_B15646.jpg)
+    ![](./images/Figure_10.6_B15646.jpg)
     
 
 
@@ -279,8 +207,7 @@ create a `String` type variable called `sValidXML`:
     The properties window should look like this:
 
     
-    ![Figure 10.7 -- Message box
-    properties](./images/Figure_10.7_B15646.jpg)
+    ![](./images/Figure_10.7_B15646.jpg)
     
 
 
@@ -310,8 +237,7 @@ create a `String` type variable called `sValidXML`:
     The properties window should look like this:
 
     
-    ![Figure 10.8 -- Message box
-    properties](./images/Figure_10.8_B15646.jpg)
+    ![](./images/Figure_10.8_B15646.jpg)
     
 
 
@@ -334,8 +260,7 @@ create a `String` type variable called `sValidXML`:
     The properties window should look like this:
 
     
-    ![Figure 10.9 -- XML: End session
-    properties](./images/Figure_10.9_B15646.jpg)
+    ![](./images/Figure_10.9_B15646.jpg)
     
 
 
@@ -346,8 +271,7 @@ create a `String` type variable called `sValidXML`:
 
 
 
-![Figure 10.10 -- Development
-interface](./images/Figure_10.10_B15646.jpg)
+![](./images/Figure_10.10_B15646.jpg)
 
 
 
@@ -382,11 +306,6 @@ or expanded, which makes it easier for you to read and understand your
 actions. As with the *If* statements and loops, all the actions related
 to a step must be indented within the step they belon to.
 
-There may be many instances where you need to look up a single value
-from your XML data stream, especially when the XML data is being used
-for reference purposes. We will continue to build
-on our walk-through by providing you with steps on how to read a
-specific single node, as well as multiple nodes, from our XML file.
 
 
 
@@ -413,12 +332,8 @@ Let\'s start this walk-through by executing the following steps:
     like this:
 
     
-    ![Figure 10.11 -- Step action property
-    settings](./images/Figure_10.11_B15646.jpg)
+    ![](./images/Figure_10.11_B15646.jpg)
     
-
-
-
 4.  Click on **Save**.
 
 5.  To read the title for the second record, drag the **Get single
@@ -437,8 +352,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties window should look like this:
 
     
-    ![Figure 10.12 -- XML: Get single node
-    properties](./images/Figure_10.12_B15646.jpg)
+    ![](./images/Figure_10.12_B15646.jpg)
     
 
 
@@ -461,8 +375,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties window should look like this:
 
     
-    ![Figure 10.13 -- Message box
-    properties](./images/Figure_10.13_B15646.jpg)
+    ![](./images/Figure_10.13_B15646.jpg)
     
 
 
@@ -546,8 +459,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties window should look like this:
 
     
-    ![Figure 10.16 -- XML: Get multiple nodes
-    properties](./images/Figure_10.16_B15646.jpg)
+    ![](./images/Figure_10.16_B15646.jpg)
     
 
 
@@ -592,8 +504,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties window should look like this:
 
     
-    ![Figure 10.18 -- Message box
-    properties](./images/Figure_10.18_B15646.jpg)
+    ![](./images/Figure_10.18_B15646.jpg)
     
 
 
@@ -712,8 +623,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties window should look like this:
 
     
-    ![Figure 10.23 -- XML: Update node
-    properties](./images/Figure_10.23_B15646.jpg)
+    ![](./images/Figure_10.23_B15646.jpg)
     
 
 
@@ -742,8 +652,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties window should look like this:
 
     
-    ![Figure 10.24 -- XML: Save session data
-    properties](./images/Figure_10.24_B15646.jpg)
+    ![](./images/Figure_10.24_B15646.jpg)
     
 
 
@@ -770,8 +679,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties window should look like this:
 
     
-    ![Figure 10.25 -- Message box
-    properties](./images/Figure_10.25_B15646.jpg)
+    ![](./images/Figure_10.25_B15646.jpg)
     
 
 
@@ -890,8 +798,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties window should look like this:
 
     
-    ![Figure 10.30 -- XML: Get multiple nodes
-    properties](./images/Figure_10.30_B15646.jpg)
+    ![](./images/Figure_10.30_B15646.jpg)
     
 
 
@@ -939,8 +846,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties window should look like this:
 
     
-    ![Figure 10.32 -- Number: Assign
-    properties](./images/Figure_10.32_B15646.jpg)
+    ![](./images/Figure_10.32_B15646.jpg)
     
 
 
@@ -965,8 +871,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties window should look like this:
 
     
-    ![Figure 10.33 -- Number: To string
-    properties](./images/Figure_10.33_B15646.jpg)
+    ![](./images/Figure_10.33_B15646.jpg)
     
 
 
@@ -988,8 +893,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties window should look like this:
 
     
-    ![Figure 10.34 -- String: To number
-    properties](./images/Figure_10.34_B15646.jpg)
+    ![](./images/Figure_10.34_B15646.jpg)
     
 
 
@@ -1012,8 +916,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties window should look like this:
 
     
-    ![Figure 10.35 -- NumberUtils: Calc
-    properties](./images/Figure_10.35_B15646.jpg)
+    ![](./images/Figure_10.35_B15646.jpg)
     
 
 
@@ -1037,8 +940,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties window should look like this:
 
     
-    ![Figure 10.36 -- Number: To string
-    properties](./images/Figure_10.36_B15646.jpg)
+    ![](./images/Figure_10.36_B15646.jpg)
     
 
 
@@ -1064,8 +966,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties window should look like this:
 
     
-    ![Figure 10.37 -- XML: Update node
-    properties](./images/Figure_10.37_B15646.jpg)
+    ![](./images/Figure_10.37_B15646.jpg)
     
 
 
@@ -1099,8 +1000,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties window should look like this:
 
     
-    ![Figure 10.38 -- Message box
-    properties](./images/Figure_10.38_B15646.jpg)
+    ![](./images/Figure_10.38_B15646.jpg)
     
 
 
@@ -1134,8 +1034,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties window should look like this:
 
     
-    ![Figure 10.39 -- XML: Save session data
-    properties](./images/Figure_10.39_B15646.jpg)
+    ![](./images/Figure_10.39_B15646.jpg)
     
 
 
@@ -1166,8 +1065,7 @@ interface for the complete bot should look like this:
 
 
 
-![Figure 10.41 -- Development
-interface](./images/Figure_10.41_B15646.jpg)
+![](./images/Figure_10.41_B15646.jpg)
 
 
 
@@ -1282,8 +1180,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties window should look like this:
 
     
-    ![Figure 10.45 -- XML: Save session data
-    properties](./images/Figure_10.45_B15646.jpg)
+    ![](./images/Figure_10.45_B15646.jpg)
     
 
 
@@ -1306,8 +1203,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties window should look like this:
 
     
-    ![Figure 10.46 -- Message Box
-    properties](./images/Figure_10.46_B15646.jpg)
+    ![](./images/Figure_10.46_B15646.jpg)
     
 
 
@@ -1425,8 +1321,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties window should look like this:
 
     
-    ![Figure 10.51 -- XML: Save session data
-    properties](./images/Figure_10.51_B15646.jpg)
+    ![](./images/Figure_10.51_B15646.jpg)
     
 
 
@@ -1448,8 +1343,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties window should look like this:
 
     
-    ![Figure 10.52 -- Message box
-    properties](./images/Figure_10.52_B15646.jpg)
+    ![](./images/Figure_10.52_B15646.jpg)
     
 
 
@@ -1534,8 +1428,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties window should look like this:
 
     
-    ![Figure 10.55 -- XML: Execute XPath function
-    properties](./images/Figure_10.55_B15646.jpg)
+    ![](./images/Figure_10.55_B15646.jpg)
     
 
 
@@ -1559,12 +1452,8 @@ Let\'s start this walk-through by executing the following steps:
     The properties window should look like this:
 
     
-    ![Figure 10.56 -- Message box
-    properties](./images/Figure_10.56_B15646.jpg)
+    ![](./images/Figure_10.56_B15646.jpg)
     
-
-
-
 10. Click on **Save**.
 
     Your **Step** action should look like this in the development
@@ -1579,8 +1468,6 @@ interface](./images/Figure_10.57_B15646.jpg)
 
 
 
-
-
 Now, for the final time, run the bot. You should get a result of
 `5`. There are five book records in our sample XML file.
 Collapse all the steps; your development interface should look like
@@ -1589,8 +1476,7 @@ this:
 
 
 
-![Figure 10.58 -- Development
-interface](./images/Figure_10.58_B15646.jpg)
+![](./images/Figure_10.58_B15646.jpg)
 
 
 

@@ -35,8 +35,7 @@ In this lab, we will be using the following packages:
 
 
 
-![Figure 16.1 -- The packages used in this
-lab](./images/Figure_16.1_B15646.jpg)
+![](./images/Figure_16.1_B15646.jpg)
 
 
 
@@ -414,8 +413,7 @@ Let\'s start this walk-through by executing the following steps:
     following figure:
 
     
-    ![Figure 16.7 -- If
-    properties](./images/Figure_16.7_B15646.jpg)
+    ![](./images/Figure_16.7_B15646.jpg)
     
 
 
@@ -439,8 +437,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look as shown in the following figure:
 
     
-    ![Figure 16.8 -- File: Delete
-    properties](./images/Figure_16.8_B15646.jpg)
+    ![](./images/Figure_16.8_B15646.jpg)
     
 
 
@@ -466,8 +463,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look as shown in the following figure:
 
     
-    ![Figure 16.9 -- Excel advanced: Create workbook
-    properties](./images/Figure_16.9_B15646.jpg)
+    ![](./images/Figure_16.9_B15646.jpg)
     
 
 
@@ -487,8 +483,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look as shown in the following figure:
 
     
-    ![Figure 16.10 -- Excel advanced: Close
-    properties](./images/Figure_16.10_B15646.jpg)
+    ![](./images/Figure_16.10_B15646.jpg)
     
 
 
@@ -526,7 +521,7 @@ get all the non-system table names. The statement we are using is as
 follows:
 
 
-``` {.language-markup}
+```
 SELECT name FROM sqlite_master WHERE type='table' and name Not Like 'sqlite%';Copy
 ```
 
@@ -615,8 +610,7 @@ Let\'s start this walk-through; follow the steps given here:
     The properties should look as shown in the following figure:
 
     
-    ![Figure 16.13 -- String: Assign
-    properties](./images/Figure_16.13_B15646.jpg)
+    ![](./images/Figure_16.13_B15646.jpg)
     
 
 
@@ -636,8 +630,7 @@ Let\'s start this walk-through; follow the steps given here:
     The properties should look as shown in the following figure:
 
     
-    ![Figure 16.14 -- Number: Assign
-    properties](./images/Figure_16.14_B15646.jpg)
+    ![](./images/Figure_16.14_B15646.jpg)
     
 
 
@@ -672,8 +665,7 @@ Let\'s start this walk-through; follow the steps given here:
     following figure:
 
     
-    ![Figure 16.16 -- Database: Connect
-    properties](./images/Figure_16.16_B15646.jpg)
+    ![](./images/Figure_16.16_B15646.jpg)
     
 
 
@@ -695,8 +687,7 @@ Let\'s start this walk-through; follow the steps given here:
     following figure:
 
     
-    ![Figure 16.17 -- Database: Read from
-    properties](./images/Figure_16.17_B15646.jpg)
+    ![](./images/Figure_16.17_B15646.jpg)
     
 
 
@@ -730,8 +721,7 @@ Let\'s start this walk-through; follow the steps given here:
     following figure:
 
     
-    ![Figure 16.19 -- Loop: SQL dataset
-    properties](./images/Figure_16.19_B15646.jpg)
+    ![](./images/Figure_16.19_B15646.jpg)
     
 
 
@@ -756,8 +746,7 @@ Let\'s start this walk-through; follow the steps given here:
     following figure:
 
     
-    ![Figure 16.20 -- Number: Increment
-    properties](./images/Figure_16.20_B15646.jpg)
+    ![](./images/Figure_16.20_B15646.jpg)
     
 
 
@@ -783,8 +772,7 @@ Let\'s start this walk-through; follow the steps given here:
     following figure:
 
     
-    ![Figure 16.21 -- If
-    properties](./images/Figure_16.21_B15646.jpg)
+    ![](./images/Figure_16.21_B15646.jpg)
     
 
 
@@ -808,8 +796,7 @@ Let\'s start this walk-through; follow the steps given here:
     following figure:
 
     
-    ![Figure 16.22 -- String: Assign
-    properties](./images/Figure_16.22_B15646.jpg)
+    ![](./images/Figure_16.22_B15646.jpg)
     
 
 
@@ -837,8 +824,7 @@ Let\'s start this walk-through; follow the steps given here:
     following figure:
 
     
-    ![Figure 16.23 -- String: Assign
-    properties](./images/Figure_16.23_B15646.jpg)
+    ![](./images/Figure_16.23_B15646.jpg)
     
 
 
@@ -857,8 +843,7 @@ Let\'s start this walk-through; follow the steps given here:
     The properties should look as shown in the following figure:
 
     
-    ![Figure 16.24 -- Database: Disconnect
-    properties](./images/Figure_16.24_B15646.jpg)
+    ![](./images/Figure_16.24_B15646.jpg)
     
 
 
@@ -896,7 +881,7 @@ worksheet on the given workbook. The SQL query that we will be using to
 get all the data is as follows:
 
 
-``` {.language-markup}
+```
 Select * from $strTableName$Copy
 ```
 
@@ -987,8 +972,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look as shown in the following figure:
 
     
-    ![Figure 16.27 -- Data Table: Clear content
-    properties](./images/Figure_16.27_B15646.jpg)
+    ![](./images/Figure_16.27_B15646.jpg)
     
 
 
@@ -1023,8 +1007,7 @@ Let\'s start this walk-through by executing the following steps:
     following figure:
 
     
-    ![Figure 16.29 -- Database: Connect
-    properties](./images/Figure_16.29_B15646.jpg)
+    ![](./images/Figure_16.29_B15646.jpg)
     
 
 
@@ -1051,8 +1034,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look as shown in the following figure:
 
     
-    ![Figure 16.30 -- Database: Export to data table
-    properties](./images/Figure_16.30_B15646.jpg)
+    ![](./images/Figure_16.30_B15646.jpg)
     
 
 
@@ -1070,8 +1052,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look as shown in the following figure:
 
     
-    ![Figure 16.31 -- Database: Disconnect
-    properties](./images/Figure_16.31_B15646.jpg)
+    ![](./images/Figure_16.31_B15646.jpg)
     
 
 
@@ -1104,8 +1085,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look as shown in the following figure:
 
     
-    ![Figure 16.33 -- Excel advanced: Open
-    properties](./images/Figure_16.33_B15646.jpg)
+    ![](./images/Figure_16.33_B15646.jpg)
     
 
 
@@ -1126,8 +1106,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look as shown in the following figure:
 
     
-    ![Figure 16.34 -- Excel advanced: Create worksheet
-    properties](./images/Figure_16.34_B15646.jpg)
+    ![](./images/Figure_16.34_B15646.jpg)
     
 
 
@@ -1154,8 +1133,7 @@ Let\'s start this walk-through by executing the following steps:
     following figure:
 
     
-    ![Figure 16.35 -- Excel advanced: Write from data table
-    properties](./images/Figure_16.35_B15646.jpg)
+    ![](./images/Figure_16.35_B15646.jpg)
     
 
 
@@ -1177,8 +1155,7 @@ Let\'s start this walk-through by executing the following steps:
     following figure:
 
     
-    ![Figure 16.36 -- Excel advanced: Close
-    properties](./images/Figure_16.36_B15646.jpg)
+    ![](./images/Figure_16.36_B15646.jpg)
     
 
 
@@ -1311,8 +1288,7 @@ Let\'s start this walk-through by executing the following steps:
     following figure:
 
     
-    ![Figure 16.39 -- String: Assign
-    properties](./images/Figure_16.39_B15646.jpg)
+    ![](./images/Figure_16.39_B15646.jpg)
     
 
 
@@ -1334,8 +1310,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look as shown in the following figure:
 
     
-    ![Figure 16.40 -- String: Assign
-    properties](./images/Figure_16.40_B15646.jpg)
+    ![](./images/Figure_16.40_B15646.jpg)
     
 
 
@@ -1356,8 +1331,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look as shown in the following figure:
 
     
-    ![Figure 16.41 -- Number: Assign
-    properties](./images/Figure_16.41_B15646.jpg)
+    ![](./images/Figure_16.41_B15646.jpg)
     
 
 
@@ -1392,8 +1366,7 @@ Let\'s start this walk-through by executing the following steps:
     following figure:
 
     
-    ![Figure 16.43 -- Task Bot: Run
-    properties](./images/Figure_16.43_B15646.jpg)
+    ![](./images/Figure_16.43_B15646.jpg)
     
 
 
@@ -1430,8 +1403,7 @@ Let\'s start this walk-through by executing the following steps:
     following figure:
 
     
-    ![Figure 16.45 -- Task Bot: Run
-    properties](./images/Figure_16.45_B15646.jpg)
+    ![](./images/Figure_16.45_B15646.jpg)
     
 
 
@@ -1469,8 +1441,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look as shown in the following figure:
 
     
-    ![Figure 16.47 -- String: Split
-    properties](./images/Figure_16.47_B15646.jpg)
+    ![](./images/Figure_16.47_B15646.jpg)
     
 
 
@@ -1498,8 +1469,7 @@ Let\'s start this walk-through by executing the following steps:
     following figure:
 
     
-    ![Figure 16.48 -- Loop -- List
-    properties](./images/Figure_16.48_B15646.jpg)
+    ![](./images/Figure_16.48_B15646.jpg)
     
 
 
@@ -1532,8 +1502,7 @@ Let\'s start this walk-through by executing the following steps:
     following figure:
 
     
-    ![Figure 16.49 -- Task Bot: Run
-    properties](./images/Figure_16.49_B15646.jpg)
+    ![](./images/Figure_16.49_B15646.jpg)
     
 
 

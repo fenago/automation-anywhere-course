@@ -1,30 +1,6 @@
 Lab 8: String Manipulation and List Variables 
 ===============================================
 
-
-As you progress in this book, you will gain experience with more actions
-at each stage. Each action you learn will build upon your existing
-knowledge. This will all contribute to making you a more confident RPA
-developer.
-
-In this lab, we will be covering the different actions available for
-string manipulation. This is a common task needed when your bot is
-working with data. Typically, your data format and layout needs to be
-transformed and parsed so that it meets system requirements. When
-transferring data from one source to another, there may be slight
-differences in the required formats. String manipulation routines are
-needed to transform your data so that it meets the desired requirements.
-
-In order to fully understand how to work with data, this lab will
-also cover `List` type variables. We use these when we need to
-iterate through a single string by splitting it with a specific
-delimiter. By the end of this lab, you will have the skills to
-confidently handle various formats of strings and be able to manipulate
-them so that they meet any system requirement. You will also be able to
-create `List` variables and loop through the data for any
-manipulation that may be needed. Another skill that you will learn is
-how to apply some simple logical conditions using variables.
-
 In this lab, we will cover the following topics:
 
 -   Manipulating strings
@@ -35,14 +11,13 @@ In this lab, you will be guided by a walk-through so that you can
 build a fully functional bot. This will be a bit intensive, but you will
 gain some valuable experience in implementing a number of useful
 actions. We will be working with a number of Automation Anywhere
-packages, some of which you have already used in this book. We will be
+packages, some of which you have already used in this course. We will be
 using the following packages:
 
 
 
 
-![Figure 8.1 -- Packages that will be used in this
-lab](./images/Figure_8.1_B15646.jpg)
+![](./images/Figure_8.1_B15646.jpg)
 
 
 
@@ -58,8 +33,6 @@ your current routine tasks.
 
 
 
-
-
 Technical requirements 
 ======================
 
@@ -67,22 +40,13 @@ Technical requirements
 You will need the following in order to install the Automation Anywhere
 Bot agent:
 
--   Windows operating system version 7 or higher
--   Processor with a minimum speed of 3 GHz
--   Minimum of 4 GB RAM
--   At least 100 MB hard disk space
--   Internet Explorer v10 or higher OR Chrome v49 or higher
--   A minimum screen resolution of 1024\*768
--   An internet connection with a minimum speed of 10 Mb/sec
+-   Google Chrome
 -   Completed registration with Automation Anywhere  Community
     Edition
 -   Logged on successfully to Automation Anywhere  Community
     Edition
 -   A successfully registered local device
 -   Successfully downloaded sample data from GitHub
-
-
-
 
 
 Manipulating strings 
@@ -190,8 +154,7 @@ Let\'s start this walk-through by executing the following steps:
 
 
 
-![Figure 8.2 -- Development
-interface](./images/Figure_8.2_B15646.jpg)
+![](./images/Figure_8.2_B15646.jpg)
 
 
 
@@ -254,8 +217,8 @@ started:
     the following data:
 
     
-    ``` {.language-markup}
-    "husan lal mahey, priya mahey, sonam mahey, ravinder raj lal mahey, sunita kumari mahey, manisha Mahey" Copy
+    ```
+    "husan lal mahey, priya mahey, sonam mahey, ravinder raj lal mahey, sunita kumari mahey, manisha Mahey" 
     ```
     
 
@@ -343,8 +306,8 @@ what character to use for the split. Let\'s take a look at our source
 string:
 
 
-``` {.language-markup}
-husan lal mahey, priya mahey, sonam mahey, ravinder raj lal mahey, sunita kumari mahey, manisha maheyCopy
+```
+husan lal mahey, priya mahey, sonam mahey, ravinder raj lal mahey, sunita kumari mahey, manisha mahey
 ```
 
 
@@ -592,8 +555,7 @@ uppercase. Execute the following steps to convert the case:
 
 
 
-![Figure 8.16 -- Development
-interface](./images/Figure_8.16_B15646.jpg)
+![](./images/Figure_8.16_B15646.jpg)
 
 
 
@@ -721,8 +683,7 @@ Follow these steps to add the **Substring** action:
     The properties should look like this:
 
     
-    ![Figure 8.19 -- String: Substring
-    properties](./images/Figure_8.19_B15646.jpg)
+    ![](./images/Figure_8.19_B15646.jpg)
     
 
 
@@ -745,8 +706,7 @@ Follow these steps to add the **Substring** action:
     The properties should look like this:
 
     
-    ![Figure 8.20 -- String: Substring
-    properties](./images/Figure_8.20_B15646.jpg)
+    ![](./images/Figure_8.20_B15646.jpg)
     
 
 
@@ -767,8 +727,7 @@ Follow these steps to add the **Substring** action:
     The properties should look like this:
 
     
-    ![Figure 8.21 -- String: Lowercase
-    properties](./images/Figure_8.21_B15646.jpg)
+    ![](./images/Figure_8.21_B15646.jpg)
     
 
 
@@ -806,8 +765,7 @@ case. The development interface for this section should look this:
 
 
 
-![Figure 8.23 -- Development
-interface](./images/Figure_8.23_B15646.jpg)
+![](./images/Figure_8.23_B15646.jpg)
 
 
 
@@ -905,8 +863,7 @@ perform this task:
     The properties should look like this:
 
     
-    ![Figure 8.25 -- String: Substring
-    properties](./images/Figure_8.25_B15646.jpg)
+    ![](./images/Figure_8.25_B15646.jpg)
     
 
 
@@ -919,8 +876,7 @@ perform this task:
     box so that it includes the following:
 
     
-    ![Figure 8.26 -- Message box
-    properties](./images/Figure_8.26_B15646.jpg)
+    ![](./images/Figure_8.26_B15646.jpg)
     
 
 
@@ -936,8 +892,7 @@ for this section should look like this:
 
 
 
-![Figure 8.27 -- Development
-interface](./images/Figure_8.27_B15646.jpg)
+![](./images/Figure_8.27_B15646.jpg)
 
 
 
@@ -997,8 +952,7 @@ the **Replace** action:
     The properties should look like this:
 
     
-    ![Figure 8.28 -- String: Replace action
-    properties](./images/Figure_8.28_B15646.jpg)
+    ![](./images/Figure_8.28_B15646.jpg)
     
 
 
@@ -1028,8 +982,7 @@ the **Replace** action:
     The properties should look like this:
 
     
-    ![Figure 8.29 -- String: Replace action
-    properties](./images/Figure_8.29_B15646.jpg)
+    ![](./images/Figure_8.29_B15646.jpg)
     
 
 
@@ -1055,8 +1008,7 @@ the **Replace** action:
     The properties should look like this:
 
     
-    ![Figure 8.30 -- String: Trim action
-    properties](./images/Figure_8.30_B15646.jpg)
+    ![](./images/Figure_8.30_B15646.jpg)
     
 
 
@@ -1069,8 +1021,7 @@ the **Replace** action:
     of the **Message box** so that it includes this:
 
     
-    ![Figure 8.31 -- Message box
-    properties](./images/Figure_8.31_B15646.jpg)
+    ![](./images/Figure_8.31_B15646.jpg)
     
 
 
@@ -1159,8 +1110,7 @@ following instructions will take you through the steps to achieve this:
     The properties should look like this:
 
     
-    ![Figure 8.33 -- If statement
-    properties](./images/Figure_8.33_B15646.jpg)
+    ![](./images/Figure_8.33_B15646.jpg)
     
 
 
@@ -1230,8 +1180,7 @@ steps to achieve this:
     The properties should look like this:
 
     
-    ![Figure 8.35 -- String: Split properties
-    dialog](./images/Figure_8.35_B15646.jpg)
+    ![](./images/Figure_8.35_B15646.jpg)
     
 
 
@@ -1259,8 +1208,7 @@ steps to achieve this:
     The properties should look like this:
 
     
-    ![Figure 8.36 -- Loop properties
-    dialog](./images/Figure_8.36_B15646.jpg)
+    ![](./images/Figure_8.36_B15646.jpg)
     
 
 
@@ -1293,8 +1241,7 @@ started:
     The properties should look like this:
 
     
-    ![Figure 8.37 -- String: Substring action
-    properties](./images/Figure_8.37_B15646.jpg)
+    ![](./images/Figure_8.37_B15646.jpg)
     
 
 
@@ -1333,8 +1280,7 @@ interface for this section should look like this:
 
 
 
-![Figure 8.39 -- Development
-interface](./images/Figure_8.39_B15646.jpg)
+![](./images/Figure_8.39_B15646.jpg)
 
 
 
@@ -1361,7 +1307,7 @@ to identify the sequence of our name items as required. The output
 should be in the following format:
 
 
-``` {.language-markup}
+```
 Surname in uppercase, Forename in Proper case, Middle name initials in uppercaseCopy
 ```
 
@@ -1388,8 +1334,7 @@ Let\'s get started:
     The properties should look like this:
 
     
-    ![Figure 8.40 -- Log to file
-    properties](./images/Figure_8.40_B15646.jpg)
+    ![](./images/Figure_8.40_B15646.jpg)
     
 
 
@@ -1413,8 +1358,7 @@ Let\'s get started:
     The properties should look like this:
 
     
-    ![Figure 8.41 -- Log to file
-    properties](./images/Figure_8.41_B15646.jpg)
+    ![](./images/Figure_8.41_B15646.jpg)
     
 
 
@@ -1430,8 +1374,7 @@ interface for this final section should look like this:
 
 
 
-![Figure 8.42 -- Development
-interface](./images/Figure_8.42_B15646.jpg)
+![](./images/Figure_8.42_B15646.jpg)
 
 
 

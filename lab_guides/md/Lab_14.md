@@ -1,35 +1,9 @@
 Lab 14: Working with PDF Files 
 ===============================
 
-
-To recall what we learned in the last lab, we worked with automating
-emails. This included reading and looping through specified mailbox
-folders, as well as applying filters, such as filtering by subject-line
-text or the sender\'s email address. The walk-through also demonstrated
-how to save attachments from received emails. We also walked through how
-to use RPA to send emails, as well as replying to and forwarding them.
-
-Progressing onward, in this lab, we will be exploring PDF files. PDF
-files are used extensively within businesses. They can take many forms,
-such as business flow documents, design plans, or invoices. This lab
-will teach you how to extract text from a PDF file, as well as saving a
-document as an image. Other actions that you will learn include
-manipulating PDF files by merging and splitting PDF documents. Finally,
-you will also get to encrypt a PDF file, as well as decrypt it. This is
-an essential part of adding additional security to your PDF files.
-
 In this lab, we will be using the following packages:
 
-
-
-
-![Figure 14.1 -- Packages used in this
-lab](./images/Figure_14.1_B15646.jpg)
-
-
-
-
-
+![](./images/Figure_14.1_B15646.jpg)
 
 Just as we discovered the `Dictionary` variable type for email
 in the preceding lab, Automation Anywhere also has a built-in
@@ -56,13 +30,7 @@ Technical requirements
 In order to install Automation Anywhere Bot agent, the following
 requirements are necessary:
 
--   Windows OS version 7 or higher
--   A processor with a minimum speed of 3 GHz
--   A minimum of 4 GB RAM
--   At least 100 MB hard disk space
--   Internet Explorer v10 or higher OR Chrome v49 or higher
--   A minimum screen resolution of 1024\*768
--   An internet connection with a minimum speed of 10 Mb/sec
+-   Google Chrome
 -   Completed registration with Automation Anywhere  Community
     Edition
 -   Successful log-on to Automation Anywhere  Community Edition
@@ -162,8 +130,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look as in the following screenshot:
 
     
-    ![Figure 14.4 -- PDF: Extract text -- output format
-    properties](./images/Figure_14.4_B15646.jpg)
+    ![](./images/Figure_14.4_B15646.jpg)
     
 
 
@@ -183,8 +150,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look as in the following screenshot:
 
     
-    ![Figure 14.5 -- PDF: Extract text -- output file
-    properties](./images/Figure_14.5_B15646.jpg)
+    ![](./images/Figure_14.5_B15646.jpg)
     
 
 
@@ -195,8 +161,7 @@ Let\'s start this walk-through by executing the following steps:
 
 
 
-![Figure 14.6 -- Development
-interface](./images/Figure_14.6_B15646.jpg)
+![](./images/Figure_14.6_B15646.jpg)
 
 
 
@@ -257,8 +222,7 @@ file. Like always, let\'s begin by adding our comments:
     The properties should look as in the following screenshot:
 
     
-    ![Figure 14.8 -- PDF: Extract image -- file
-    properties](./images/Figure_14.8_B15646.jpg)
+    ![](./images/Figure_14.8_B15646.jpg)
     
 
 
@@ -279,8 +243,7 @@ file. Like always, let\'s begin by adding our comments:
     The properties should look as in the following screenshot:
 
     
-    ![Figure 14.9 -- PDF: Extract image -- output format
-    properties](./images/Figure_14.9_B15646.jpg)
+    ![](./images/Figure_14.9_B15646.jpg)
     
 
 
@@ -301,8 +264,7 @@ file. Like always, let\'s begin by adding our comments:
     The properties should look as in the following screenshot:
 
     
-    ![Figure 14.10 -- PDF: Extract image -- output file
-    properties](./images/Figure_14.10_B15646.jpg)
+    ![](./images/Figure_14.10_B15646.jpg)
     
 
 
@@ -326,8 +288,7 @@ file. Like always, let\'s begin by adding our comments:
     screenshot:
 
     
-    ![Figure 14.11 -- PDF: Extract image -- image resolution
-    properties](./images/Figure_14.11_B15646.jpg)
+    ![](./images/Figure_14.11_B15646.jpg)
     
 
 
@@ -339,8 +300,7 @@ file. Like always, let\'s begin by adding our comments:
 
 
 
-![Figure 14.12 -- Development
-interface](./images/Figure_14.12_B15646.jpg)
+![](./images/Figure_14.12_B15646.jpg)
 
 
 
@@ -456,8 +416,7 @@ comments:
     The properties should look as in the following screenshot:
 
     
-    ![Figure 14.16 -- PDF: Split document -- output file
-    properties](./images/Figure_14.16_B15646.jpg)
+    ![](./images/Figure_14.16_B15646.jpg)
     
 
 
@@ -468,8 +427,7 @@ comments:
 
 
 
-![Figure 14.17 -- Development
-interface](./images/Figure_14.17_B15646.jpg)
+![](./images/Figure_14.17_B15646.jpg)
 
 
 
@@ -521,8 +479,7 @@ always, let\'s begin by adding our comments:
     the properties of the **PDF: Merge documents** action on line **9**:
 
     
-    ![Figure 14.19 -- PDF: Merge documents
-    properties](./images/Figure_14.19_B15646.jpg)
+    ![](./images/Figure_14.19_B15646.jpg)
     
 
 
@@ -543,8 +500,7 @@ always, let\'s begin by adding our comments:
     The properties should look as in the following screenshot:
 
     
-    ![Figure 14.20 -- The Add PDF document
-    dialog](./images/Figure_14.20_B15646.jpg)
+    ![](./images/Figure_14.20_B15646.jpg)
     
 
 
@@ -572,8 +528,7 @@ always, let\'s begin by adding our comments:
     look as in the following screenshot:
 
     
-    ![Figure 14.21 -- The PDF: Merge documents
-    properties](./images/Figure_14.21_B15646.jpg)
+    ![](./images/Figure_14.21_B15646.jpg)
     
 
 
@@ -590,8 +545,7 @@ always, let\'s begin by adding our comments:
     The properties should look as in the following screenshot:
 
     
-    ![Figure 14.22 -- PDF: Merge documents -- output file
-    properties](./images/Figure_14.22_B15646.jpg)
+    ![](./images/Figure_14.22_B15646.jpg)
     
 
 
@@ -602,8 +556,7 @@ always, let\'s begin by adding our comments:
 
 
 
-![Figure 14.23 -- Development
-interface](./images/Figure_14.23_B15646.jpg)
+![](./images/Figure_14.23_B15646.jpg)
 
 
 
@@ -686,8 +639,7 @@ Let\'s start this walk-through by executing the following steps:
     The property should look as in the following screenshot:
 
     
-    ![Figure 14.25 -- PDF: Encrypt document -- password
-    properties](./images/Figure_14.25_B15646.jpg)
+    ![](./images/Figure_14.25_B15646.jpg)
     
 
 
@@ -704,8 +656,7 @@ Let\'s start this walk-through by executing the following steps:
     The property should look as in the following screenshot:
 
     
-    ![Figure 14.26 -- PDF: Encrypt document -- permissions
-    properties](./images/Figure_14.26_B15646.jpg)
+    ![](./images/Figure_14.26_B15646.jpg)
     
 
 
@@ -722,8 +673,7 @@ Let\'s start this walk-through by executing the following steps:
     The property should look as in the following screenshot:
 
     
-    ![Figure 14.27 -- PDF: Encrypt document -- encryption type
-    properties](./images/Figure_14.27_B15646.jpg)
+    ![](./images/Figure_14.27_B15646.jpg)
     
 
 
@@ -742,8 +692,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look as in the following screenshot:
 
     
-    ![Figure 14.28 -- PDF: Encrypt document -- output file
-    properties](./images/Figure_14.28_B15646.jpg)
+    ![](./images/Figure_14.28_B15646.jpg)
     
 
 
@@ -754,8 +703,7 @@ Let\'s start this walk-through by executing the following steps:
 
 
 
-![Figure 14.29 -- Development
-interface](./images/Figure_14.29_B15646.jpg)
+![](./images/Figure_14.29_B15646.jpg)
 
 
 
@@ -815,8 +763,7 @@ comments:
     The property should look as in the following screenshot:
 
     
-    ![Figure 14.31 -- PDF: Decrypt document -- password
-    properties](./images/Figure_14.31_B15646.jpg)
+    ![](./images/Figure_14.31_B15646.jpg)
     
 
 
@@ -835,8 +782,7 @@ comments:
     The properties should look as in the following screenshot:
 
     
-    ![Figure 14.32 -- PDF: Decrypt document -- output file
-    properties](./images/Figure_14.32_B15646.jpg)
+    ![](./images/Figure_14.32_B15646.jpg)
     
 
 
@@ -847,8 +793,7 @@ comments:
 
 
 
-![Figure 14.33 -- Development
-interface](./images/Figure_14.33_B15646.jpg)
+![](./images/Figure_14.33_B15646.jpg)
 
 
 
@@ -951,8 +896,7 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look as in the following screenshot:
 
     
-    ![Figure 14.37 -- Message box
-    properties](./images/Figure_14.37_B15646.jpg)
+    ![](./images/Figure_14.37_B15646.jpg)
     
 
 

@@ -54,9 +54,7 @@ requirements are necessary:
 -   A processor with a minimum speed of 3 GHz
 -   A minimum of 4 GB RAM
 -   At least 100 MB hard disk space
--   Internet Explorer v10 or higher or Chrome v49 or higher
--   A minimum screen resolution of 1024\*768
--   An internet connection with a minimum speed of 10 Mbps
+-   Google Chrome
 -   You must have completed registration with Automation Anywhere 
     Community Edition
 -   You must have logged on successfully to Automation Anywhere 
@@ -200,8 +198,7 @@ following screenshot:
 
 
 
-![Figure 18.3 -- Snapshot of the input
-file](./images/Figure_18.3_B15646.jpg)
+![](./images/Figure_18.3_B15646.jpg)
 
 
 
@@ -330,8 +327,7 @@ need:
     following screenshot:
 
     
-    ![Figure 18.7 -- CSV/TXT: Open
-    properties](./images/Figure_18.7_B15646.jpg)
+    ![](./images/Figure_18.7_B15646.jpg)
     
 
 
@@ -349,8 +345,7 @@ need:
     The property should look as shown in the following screenshot:
 
     
-    ![Figure 18.8 -- CSV/TXT: Close
-    properties](./images/Figure_18.8_B15646.jpg)
+    ![](./images/Figure_18.8_B15646.jpg)
     
 
 
@@ -384,8 +379,7 @@ need:
     The properties should look as shown in the following screenshot:
 
     
-    ![Figure 18.10 -- Loop through CSV/TXT file
-    properties](./images/Figure_18.10_B15646.jpg)
+    ![](./images/Figure_18.10_B15646.jpg)
     
 
 
@@ -407,8 +401,7 @@ need:
     The properties should look as shown in the following screenshot:
 
     
-    ![Figure 18.11 -- String: To number
-    properties](./images/Figure_18.11_B15646.jpg)
+    ![](./images/Figure_18.11_B15646.jpg)
     
 
 
@@ -432,8 +425,7 @@ need:
     following screenshot:
 
     
-    ![Figure 18.12 -- Number: Assign
-    properties](./images/Figure_18.12_B15646.jpg)
+    ![](./images/Figure_18.12_B15646.jpg)
     
 
 
@@ -457,8 +449,7 @@ need:
     The properties should look as shown in the following screenshot:
 
     
-    ![Figure 18.13 -- Number: To string
-    properties](./images/Figure_18.13_B15646.jpg)
+    ![](./images/Figure_18.13_B15646.jpg)
     
 
 
@@ -500,8 +491,7 @@ need:
 
 
 
-![Figure 18.15 -- Development
-interface](./images/Figure_18.15_B15646.jpg)
+![](./images/Figure_18.15_B15646.jpg)
 
 
 
@@ -650,8 +640,7 @@ variables we will need as follows:
     following screenshot:
 
     
-    ![Figure 18.22 -- Error handler: Catch
-    properties](./images/Figure_18.22_B15646.jpg)
+    ![](./images/Figure_18.22_B15646.jpg)
     
 
 
@@ -678,8 +667,7 @@ variables we will need as follows:
     The properties should look as shown in the following screenshot:
 
     
-    ![Figure 18.23 -- Number: To string
-    properties](./images/Figure_18.23_B15646.jpg)
+    ![](./images/Figure_18.23_B15646.jpg)
     
 
 
@@ -785,11 +773,3 @@ your bots. No matter how great the functionality of your bot, one thing
 we cannot guarantee is the quality of any source inputs. A mechanism is
 needed to manage any anomalies in the best way possible. Using error
 management and some defensive coding is a step in the right direction.
-
-This brings us to the end of this book. I hope you have enjoyed it as
-much as I enjoyed writing it. By following all the walk-throughs, you
-will have just over 20 bots already built, each one demonstrating some
-benefits of RPA. Hopefully, you have gained the skills and confidence to
-take you to the next step of your RPA journey. You are probably thinking
-about real-life scenarios where Automation Anywhere could help you save
-time and increase accuracy.

@@ -2,12 +2,6 @@ Lab 12: Automation Using Word
 ========================================================
 
 
-In the previous lab, we looked at Excel and what can be automated.
-You learned about the two packages available and how Automation Anywhere
-bots work with Excel. Our walk-through included looping through
-datasets, inserting columns, sorting data, and adding formulas. We will
-be applying what you have already learned about Excel in this lab.
-
 In this lab, we will continue working with applications as we learn
 about how tasks with Word can be automated. This lab will take a
 different approach: we will build a bot that performs a complete user
@@ -15,15 +9,7 @@ role. This role involves automation with Excel and Word working
 together. The walk-through is designed to mimic a real-life business
 role scenario. We will be using the following packages:
 
-
-
-
-![Figure 12.1 -- Packages used in this
-lab](./images/Figure_12.1_B15646.jpg)
-
-
-
-
+![](./images/Figure_12.1_B15646.jpg)
 
 
 This lab will take you through a fictitious user role. The role is
@@ -51,13 +37,7 @@ Technical requirements
 In order to install the Automation Anywhere Bot agent, the following
 requirements are necessary:
 
--   Windows OS version 7 or higher
--   A processor with a minimum speed of 3 GHz
--   A minimum of 4 GB RAM
--   At least 100 MB hard disk space
--   Internet Explorer v10 or higher or Chrome v49 or higher
--   A minimum screen resolution of 1024\*768
--   An internet connection with a minimum speed of 10 Mbps
+-   Google Chrome
 -   Completed registration with Automation Anywhere  Community
     Edition
 -   Successful login to Automation Anywhere  Community Edition
@@ -190,8 +170,7 @@ Let\'s start this walk-through by executing the following steps:
 
 
 
-![Figure 12.4 -- Development
-interface](./images/Figure_12.4_B15646.jpg)
+![](./images/Figure_12.4_B15646.jpg)
 
 
 
@@ -266,8 +245,7 @@ steps:
     The properties should look like this:
 
     
-    ![Figure 12.6 -- Excel advanced: Open
-    properties](./images/Figure_12.6_B15646.jpg)
+    ![](./images/Figure_12.6_B15646.jpg)
     
 
 
@@ -318,8 +296,7 @@ open our worksheet:
     The properties should look like this:
 
     
-    ![Figure 12.7 -- Excel advanced: Read row
-    properties](./images/Figure_12.7_B15646.jpg)
+    ![](./images/Figure_12.7_B15646.jpg)
     
 
 
@@ -372,8 +349,7 @@ type variable, the values can be accessed via an index number:
     The properties should look like this:
 
     
-    ![Figure 12.9 -- Loop
-    properties](./images/Figure_12.9_B15646.jpg)
+    ![](./images/Figure_12.9_B15646.jpg)
     
 
 
@@ -391,8 +367,7 @@ type variable, the values can be accessed via an index number:
 
 
 
-![Figure 12.10 -- Development
-interface](./images/Figure_12.10_B15646.jpg)
+![](./images/Figure_12.10_B15646.jpg)
 
 
 
@@ -461,8 +436,7 @@ steps:
     The properties should look like this:
 
     
-    ![Figure 12.12 -- String: Assign
-    properties](./images/Figure_12.12_B15646.jpg)
+    ![](./images/Figure_12.12_B15646.jpg)
     
 
 
@@ -486,8 +460,7 @@ steps:
     The properties should look like this:
 
     
-    ![Figure 12.13 -- File: Copy
-    properties](./images/Figure_12.13_B15646.jpg)
+    ![](./images/Figure_12.13_B15646.jpg)
     
 
 
@@ -501,8 +474,7 @@ steps:
 
 
 
-![Figure 12.14 -- Development
-interface](./images/Figure_12.14_B15646.jpg)
+![](./images/Figure_12.14_B15646.jpg)
 
 
 
@@ -554,8 +526,7 @@ steps:
     The properties should look like this:
 
     
-    ![Figure 12.15 -- Datetime: To string
-    properties](./images/Figure_12.15_B15646.jpg)
+    ![](./images/Figure_12.15_B15646.jpg)
     
 
 
@@ -581,8 +552,7 @@ steps:
     The properties should look like this:
 
     
-    ![Figure 12.16 -- MS Word: Insert Text
-    properties](./images/Figure_12.16_B15646.jpg)
+    ![](./images/Figure_12.16_B15646.jpg)
     
 
 
@@ -593,8 +563,7 @@ steps:
 
 
 
-![Figure 12.17 -- Development
-interface](./images/Figure_12.17_B15646.jpg)
+![](./images/Figure_12.17_B15646.jpg)
 
 
 
@@ -739,8 +708,7 @@ steps:
 
 
 
-![Figure 12.20 -- Development
-interface](./images/Figure_12.20_B15646.jpg)
+![](./images/Figure_12.20_B15646.jpg)
 
 
 
@@ -795,8 +763,7 @@ actual values from the data worksheet:
     The properties should look like this:
 
     
-    ![Figure 12.21 -- Number: Assign
-    properties](./images/Figure_12.21_B15646.jpg)
+    ![](./images/Figure_12.21_B15646.jpg)
     
 
 
@@ -819,8 +786,7 @@ actual values from the data worksheet:
     The properties should look like this:
 
     
-    ![Figure 12.22 -- Loop
-    properties](./images/Figure_12.22_B15646.jpg)
+    ![](./images/Figure_12.22_B15646.jpg)
     
 
 
@@ -844,8 +810,7 @@ actual values from the data worksheet:
     The properties should look like this:
 
     
-    ![Figure 12.23 -- Number: Increment
-    properties](./images/Figure_12.23_B15646.jpg)
+    ![](./images/Figure_12.23_B15646.jpg)
     
 
 
@@ -869,8 +834,7 @@ actual values from the data worksheet:
     The properties should look like this:
 
     
-    ![Figure 12.24 -- List: Get item
-    properties](./images/Figure_12.24_B15646.jpg)
+    ![](./images/Figure_12.24_B15646.jpg)
     
 
 
@@ -895,8 +859,7 @@ actual values from the data worksheet:
     The properties should look like this:
 
     
-    ![Figure 12.25 -- MS Word: Replace Text
-    properties](./images/Figure_12.25_B15646.jpg)
+    ![](./images/Figure_12.25_B15646.jpg)
     
 
 
@@ -917,8 +880,7 @@ actual values from the data worksheet:
     The properties should look like this:
 
     
-    ![Figure 12.26 -- Excel advanced: Close
-    properties](./images/Figure_12.26_B15646.jpg)
+    ![](./images/Figure_12.26_B15646.jpg)
     
 
 
@@ -932,8 +894,7 @@ should look like this:
 
 
 
-![Figure 12.27 -- Development
-interface](./images/Figure_12.27_B15646.jpg)
+![](./images/Figure_12.27_B15646.jpg)
 
 
 
