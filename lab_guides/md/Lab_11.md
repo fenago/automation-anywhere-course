@@ -45,13 +45,8 @@ Technical requirements
 In order to install the Automation Anywhere Bot agent, the following
 requirements are necessary:
 
--   Windows operating system version 7 or higher
--   A processor with a minimum speed of 3 GHz
--   A minimum of 4 GB RAM
--   At least 100 MB hard disk space
+
 -   Web browser: Google Chrome
--   A minimum screen resolution of 1024\*768
--   An internet connection with a minimum speed of 10 Mbps
 -   You must have completed registration for Automation Anywhere 
     Community Edition
 -   You must have logged on successfully to Automation Anywhere 

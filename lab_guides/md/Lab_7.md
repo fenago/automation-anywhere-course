@@ -1,32 +1,5 @@
 Lab 7: Interacting with Applications 
-===============================================================
-
-
-Hopefully, you will be feeling confident about using Automation Anywhere
-by now. The walk-throughs so far should have given you an opportunity to
-create and run bots. These may be relatively basic bots, but with each
-walk-through, we are expanding our knowledge of additional packages.
-Each Automation Anywhere package and its actions open up more operations
-that you can automate. Following the walk-throughs gives you hands-on
-experience, allowing you to add value to your RPA development skills.
-
-There are many tasks that we perform as part of our daily routines at
-work. These tasks will almost always include working with web-based and
-desktop applications. Being able to automate tasks that interact with
-web and desktop applications are key skills that any RPA developer ought
-to possess.
-
-We have already covered the basics of using Automation Anywhere, so now
-get ready for some more serious automation. Having a clear understanding
-of creating and assigning different variable types, we can now start
-utilizing these skills further to build bots that interact with
-applications.
-
-This lab will look at working with web-based and desktop
-applications. We will be building bots that mimic human interaction. You
-will learn how to navigate, select, and update applications using
-keystroke simulation, as well as by clicking and selecting elements
-within these applications.
+====================================
 
 In this lab, we will cover the following topics:
 
@@ -34,29 +7,11 @@ In this lab, we will cover the following topics:
 -   Automating desktop applications
 -   Simulating keystrokes
 
-By the end of this lab, you will have the skills needed to build
-bots that can launch applications, navigate through various application
-interfaces, interact with buttons and checkboxes, and read and enter
-data. This lab will be using the following packages:
-
-
-
-
-![](./images/Figure_7.1_B15646.jpg)
-
-
-
-
-
-
 You will be building two bots in this lab. The first will be based
 on web applications, and the second on desktop applications. The
 walk-throughs will guide you step by step, enabling you to have bots
 that launch your application and navigate through them just as a human
 would.
-
-
-
 
 
 Technical requirements 
@@ -66,10 +21,6 @@ Technical requirements
 In order to install the Automation Anywhere Bot agent, the following is
 required:
 
--   Windows OS version 7 or higher
--   A processor with a minimum speed of 3 GHz
--   A minimum of 4 GB RAM
--   At least 100 MB of hard disk space
 -   Google Chrome
 -   Completed registration with Automation Anywhere  Community
     Edition
@@ -85,26 +36,11 @@ Automating web applications
 ===========================
 
 
-During a normal working day, we will use web applications to carry out
-our daily tasks. These applications may be in the
-public domain, such as search engines, or intranet-based applications
-specific to your organization. There is a shift of desktop applications
-moving to cloud-based web applications. The use of web applications is
-increasing in business circles.
-
-In the following walk-through, we will be working with a web
-application. It\'s a very simple website. We will be navigating to a
-specific page by looking for a particular tab. The walk-through will
-then fill a simple online form and conclude by clicking the **Send**
-button on the form.
-
 In this walk-through, we will be performing the following tasks:
 
-1.  Launching the [http://skysoftuk.net](http://skysoftuk.net/) website
-2.  Clicking on the **CONTACT** tab to navigate to the contact page
-3.  Completing the **Name**, **Email**, and **Message** fields on the
-    form
-4.  Clicking the **Send** button
+1.  Launching the [https://google.com](https://google.com) website
+2.  Enter text in Google search bar.
+4.  Clicking the **Enter** button
 
 Let\'s start this walk-through by executing the following steps:
 
@@ -117,435 +53,104 @@ Let\'s start this walk-through by executing the following steps:
     our bot, add a new **Comment** action on line **1**, set the value
     to `"---------------------"`, and click on **Save**.
 
-4.  Add a new **Comment** action as `"Launch Website"` on line
+4.  Add a new **Comment** action as `"Open"` on line
     **2** and click on **Save**.
 
 5.  Add a new **Comment** action as
-    `"Navigate to Contact Page"` on line **3** and click on
+    `"Search Automation Anywhere Demo"` on line **3** and click on
     **Save**.
 
-6.  Add a new **Comment** action as `"Fill on-line form"` on
+6.  Add a new **Comment** action as `"Enter Send"` on
     line **4** and click on **Save**.
 
-7.  Add a new **Comment** action as `"Click on Send"` on line
-    **5** and click on **Save**.
 
 8.  Add a new **Comment** action as `"---------------------"`
-    on line **6** and click on **Save**. Your bot should look like this:
-
-    
-    ![Figure 7.2 -- Development
-    interface](./images/Figure_7.2_B15646.jpg)
-    
-
-
+    on line **6** and click on **Save**.
 
 9.  We can now start to add some functionality.
     The first thing we want the bot to do is launch the browser and go
-    to our web page. From the **Browser** package, drag the **Launch
-    website** action under line **2**.
+    to our web page. From the **Browser** package, drag the **Open** action under line **2**.
 
-10. Set the following properties for the **Browser: Launch website**
+10. Set the following properties for the **Browser: Open**
     action on line **3**:
-    -   **URL**: `http://skysoftuk.net/`
-
+    -   **URL**: `https://google.com`
     -   **Browser**: **Google Chrome**
 
-        The **Browser: Launch website** action properties should look
-        like this:
+        The **Browser: Open** action properties should look like this:
 
 
-
-
-![Figure 7.3 -- Browser: Launch website
-properties](./images/Figure_7.3_B15646.jpg)
-
-
-
-
+![](./images/Figure_7.3_B15646.jpg)
 
 
 1.  Click on **Save**.
 
-2.  Now it gets really interesting. We will instruct the bot to look for
-    the **CONTACT** tab and then click on it. Currently, the bot will
-    not be able to capture the **CONTACT** tab
-    because the web page isn\'t actually open.
-    Manually open another session of Chrome and navigate to
-    <http://skysoftuk.net/>. The bot is now ready to capture the
-    **CONTACT** tab.
+2. Open `https://google.com` in google chrome.
 
-3.  From the **Recorder** package, drag the **Capture** action under
-    line **4**.
+3.  From the **Recorder** package, drag the **Capture** action.
 
-    When Automation Anywhere captures an object,
-    the properties are in six sections:
-
-    **Object detail** -- This tells the bot where to look for the
-    object.
-
-    **Preview** -- This is a visual display of what the object looks
-    like.
-
-    **Object properties** -- These list all the attributes for that
-    object; the attributes used to identify the object are checked.
-
-    **Action** -- This tells the bot how to interact with the object.
-
-    **Wait for control** -- This tells the bot to wait for a specific
-    duration for the object. This shows how many seconds to continue
-    looking for the object before moving on to the next line.
-
-    **Assign the output to variable** -- This is always of the
-    `string` type and will assign any value from the control
-    to this variable. It is useful when reading
-    values from an application.
-
-4.  Firstly, we need to tell the bot where to look for the object. For
-    our **Browser: Launch website** action on line
-    **5**, set the **Object detail** property to **Window**, and then
-    click the refresh icon, as shown in the following screenshot:
-
-    
-    ![Figure 7.4 -- Capturing the Window refresh
-    icon](./images/Figure_7.4_B15646.jpg)
-    
+    ![](./images/6.jpg)
 
 
+4.  Firstly, we need to tell the bot where to look for the object. Set the **Object detail**  property to **Browser**, and then click the refresh icon, as shown in the following screenshot:
 
-5.  The drop-down list will show all windows that are currently open.
-    Select **Home - Google Chrome**. The **Recorder: Capture** action
-    properties should look like this:
-
-    
-    ![](./images/Figure_7.5_B15646.jpg)
-    
+    ![](./images/7.jpg)
 
 
+6.  To capture the search bar, click on **Capture object**.
 
-6.  To capture the **CONTACT** tab, click on
-    **Capture object**.
+    ![](./images/8.jpg)
 
-7.  The SkySoft web page should appear. Hover your mouse on the web
+7.  The web page should appear. Hover your mouse on the web
     page, and Automation Anywhere will look for all the objects on the
     page. It highlights what it has found with a red border. Move your
-    mouse until you get the red border around the **CONTACT** tab. The
+    mouse until you get the red border around the **Search Bar** . The
     capture screen should look like this:
-
     
-    ![](./images/Figure_7.6_B15646.jpg)
-    
-
+    ![](./images/9.jpg)
 
 
 8.  Once the correct object has been identified
     with the red border, click to select it. Once clicked, the bot will
-    capture all the attributes it needs. You will see the selected
-    object in the preview section of the properties. It should look
-    something like this:
+    capture all the attributes it needs.
 
-    
-    ![](./images/Figure_7.7_B15646.jpg)
-    
-
-
-
-    If you didn\'t manage to capture the correct
-    object, you can always recapture again to try and get it. It can be
-    tricky with some applications and may take a few attempts. It is
-    also a best practice to have your browser zoom set to 100%.
-
-9.  The next step is to look at the attributes used to identify the
-    object. If we collapse the **Object properties** list, you will see
-    only the checked attributes used to identify the object. The
-    properties should look like this:
-
-    
-    ![](./images/Figure_7.8_B15646.jpg)
-    
-
-
-
-    These attributes can be modified if needed.
-    Variables can also be used as values. This is useful when you are
-    working with interfaces that are very similar in build with only a
-    few attribute differences.
-
-10. Now that the bot has found the **CONTACT** tab, the next step is to
-    get the bot to click on it. This is where we set the **Action**
-    property. This should be set to **Click**, as shown here:
-
-    
-    ![](./images/Figure_7.9_B15646.jpg)
-    
-
-
-
-11. Click on **Save**.
-
-12. We have set the first bot interaction with the website. The
-    development interface for this step should look like this:
-
-    
-    ![](./images/Figure_7.10_B15646.jpg)
-    
-
-
-
-    At this stage, we are only building the
-    instructions for what we want the bot to perform. As the bot hasn\'t
-    yet been executed, it hasn\'t actually done anything. The next step
-    is to fill in the form on the **CONTACT** page. The bot itself
-    hasn\'t actually clicked on the **CONTACT** tab, so we will do this
-    manually.
-
-13. Manually click on the **CONTACT** tab on the *skysoftuk.net*
-    website. The web page should look like this:
-
-    
-    ![](./images/Figure_7.11_B15646.jpg)
-    
-
-
-
-14. There are three items we need to fill in on
-    the form: **Name**, **Email**, and **Message**. Starting with
-    **Name**, as we did before, add a new **Recorder: Capture** action
-    just below line **6**.
-
-15. For the **Recorder: Capture** action on line **7**, set the **Object
-    detail** properties to **Window**.
-
-16. Refresh the windows drop-down list and select **Contact - Google
-    Chrome**. The action properties should look like this:
-
-    
-    ![](./images/Figure_7.12_B15646.jpg)
-    
-
-
-
-17. To capture the **Name** textbox, click on
-    **Capture object**.
-
-18. When the `Contact` web page appears, hover the mouse over
-    the **Name** textbox until it has a red border around it, as shown
-    in the following screenshot:
-
-    
-    ![Figure 7.13 -- Capturing the Name
-    textbox](./images/Figure_7.13_B15646.jpg)
-    
-
-
-
-19. Click in the red border to capture it. Once captured, check the
-    preview to ensure that the correct object has been captured, as
-    shown in the following screenshot:
-
-    
-    ![](./images/Figure_7.14_B15646.jpg)
-    
-
-
-
-20. This time we want to populate the textbox with your name. Set the
-    following properties for the **Recorder: Capture** action on line
-    **7**:
+9. This time we want to populate the textbox. Set the
+    following properties for the **Recorder: Capture** action:
 
     **Action**: **Set text**
 
-    **Keystrokes**: **Enter keystrokes here or use the on-screen
-    keyboard**
+    **Keystrokes**: **Enter keystrokes here or use the on-screen keyboard**
 
-    **Value**: *(Enter your name)*
+    **Value**: *Automation Anywhere demo*
 
-    The properties should look like the following
-    screenshot:
+    The properties should look like the following screenshot:
 
     
-    ![](./images/Figure_7.15_B15646.jpg)
+    ![](./images/10.jpg)
     
 
+    ![](./images/11.jpg)
 
+10. Click on **Save**.
 
-21. Click on **Save**.
+11. From the **Simulate keystrokes** package, drag the **Simulate keystrokes** action.
 
-22. To do the same for the **Email** textbox, add another **Recorder:
-    Capture** action just below line **7**.
+    ![](./images/12.jpg)
 
-23. For the **Recorder: Capture** action on line **8**, set the **Object
-    detail** properties to **Window**.
+12. Firstly, we need to tell the bot where to look for the object. Set the **Object detail**  property to **Browser**, and then click the refresh icon, as shown in the following screenshot:
 
-24. Refresh the windows drop-down list and select **Contact - Google
-    Chrome**.
+    ![](./images/13.jpg)
 
-25. To capture the **Email** textbox, click on **Capture object**.
+12. Click `Insert ketstroke` and select **Enter**:
 
-26. When the `Contact` web page appears, hover the mouse over
-    the **Email** textbox until it has a red border around it, as shown
-    in the following screenshot:
+    ![](./images/14.jpg)
 
-    
-    ![](./images/Figure_7.16_B15646.jpg)
-    
+13. Click on **Save**.
 
+    ![](./images/15.jpg)
 
+14. Run the bot. You will get following output:
 
-27. Click in the red border to capture it. Once
-    captured, check the preview to ensure the correct object has been
-    captured.
-
-28. This time we want to populate the textbox with your email address.
-    Set the following properties for the **Recorder: Capture** action on
-    line **8**:
-
-    **Action**: **Set text**
-
-    **Keystrokes**: **Enter keystrokes here or use the on-screen
-    keyboard**
-
-    **Value**: *(Enter your email address)*
-
-    The properties should look similar to the following screenshot:
-
-    
-    ![](./images/Figure_7.17_B15646.jpg)
-    
-
-
-
-29. Click on **Save**.
-
-30. To do the same for the **Message** textbox,
-    add another **Recorder: Capture** action just below line **8** and
-    set its **Object detail** properties to **Window**.
-
-31. Refresh the windows drop-down list and select **Contact - Google
-    Chrome**.
-
-32. To capture the **Message** textbox, as before, click on **Capture
-    object**.
-
-33. When the `Contact` web page appears, hover the mouse over
-    the **Message** textbox until it has a red border around it, as
-    shown in the following screenshot:
-
-    
-    ![Figure 7.18 -- Capturing the Message
-    textbox](./images/Figure_7.18_B15646.jpg)
-    
-
-
-
-34. Click in the red border to capture it. Once
-    captured, check the preview to ensure that the correct object has
-    been captured.
-
-35. This time we want to populate the textbox with your email address.
-    Set the following properties for the **Recorder: Capture** action on
-    line **9**:
-
-    **Action**: **Set text**
-
-    **Keystrokes**: **Enter keystrokes here or use the on-screen
-    keyboard**
-
-    **Value**:
-    `Having lots of fun learning Automation Anywhere`
-
-    The properties should look similar to the following screenshot:
-
-    
-    ![](./images/Figure_7.19_B15646.jpg)
-    
-
-
-
-36. Click on **Save**. Your development interface for this section
-    should look like this:
-
-    
-    ![](./images/Figure_7.20_B15646.jpg)
-    
-
-
-
-37. Nearly there! There is just one more object to
-    capture. This time we want the bot to click on the **Send** button.
-    To do this, add another **Recorder: Capture** action just below line
-    **10** and set the **Object details** property to **Window**.
-
-38. Refresh the windows drop-down list and select **Contact - Google
-    Chrome**.
-
-39. To capture the **Send** button, just like before, click on the
-    **Capture** object.
-
-40. When the `Contact` web page appears, hover the mouse over
-    the **Send** button until it has a red border around it, as shown in
-    the following screenshot:
-
-    
-    ![](./images/Figure_7.21_B15646.jpg)
-    
-
-
-
-41. Click in the red border to capture it. Once captured, check the
-    preview to ensure that the correct object has
-    been captured.
-
-42. This time we want the bot to click the button. To do this, set the
-    following properties for the **Recorder: Capture** action on line
-    **11**:
-
-    **Action**: **Click**
-
-    The properties should look similar to the following screenshot:
-
-    
-    ![](./images/Figure_7.22_B15646.jpg)
-    
-
-
-
-43. Click on **Save**.
-
-44. We can now close the Google Chrome session with the *skysoftuk.net*
-    website.
-
-45. Finally, a **Message** box action appears just below line **11** to
-    let us know the bot has finished running the task.
-
-46. Set the message to display something like
-    `"Bot has sent email successfully"`.
-
-47. Click on **Save**. The development interface for this section should
-    look like this:
-
-
-
-
-![](./images/Figure_7.23_B15646.jpg)
-
-
-
-
-
-
-Great work! You have completed the walk-through. Feel free to run the
-bot and test it. It should launch the website,
-fill in the online form, and click on the send button. Remember to
-ensure the browser is closed before running your bot.
-
-In the next section, we will expand what we have already learned, moving
-from automating web applications to working with desktop applications.
-We will also be learning how to simulate keystrokes to run tasks on
-desktop applications.
-
-
-
+    ![](./images/16.jpg)
 
 
 Automating desktop applications 
@@ -577,7 +182,7 @@ using keystrokes and the capture actions.
 
 In this walk-through, we will be performing the following tasks:
 
-1.  Launching the [http://skysoftuk.net](http://skysoftuk.net/) website
+1.  Launching the [http://skysoftuk.net](https://google.com) website
 2.  Extracting a paragraph of text and assigning it to a variable
 3.  Opening the Notepad application
 4.  Entering the extracted text into Notepad
@@ -595,7 +200,7 @@ Let\'s start this walk-through by executing the following steps:
     our bot. Add a new **Comment** action as line number 1, set the
     value to `"---------------------"`, and click on **Save**.
 
-4.  Add a new **Comment** action as `"Launch Website"` on line
+4.  Add a new **Comment** action as `"Open"` on line
     **2** and click on **Save**.
 
 5.  Add a new **Comment** action as `"Capture text"` on line
@@ -623,16 +228,16 @@ Let\'s start this walk-through by executing the following steps:
 
 
 11. We need to start by launching the website as we did before. Add the
-    **Browser: Launch website** action under line **2**.
+    **Browser: Open** action under line **2**.
 
 12. Set the following properties for the
-    **Browser: Launch website** action on line **3**:
+    **Browser: Open** action on line **3**:
 
-    **URL**: `http://skysoftuk.net/`
+    **URL**: `https://google.com`
 
     **Browser**: **Google Browser**
 
-    The **Browser: Launch website** action properties should look like
+    The **Browser: Open** action properties should look like
     this:
 
     
@@ -645,7 +250,7 @@ Let\'s start this walk-through by executing the following steps:
 
 14. As before, we need to ensure that the website
     is available to capture anything. Manually open another session of
-    Chrome and navigate to <http://skysoftuk.net/>.
+    Chrome and navigate to <https://google.com>.
 
 15. To extract some text from an object, the object needs to be
     captured. To do this, add a new **Recorder: Capture** action just
@@ -970,8 +575,6 @@ implement this:
     ![](./images/Figure_7.43_B15646.jpg)
     
 
-
-
 16. Click on **Save**.
 
 17. To enter the file path of
@@ -993,11 +596,8 @@ implement this:
     shown in the following screenshot:
 
     
-    ![Figure 7.44 -- Inserting
-    keystrokes](./images/Figure_7.44_B15646.jpg)
+    ![](./images/Figure_7.44_B15646.jpg)
     
-
-
 
 23. Click on **Save**.
 
@@ -1022,16 +622,12 @@ implement this:
     ![](./images/Figure_7.45_B15646.jpg)
     
 
-
-
 30. Click on **Save**. Your development interface
     for this section should look something like this:
 
     
     ![](./images/Figure_7.46_B15646.jpg)
     
-
-
 
 31. Manually save the Notepad file, as it would have been saved at this
     point if the bot was processing the task.
@@ -1050,8 +646,6 @@ implement this:
     ![](./images/Figure_7.47_B15646.jpg)
     
 
-
-
 35. Click on **Save**.
 
     The bot is now complete. Close all websites apart from the **Control
@@ -1059,12 +653,7 @@ implement this:
     should look like this:
 
 
-
-
 ![](./images/Figure_7.48_B15646.jpg)
-
-
-
 
 
 
@@ -1074,8 +663,6 @@ create this. It should launch the website, extract the text, and then
 create and save a text file using Notepad. You
 have learned a lot of valuable skills in this walk-through. Recorder and
 keystrokes are vital actions used in most automation tasks.
-
-
 
 
 
@@ -1089,17 +676,3 @@ desktop applications is what we humans do. All the tasks that we perform
 while sitting in front of a computer involve interacting with an
 application of some sort. This interaction may involve selecting or
 clicking on objects as well as entering inputs using the keyboard.
-
-The walk-throughs in this lab have given you the practical knowledge
-to enable you to create bots that navigate through applications, as well
-as read and enter text. You will be confident with capturing objects
-such as textboxes and drop-down lists, as well as tabs and buttons. Your
-journey to becoming an RPA developer is truly underway.
-
-You are doing great work and will continue building
-on this in the next lab, where we will explore how to perform string
-manipulation. This includes creating and looping through
-`List` type variables when working with strings. There will be
-a number of different data transformation and parsing actions that we
-will look at -- include, replace, substrings, extract, and trim, and we
-will use regular expressions to find string patterns.

@@ -1,28 +1,6 @@
 Lab 18: Managing Errors 
 ==================================================
 
-
-In the last lab, you discovered how to run external scripts such as
-VBScripts and Python scripts. The walk-throughs showed how to call these
-scripts as well as how to send parameters with them, and finally get a
-result back to your bot. Having the ability to run scripts is a very
-useful tool to have in your automation toolbox. It opens up further
-automation opportunities, not limiting yourself only to the actions
-available in Automation Anywhere.
-
-This brings us to the final lab of the book; in this lab, we
-will be exploring error management. I hear you say *my bots never have
-any errors, so error management is not needed!* I agree with you; I am
-sure your RPA skills and knowledge are impeccable. The most common
-errors are not necessarily caused by poor development but by invalid or
-incomplete inputs. Having robust error management will allow your bots
-to continue processing even when an error or exception is encountered.
-
-With the help of the guided walk-throughs, you will learn how to
-implement an error-handling routine that will manage a real-life
-scenario as and when an error occurs. We will be looking at the
-following actions: **Try**, **Catch**, **Finally**, and **Throw**.
-
 In this lab, we will be using the following packages:
 
 ![](./images/Figure_18.1_B15646.jpg)
@@ -41,8 +19,6 @@ In this lab, we will cover the following:
 
 
 
-
-
 Technical requirements 
 ======================
 
@@ -50,10 +26,7 @@ Technical requirements
 In order to install the Automation Anywhere Bot agent, the following
 requirements are necessary:
 
--   Windows operating system version 7 or higher
--   A processor with a minimum speed of 3 GHz
--   A minimum of 4 GB RAM
--   At least 100 MB hard disk space
+
 -   Google Chrome
 -   You must have completed registration with Automation Anywhere 
     Community Edition
@@ -69,117 +42,15 @@ requirements are necessary:
 Error handling with Automation Anywhere
 =======================================
 
-
-Pretty much all development platforms will have some sort of error
-handling functions. Having error handling in your
-bots is crucial when building resilient automation. The purpose of
-managing any errors or exceptions is to keep your bot processing. As an
-example, if your bot is processing a large file unattended and there is
-an error within the first few records, your bot will stop processing and
-you won\'t be aware of this until you next check your bot. Having an
-error-handling routine should log the details of the invalid record and
-continue with the rest of the file until complete.
-
-A bot works by executing a sequence of actions to complete a given task.
-While the bot is performing its task, an action may fail to complete.
-This could be caused by a number of factors, such as the following:
-
--   Navigation on a web page where the page itself has been updated and
-    the required controls have been renamed or removed
--   A string value is present within a dataset where a number is
-    expected
--   The bot is unable to open a file as it may be locked
--   A network failure
--   The expected web page doesn\'t load for some reason
-
-When such errors occur, the bot should be able to close the applications
-that have the issue and recover from the error elegantly. A bot should
-leave the workstation in the same position it was in before it started
-to run its task. Any applications or services that are used should be
-closed, leaving a nice clean desktop.
-
-As a developer, you should also be thinking about using defensive
-coding. This is when you take a proactive approach rather than a
-reactive approach. An error-handling routine is a reactive approach as
-it will react to any errors that occur. Thinking proactively is using a
-mindset to predict any vulnerabilities in the code where the bot may be
-prone to an error. An example could be the bot being tasked with opening
-a file. In the event that the file is not present, an error would occur.
-A proactive approach would be to check first whether the file exists and
-only open it if it exists. This way the bot becomes more resilient and
-less prone to an error.
-
-Automation Anywhere  comes with an **Error
-handler** package. This package has four actions, which are designed to
+Automation Anywhere  comes with an **Error handler** package. This package has four actions, which are designed to
 help build a robust error-handling routine:
-
-
 
 
 ![](./images/Figure_18.2_B15646.jpg)
 
 
-
-
-
-
-In the next section, we will look more closely into the preceding four
-actions. You will learn what they do and how to implement them for your
-bot.
-
-
-
-
-
-Understanding Try, Catch, Finally, and Throw actions 
-====================================================
-
-
-The actions used for handling errors are all designed to manage
-different aspects of each error. We know a bot
-runs a sequence of actions. Each bot can have
-multiple error-handling routines. If there is a
-particular part of your bot that is vulnerable to an error, you would
-wrap those actions within a **Try** action. This
-would assign the action or actions as a block
-within the **Try** action. Any action within the **Try** action is
-managed by the error-handling routine. If any action was to fail from
-within the **Try** block, the bot would move directly to the **Catch**
-action for that error handler. Here, you would instruct the bot on what
-to do if an error was to occur. The most common actions would be to log
-the details to an error log file, maybe take a screenshot, or even send
-an email. The bot will continue to process any further actions in its
-routine without stopping.
-
-All the actions within the **Finally** block are expected regardless of
-whether an error occurred or not. This would be a good place to close
-any open applications that were used. Since it is good practice to close
-them anyway, it would make sense to put these tidying up actions in the
-**Finally** block.
-
-The **Throw** action is used to invoke an exception. This can be very
-useful when dealing with data. An example would be, say, your bot is
-processing a products file. This file is automatically generated and
-should not have certain products in it as they have now been
-discontinued. If such a product existed in this file, the bot would
-still process it as it wouldn\'t know it is an
-invalid entry. For this scenario, you could add a **Throw** action
-to identify such records and trigger an error.
-This way, you would still get an entry in the
-error log file of all the invalid records without
-processing them.
-
-In the next section, you will be guided through a walk-through that will
-include adding an error-handling routine using the **Try**, **Catch**,
-and **Throw** actions.
-
-
-
-
-
 Building an error-handling routine 
 ==================================
-
 
 You are probably keen to see the **Error handler** package in action.
 You will be guided through a step-by-step

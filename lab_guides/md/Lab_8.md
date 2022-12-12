@@ -52,21 +52,6 @@ Bot agent:
 Manipulating strings 
 ====================
 
-
-When dealing with data, it isn\'t always in the
-format we need it to be in. Developers will often
-write routines to manipulate data so that it suits its purpose. A number
-of actions are available to help us manipulate data. This walk-through
-will give you the skills you need to build
-effective data manipulation routines. In the example, you will read a
-single string that consists of a few names. This is the format the data
-is initially available in. The bot is tasked with manipulating it to
-produce a CSV file. This file will have separated all the names into two
-columns. The first column will contain the surname in capitals, while
-the second column will contain the forename and any initials. The
-forename will be in *Proper* case, while the initials will be in
-uppercase.
-
 While working through this walk-through, we will look at the following
 string manipulation actions:
 
@@ -78,15 +63,6 @@ string manipulation actions:
 -   **Uppercase**
 -   **Lowercase**
 
-We will also learn how to use regular expressions to find patterns
-within a string. We have already looked at variables, but in this
-walk-through, you will be introduced to a new type of variable. We will
-be also using the `List` variable to help the bot complete its
-task. Here, we will build a simple loop to iterate through our lists.
-There will also be an opportunity to introduce a simple conditional
-logic statement. There is a lot to cover in this lab, all of which
-will give you a wealth of experience with further Automation Anywhere
-actions.
 
 This walk-through will cover performing the following tasks:
 

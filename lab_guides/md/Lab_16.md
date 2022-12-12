@@ -1,45 +1,10 @@
 Lab 16: Building Modular Bots and Sub-Tasks 
-======================================================================
-
-
-The previous lab was all about databases. It included a number of
-practical walk-throughs that demonstrated some of the automation actions
-available for your RPA projects. You learned all about connecting to
-databases such as SQL Server, Oracle, Access, and SQLite, and you even
-explored using connection strings. The skills gained there focused on
-reading and updating datasets from your database. Using the sample
-databases from the GitHub repository, the step-by-step instructions
-guided you on how to apply SQL `Select` statements, in
-particular, the `Select`, `Insert`,
-`Update`, and `Delete` statements.
-
-This lab moves away from Automation Anywhere actions and packages;
-here you will learn more about how to build a well-structured bot. As a
-good developer, you\'ll not only want your bot to perform its task
-without any issues, but you\'ll also want to build a bot that is easy to
-understand and is made up of small building blocks. This allows each
-block to work like a small sub-bot, making the whole thing a modular
-solution. The benefit of this is that as you build your library of small
-sub-bots, they can be reused without having to replicate the effort of
-building them.
-
-For this lab, you will be given a set process to design. We will
-examine this process and design an initial solution. You will then break
-the solution down into smaller bots that can work independently with a
-given set of parameters. The task itself will be working with databases
-and spreadsheets. All the files needed are included in the GitHub
-repository.
+===========================================
 
 In this lab, we will be using the following packages:
 
 
-
-
 ![](./images/Figure_16.1_B15646.jpg)
-
-
-
-
 
 
 The walk-throughs will take you through designing your sub-bots. This
@@ -65,21 +30,12 @@ Technical requirements
 In order to install the Automation Anywhere Bot agent, you\'ll need the
 following:
 
--   Windows operating system version 7 or higher
--   A processor with a minimum speed of 3 GHz
--   A minimum of 4 GB RAM
--   At least 100 MB of hard disk space
--   Internet Explorer v10 or higher, or Chrome v49 or higher
--   A minimum screen resolution of 1,024\*768
--   An internet connection with a minimum speed of 10 Mb/sec
+-   Google Chrome
 -   A completed registration with Automation Anywhere  Community
     Edition
 -   A successful login to Automation Anywhere  Community Edition
 -   A successfully registered local device
 -   Successfully downloaded sample data from GitHub
-
-
-
 
 
 Designing modular task bots 
