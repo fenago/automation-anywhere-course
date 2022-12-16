@@ -60,8 +60,8 @@ Let\'s start this lab by performing the following steps:
     `Chapter15 – Database Automation` in the `\Bot\`
     folder.
 3.  Add a new **Comment** action as `"---------------------"`
-    on line **1** and click on **Save**.
-4.  Add a **Step** just below line **1**, set the **Title** property as
+    and click on **Save**.
+4.  Add a **Step**, set the **Title** property as
     \"`Connecting to Databases"`, and then click on **Save**.
 6.  Add another **Step**, set the **Title** property as
     \"`Connecting to a SQLite Database"`, and then click on
@@ -118,11 +118,10 @@ Let\'s start this lab by performing the following steps:
 5.  Click on **Save**.
 
 6.  The SQLite database session is now created. To disconnect, add the
-    **Database: Disconnect** action just below line **7**, ensuring it
-    is aligned to the **Database: Connect** action on line **7**.
+    **Database: Disconnect** action , ensuring it
+    is aligned to the **Database: Connect** action .
 
-7.  Set the following property for the **Database: Disconnect** action
-    on line **8**:
+7.  Set the following property for the **Database: Disconnect** action:
 
     **Session name**: `db_SqLite`
 
@@ -169,8 +168,8 @@ lab.
 Let\'s start this lab by performing the following steps:
 
 1.  To create the Access database session, drag the **Database:
-    Connect** action just below line **9**, ensuring it is within the
-    **Step** on line **9**. You are now ready to start setting the
+    Connect** action , ensuring it is within the
+    **Step** . You are now ready to start setting the
     properties.
 
 2.  We first need to specify the session details. To do this, set the
@@ -193,7 +192,7 @@ Let\'s start this lab by performing the following steps:
 
 4.  The next part is to specify the type of database and the location of
     the file. To do this, set the following properties for the
-    **Database: Connect** action on line **7**:
+    **Database: Connect** action:
 
     **Database type**: **Microsoft Access**
 
@@ -211,12 +210,11 @@ Let\'s start this lab by performing the following steps:
 5.  Click on **Save**.
 
 6.  We now have to add the **Database: Disconnect** action. To do this,
-    add the **Database: Disconnect** action just below line **10**,
+    add the **Database: Disconnect** action,
     ensuring it is aligned to the **Database: Connect** action on line
     **10**.
 
-7.  Set the following property for the **Database: Disconnect** action
-    on line **11**:
+7.  Set the following property for the **Database: Disconnect** action:
 
     **Session name**: `db_Access`
 
@@ -296,18 +294,15 @@ well as displaying a **Message box** for each record returned.
 Let\'s start this lab by performing the following steps:
 
 1.  To keep our bot organized, let\'s begin by adding a new **Step**
-    just below line **14** and setting the **Title** property to
+    and setting the **Title** property to
     **Reading from Databases**.
 
 2.  Keeping up with tidy scene, it would make sense to collapse the
-    **Step** in line **2**. Your development interface should look like
+    **Step** . Your development interface should look like
     the following screenshot:
 
-    
     ![](./images/Figure_15.21_B15646.jpg)
     
-
-
 
 3.  Click on **Save**.
 
@@ -316,11 +311,11 @@ Let\'s start this lab by performing the following steps:
     variable and call it `recData`.
 
 5.  We are now ready to create our connection. Drag the **Database:
-    Connect** action just below line **15**, ensuring it is within the
-    **Step** on line **15**.
+    Connect** action , ensuring it is within the
+    **Step** .
 
 6.  To create our connection, set the following properties for the
-    **Database: Connect** action on line **16**:
+    **Database: Connect** action:
 
     **Session name**: `db_Access`
 
@@ -343,11 +338,10 @@ Let\'s start this lab by performing the following steps:
 
 8.  Next, we add the action to read the data using
     the SQL statement and send the results to a CSV file. To do this,
-    add the **Database: Read** action just below line **16**, ensuring
-    it is aligned to the **Database: Connect** action on line **16**.
+    add the **Database: Read** action , ensuring
+    it is aligned to the **Database: Connect** action .
 
-9.  Set the following properties for the **Database: Read** action on
-    line **17**:
+9.  Set the following properties for the **Database: Read** action:
 
     **Session name**: `db_Access`
 
@@ -375,10 +369,10 @@ Let\'s start this lab by performing the following steps:
 11. At this point, the bot would have retrieved the full dataset from
     the SQL statement. As we want to see the data for each record, we
     will add a loop to iterate through our dataset. To do this, drag the
-    **Loop** action just below line **17**, ensuring it is aligned to
-    the **Database: Connect** action on line **16**.
+    **Loop** action , ensuring it is aligned to
+    the **Database: Connect** action .
 
-12. Set the following properties for the **Loop** action on line **18**:
+12. Set the following properties for the **Loop** action:
 
     **Loop Type**: **Iterator**
 
@@ -401,11 +395,11 @@ Let\'s start this lab by performing the following steps:
 
 14. We will also add a **Message box** so that we can see each record as
     the bot iterates through the dataset. To do this, add the **Message
-    box** action just below line **18**, ensuring it is within the
-    **Loop** action on line **18**.
+    box** action , ensuring it is within the
+    **Loop** action .
 
 15. Set the following properties for the **Message
-    box** action on line **19**:
+    box** action:
 
     **Enter the message box window title**:
     `Reading a SQL Dataset`
@@ -436,12 +430,12 @@ Let\'s start this lab by performing the following steps:
 
 17. The only action remaining is to add the
     **Database: Disconnect** action. To do this, add the **Database:
-    Disconnect** action just below line **19**, ensuring it is aligned
-    to the **Database: Connect** action on line **16** and not inside
-    the **Loop** action on line **18**.
+    Disconnect** action , ensuring it is aligned
+    to the **Database: Connect** action  and not inside
+    the **Loop** action .
 
 18. Set the following property for the **Database: Disconnect** action
-    on line **20**:
+    :
 
     **Session name**: `db_Access`
 
@@ -515,16 +509,16 @@ Updating databases
 
 Let\'s start this lab by performing the following steps:
 
-1.  Add a **Step** just below line **20**, set the **Title** property as
+1.  Add a **Step**, set the **Title** property as
     `Updating to Databases`, and then
     click on **Save**.
 
 2.  Again, we will add our connection to the Access database, dragging
-    the **Database: Connect** action just below line **21**, ensuring it
-    is within the **Step** action on line **21**.
+    the **Database: Connect** action , ensuring it
+    is within the **Step** action .
 
 3.  As you\'ve done previously, set the following properties for the
-    **Database: Connect** action on line **22**:
+    **Database: Connect** action:
 
     **Session name**: `db_Access`
 
@@ -545,27 +539,27 @@ Let\'s start this lab by performing the following steps:
 
 4.  Click on **Save**.
 
-5.  Add another **Step** just below line **22**, ensuring it is within
-    the previous **Step** on line **21**, set the **Title** property as
+5.  Add another **Step** , ensuring it is within
+    the previous **Step**  property as
     \"`Inserting data - INSERT Statement"`,
     and then click on **Save**.
 
-6.  Add another **Step** just below line **23**, ensuring it is aligned
-    to the **Step** on line **23**, set the **Title** property as
+6.  Add another **Step** , ensuring it is aligned
+    to the **Step** , set the **Title** property as
     \"`Updating data - UPDATE Statement"`, and then click on
     **Save**.
 
-7.  Add another **Step** just below line **24**, ensuring it is aligned
-    to the **Step** on line **24**, set the **Title** property as
+7.  Add another **Step** , ensuring it is aligned
+    to the **Step** , set the **Title** property as
     \"`Deleting data - DELETE Statement"`, and then click on
     **Save**.
 
 8.  Finally, add the **Database: Disconnect** action just below line
     **25**, ensuring it is aligned to the **Database: Connect** action
-    on line **22** and not inside the **Step** on line **25**.
+    and not inside the **Step** .
 
 9.  Set the following property for the **Database: Disconnect** action
-    on line **26**:
+    :
 
     **Session name**: `db_Access`
 
@@ -621,11 +615,11 @@ INSERT INTO tblTypes (ItemType) VALUES 'Electrical';
 Let\'s start this lab by performing the following steps:
 
 1.  To add this `Insert` SQL statement, add the **Database:
-    Insert/Update/Delete** action just below line **23**, ensuring it is
-    inside **Step** on line **23**.
+    Insert/Update/Delete** action , ensuring it is
+    inside **Step** .
 
 2.  Set the following properties for the **Database:
-    Insert/Update/Delete** action on line **24**:
+    Insert/Update/Delete** action:
 
     **Session name**: `db_Access`
 
@@ -668,11 +662,11 @@ UPDATE tblTypes SET ItemType = "Fresh Fruits" WHERE ItemType = "Fruits"
 Let\'s start this lab by performing the following steps:
 
 1.  To add this `Update` SQL statement, add the **Database:
-    Insert/Update/Delete** action just below line **25**, ensuring it is
-    inside the **step** on line **25**.
+    Insert/Update/Delete** action , ensuring it is
+    inside the **step** .
 
 2.  Set the following properties for the **Database:
-    Insert/Update/Delete** action on line **26**:
+    Insert/Update/Delete** action:
 
     **Session name**: `db_Access`
 
@@ -714,11 +708,11 @@ DELETE FROM tblTypes WHERE ItemType ="Cereal";
 Let\'s start this lab by performing the following steps:
 
 1.  To add this `Delete` SQL statement, add the **Database:
-    Insert/Update/Delete** action just below line **27**, ensuring it is
-    inside the **step** on line **27**.
+    Insert/Update/Delete** action , ensuring it is
+    inside the **step** .
 
 2.  Set the following properties for the **Database:
-    Insert/Update/Delete** action on line **28**:
+    Insert/Update/Delete** action:
 
     **Session name**: `db_Access`
 
