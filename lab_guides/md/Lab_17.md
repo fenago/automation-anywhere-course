@@ -7,10 +7,6 @@ In this lab, we will be using the following packages:
 ![](./images/Figure_17.1_B15646.jpg)
 
 
-
-
-
-
 We will look at the different types of scripts that can be executed as
 well as passing parameters. The walk-throughs will take you through each
 stage step by step, giving you valuable practical experience. Some
@@ -20,15 +16,11 @@ be used in the walk-throughs.
 In this lab, we will cover the following:
 
 -   Running VBScripts
--   Running Python scripts
 
 For Automation Anywhere to run scripts, you have to first create a
 session with a script file or an inline script. Once a session is
 established, the script or functions can be executed. When finished, the
 session needs to be closed.
-
-
-
 
 
 Technical requirements 
@@ -38,10 +30,6 @@ Technical requirements
 In order to install the Automation Anywhere Bot agent, the following
 requirements are necessary:
 
--   Windows operating system version 7 or higher
--   A processor with a minimum speed of 3 GHz
--   A minimum of 4 GB RAM
--   At least 100 MB of hard disk space
 -   Google Chrome
 -   You must have completed registration with Automation Anywhere 
     Community Edition
@@ -49,10 +37,6 @@ requirements are necessary:
     Community Edition
 -   A successfully registered local device
 -   Successfully downloaded sample data from GitHub
--   Python version 2 or 3 installed
-
-
-
 
 
 Running VBScripts 
@@ -718,217 +702,17 @@ output](./images/Figure_17.27_B15646.jpg)
 
 In the next section, we will explore running Pythion scripts.
 
-
-
-
-
-Running Python scripts 
-======================
-
-
-Running Python scripts from Automation Anywhere uses the same principle
-as running VBScripts. Firstly, create the session, then run the function
-or script. You can pass parameters to the function or script. Finally,
-close the session once you have finished with it.
-For this walk-through, we will be replicating the same process as the
-previous task. The bot will run a function called
-`procSquareRoot` from the Python script file
-`Chapter17_SquareRoot.py`. The function takes a value as an
-input. It then calculates the square root of this value and returns the
-result. The contents of the Python file look like the following
-screenshot:
-
-
-
-
-![Figure 17.28 -- Python script file
-(Chapter17\_SquareRoot.py)](./images/Figure_17.28_B15646.jpg)
-
-
-
-
-
-
-We will use the existing two variables, `numValue` and
-`strReturnValue`, for this walk-through. As we are using a
-Python script, please ensure you have Python installed on your
-workstation. You can download the latest version
-from <https://www.python.org/downloads/>. It is key that you know what
-version of Python you are using. For this example, it will be version 3.
-
-Let\'s start this walk-through by executing the
-following steps:
-
-1.  Add a **Step** just below line **24**, ensuring it is not within the
-    **Step** on line **2**, set the **Title** property as
-    `Python Scripts`, and click on **Save**.
-
-2.  Assign the `numValue` variable with a value by adding the
-    **Number: Assign** action just below line **25**, ensuring it is
-    within the **Step** on line **25**.
-
-3.  Set the following properties for the **Number: Assign** action on
-    line **26**:
-
-    **Select the source string variable/ value**: `36`
-
-    **Select the destination number variable**: **numValue - Number**
-
-    The properties should look as shown in the following screenshot:
-
-    
-    ![](./images/Figure_17.29_B15646.jpg)
-    
-
-
-
-4.  Click on **Save**.
-
-5.  We can now create our session by adding the
-    **Python script: Open** action just below line **26**, ensuring it
-    is within the **Step** on line **25**.
-
-6.  Set the following properties for the **Python script: Open** action
-    on line **27**:
-
-    **New Python session**: `py_Session`
-
-    **Python**: **Import existing file**
-
-    **Python file**: **Desktop file** --
-    `C:\Hands-On-RPA-with-AA-Sample-Data\Chapter17_SquareRoot.py`
-
-    **Python runtime version**: **3**
-
-    The properties should look as shown in the following screenshot:
-
-    
-    ![](./images/Figure_17.30_B15646.jpg)
-    
-
-
-
-7.  Click on **Save**.
-
-8.  To run the function in the script file and pass the
-    `numValue` variable and get the results to the
-    `strReturnValue` variable, add the **Python script:
-    Execute function** action just below line **27**, ensuring it is
-    within the **Step** on line **25**.
-
-9.  Set the following properties for the **Python
-    script: Execute function** action on line **28**:
-
-    **Python session**: `py_Session`
-
-    **Enter name of function to be executed**:
-    `procSquareRoot`
-
-    **Arguments to the function (optional)**: **numValue - Number**
-
-    **Assign the output to variable (optional)**: **strReturnValue -
-    String**
-
-    The properties should look as shown in the following screenshot:
-
-    
-    ![](./images/Figure_17.31_B15646.jpg)
-    
-
-
-
-10. Click on **Save**.
-
-11. To close the session, add the **Python script: Close** action just
-    below line **28**, ensuring it is within the **Step** on line
-    **25**.
-
-12. Set the following properties for the **Python
-    script: Close** action on line **29**:
-
-    **Python session**: `py_Session`
-
-    The properties should look as shown in the following screenshot:
-
-    
-    ![](./images/Figure_17.32_B15646.jpg)
-    
-
-
-
-13. Click on **Save**.
-
-14. Add a **Message box** to see the results returned by adding the
-    **Message box** action just below line **29**, ensuring it is within
-    the **Step** on line **25**.
-
-15. Set the following properties for the **Message
-    box** action on line **30**:
-
-    **Enter the message box window title**:
-    `Returning values from a Python Script`
-
-    **Enter the message to display**: `$strReturnValue$`
-
-    **Scrollbar after lines**: `30`
-
-    The properties should look as shown in the following screenshot:
-
-    
-    ![](./images/Figure_17.33_B15646.jpg)
-    
-
-
-
-16. Click on **Save**. The development interface
-    for this section should look like this:
-
-
-
-
-![](./images/Figure_17.34_B15646.jpg)
-
-
-
-
-
-
-The bot is ready to run the Python script. You will notice how similar
-it is to running a VBScript. When you run the bot, the result should be
-a message box showing a result of **6.0** as this is the square root of
-36, as shown in the following screenshot:
-
-
-
-
-![Figure 17.35 -- Message box
-output](./images/Figure_17.35_B15646.jpg)
-
-
-
-
-
-
 You can see how easily you can run external
 scripts using Automation Anywhere. Even when you may think certain tasks
 would require a lot of action using Automation Anywhere and would be
 better executed using a script, you can easily achieve them using RPA.
 
 
-
-
-
 Summary 
 =======
 
 
-In this lab, we looked at external scripts. There will be some
-exceptional instances when the actions within Automation Anywhere won\'t
-perform a specific action. An example could be calculating the square
-root of a value. In order to achieve this, we can still rely on
-Automation Anywhere to provide a solution. An ideal solution would be to
-use an external script. Whether it\'s a VBScript or a Python script,
-Automation Anywhere can handle it. You learned how to run scripts as
+In this lab, you learned how to run scripts as
 well as how to pass parameters and receive return values. The
 step-by-step walk-throughs guided you through each stage and provided
 key practical skills, as well as boosting your confidence in working

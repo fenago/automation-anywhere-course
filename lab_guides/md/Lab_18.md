@@ -6,10 +6,10 @@ In this lab, we will be using the following packages:
 ![](./images/Figure_18.1_B15646.jpg)
 
 
-There is a real-life scenario walk-through example in this lab. The
-walk-through will take you through each stage step by step, giving you
+There is a real-life scenario lab example in this lab. The
+lab will take you through each stage step by step, giving you
 valuable practical experience. The input file needed for the
-walk-through is included as part of the GitHub repository.
+lab is included as part of the GitHub repository.
 
 In this lab, we will cover the following:
 
@@ -36,45 +36,16 @@ requirements are necessary:
 -   Successfully downloaded sample data from GitHub
 
 
-
-
-
 Error handling with Automation Anywhere
 =======================================
 
-Automation Anywhere  comes with an **Error handler** package. This package has four actions, which are designed to
-help build a robust error-handling routine:
-
-
-![](./images/Figure_18.2_B15646.jpg)
-
-
-Building an error-handling routine 
-==================================
-
-You are probably keen to see the **Error handler** package in action.
-You will be guided through a step-by-step
-walk-through on building a fully functional bot.
-You will then introduce an error by editing the input file and creating
-an invalid record. This will result in the bot failing and stopping its
-processing midway as it encounters the invalid record. The walk-through
-will then take you through the process of adding an error handler
-routine.
-
-This walk-through works with the file
+This lab works with the file
 `Chapter18_Products.csv`. This file has a list of products
 within each business segment, and the contents look as shown in the
 following screenshot:
 
 
-
-
 ![](./images/Figure_18.3_B15646.jpg)
-
-
-
-
-
 
 For this scenario, the bot will perform the following tasks:
 
@@ -93,7 +64,7 @@ a few variables that will be needed. We will need four variables:
 -   Two `Number` type variables -- one for the current price
     and the other for the calculated discounted price
 
-We can start the walk-through by building the
+We can start the lab by building the
 outline using steps and comments and creating the variables we will
 need:
 
@@ -126,11 +97,8 @@ need:
     initial development interface should look like this:
 
     
-    ![Figure 18.4 -- Development
-    interface](./images/Figure_18.4_B15646.jpg)
+    ![](./images/Figure_18.4_B15646.jpg)
     
-
-
 
 9.  Create two `Number` type variables called
     `numPrice` and `numNewPrice`.
@@ -143,10 +111,7 @@ need:
     following screenshot:
 
     
-    ![Figure 18.5 -- Variable
-    interface](./images/Figure_18.5_B15646.jpg)
-    
-
+    ![](./images/Figure_18.5_B15646.jpg)
 
 
 12. To create our new output CSV file, we will use the **Log to file**
@@ -448,9 +413,9 @@ the bot encountered the error, it stopped.
 Ideally, we would like our bot to log the error details in a file
 instead of a message box. Then it would be great if the bot continued
 with the rest of the records instead of just stopping. We will now
-continue with the walk-through.
+continue with the lab.
 
-In this walk-through, you will add an error handler that will manage the
+In this lab, you will add an error handler that will manage the
 new error that we have introduced. To manage the error, we will need
 some additional variables. A `Number` type variable is needed
 to store the error line number. As this will also be added to a log
@@ -458,7 +423,7 @@ file, a `String` type will also be required for the line
 number. Another `String` type variable will also be needed to
 store the error description.
 
-We can start the walk-through by creating the
+We can start the lab by creating the
 variables we will need as follows:
 
 1.  Log into **Control Room**.
@@ -637,10 +602,7 @@ Summary
 
 This lab has been all about building robust, resilient bots that can
 get up and continue even when they fall over. We have explored the
-**Error handler** package and the actions available. The walk-through
+**Error handler** package and the actions available. The lab
 provided the practical skills to actually build your own error-handling
 routine. Having a good error-handling routine is key to the success of
-your bots. No matter how great the functionality of your bot, one thing
-we cannot guarantee is the quality of any source inputs. A mechanism is
-needed to manage any anomalies in the best way possible. Using error
-management and some defensive coding is a step in the right direction.
+your bots.
