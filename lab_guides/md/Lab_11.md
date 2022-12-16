@@ -20,24 +20,6 @@ things structured. We will be using the following packages:
 ![](./images/Figure_11.1_B15646.jpg)
 
 
-
-
-
-
-The basic Excel package works with files with the `.xlsx`
-extension only, whereas the advanced package works with Excel files with
-extensions of `.xlsx`, `.xls`, `.xlsm`,
-`.xlsb`, and `.csv`. As we progress through this
-lab, we will be using both packages, and you will learn about the
-different actions available from each one. We will start by creating a
-bot that opens, saves, and closes an Excel workbook. For this, we will
-be using the Excel basic package and the sample file that is part of the
-GitHub repository that was downloaded previously.
-
-
-
-
-
 Technical requirements 
 ======================
 
@@ -53,8 +35,6 @@ requirements are necessary:
     Community Edition
 -   A successfully registered local device
 -   Successfully downloaded sample data from GitHub
-
-
 
 
 
@@ -96,20 +76,14 @@ Let\'s start this walk-through by executing the following steps:
     on line **5** and click on **Save**. Our initial development
     interface should look like this:
 
+    ![](./images/Figure_11.2_B15646.jpg)
     
-    ![Figure 11.2 -- Development
-    interface](./images/Figure_11.2_B15646.jpg)
-    
-
-
 
 8.  To open the workbook, drag the **Excel basic: Open** action just
     below line **2**.
 
 9.  Set the following properties for the **Excel basic: Open** action on
     line **3**:
-
-    **Session name**: `xl_data`
 
     **File path**: **Desktop file** -
     `C:\Hands-On-RPA-with-AA-Sample-Data\Chapter11_Catalog.xlsx`
@@ -119,6 +93,10 @@ Let\'s start this walk-through by executing the following steps:
     **Open in**: **Read-write mode**
 
     **Sheet contains a header**: *Checked*
+
+    Select **Create Excel session** > `Local session`
+
+    **Session name**: `xl_data`
 
     The properties should look like this:
 
@@ -138,14 +116,10 @@ Let\'s start this walk-through by executing the following steps:
 
     **Session name**: `xl_data`
 
-    The properties should
-    look like this:
+    The properties should look like this:
 
-    
     ![](./images/Figure_11.4_B15646.jpg)
     
-
-
 
 13. Click on **Save**.
 
@@ -179,12 +153,7 @@ We have looked at the basics---opening, saving, and closing an Excel
 workbook. Your development window should look like this:
 
 
-
-
 ![](./images/Figure_11.6_B15646.jpg)
-
-
-
 
 
 
@@ -208,7 +177,6 @@ Excel followed by writing data to Excel. Like the previous lab, we
 will be adding new steps at each stage to make our bot more structured.
 
 
-
 Reading from Excel worksheets 
 -----------------------------
 
@@ -217,14 +185,13 @@ which means it consists of a fixed set of columns with each row as a
 record or transaction. The sample data file has a worksheet named
 `Catalog`. The dataset looks like this:
 
+![](./images/Figure_11.7_B15646.jpg)
 
+**Note**: You can open excel spreadsheet `Chapter11_Catalog.xlsx` online using below website:
 
+Excel Viewer Online: `https://products.aspose.app/cells/viewer`
 
-![Figure 11.7 -- Excel Catalog worksheet
-dataset](./images/Figure_11.7_B15646.jpg)
-
-
-
+![](./images/18.jpg)
 
 
 
@@ -254,8 +221,7 @@ Let\'s start this walk-through by executing the following steps:
     Your development interface should look like this:
 
     
-    ![Figure 11.8 -- Development
-    interface](./images/Figure_11.8_B15646.jpg)
+    ![](./images/Figure_11.8_B15646.jpg)
     
 
 
@@ -271,11 +237,8 @@ Let\'s start this walk-through by executing the following steps:
     **Loop Type\***: **For each row in worksheet**
 
     
-    ![Figure 11.9 -- Selecting Loop
-    Type](./images/Figure_11.9_B15646.jpg)
+    ![](./images/Figure_11.9_B15646.jpg)
     
-
-
 
     **Session name**: `xl_data`
 
@@ -331,7 +294,12 @@ Let\'s start this walk-through by executing the following steps:
 
 You are now ready to test your bot. Go ahead and run it. It should read
 each record from the `Catalog` worksheet, displaying the
-`Title` and `Price`. Now that we can read from an
+`Title` and `Price`. 
+
+![](./images/17.jpg)
+
+
+Now that we can read from an
 Excel worksheet, naturally, we also need to know how to write data back
 to a spreadsheet. In the next section, we will
 learn how to insert values into our Excel worksheet. As inserting values
@@ -388,11 +356,8 @@ Let\'s start this walk-through by executing the following steps:
     look like this:
 
     
-    ![Figure 11.14 -- Development
-    interface](./images/Figure_11.14_B15646.jpg)
+    ![](./images/Figure_11.14_B15646.jpg)
     
-
-
 
 6.  Add a **Step** action just below line **7**, ensuring it is not
     indented within the **Loop** on line **5**.
@@ -405,11 +370,8 @@ Let\'s start this walk-through by executing the following steps:
     Your development interface should look like this:
 
     
-    ![Figure 11.15 -- Development
-    interface](./images/Figure_11.15_B15646.jpg)
+    ![](./images/Figure_11.15_B15646.jpg)
     
-
-
 
 8.  To get the output row, we know it\'s
     `number of records + 2`; add the **Number: Assign** action
@@ -422,8 +384,7 @@ Let\'s start this walk-through by executing the following steps:
     **Select the source string variable/ value**:
     `$numRecCount$ + 2`
 
-    **Select the destination number variable**: **numResultRow -
-    Number**
+    **Select the destination number variable**: **numResultRow**
 
     The properties should look like this:
 
@@ -447,7 +408,7 @@ Let\'s start this walk-through by executing the following steps:
 
     **Enter number of digits after decimal**: `0`
 
-    **Assign the output to variable**: **strRecCount - String**
+    **Assign the output to variable**: **strRecCount**
 
     The properties should look like this:
 
@@ -470,7 +431,7 @@ Let\'s start this walk-through by executing the following steps:
 
     **Enter number of digits after decimal**: `0`
 
-    **Assign the output to variable**: **strResultRow - String**
+    **Assign the output to variable**: **strResultRow**
 
     The properties should look like this:
 
@@ -556,8 +517,7 @@ total count, as shown in the following screenshot:
 
 
 You should now be comfortable with reading and
-writing to Excel. This is just the start of how you can automate Excel
-using Automation Anywhere. As mentioned earlier, there are two Excel
+writing to Excel. As mentioned earlier, there are two Excel
 packages available with Automation Anywhere. We have so far been looking
 at the Excel basic package. In the next section, we\'ll move onto the
 Excel advanced package and discover what other Excel tasks can be
@@ -582,14 +542,9 @@ that involves updating an Excel spreadsheet. The file used is available
 as part of the GitHub repository `Chapter11_SampleData.xlsm`:
 
 
-
-
 ![](./images/Figure_11.23_B15646.jpg)
 
-
-
-
-
+Excel Viewer Online: `https://products.aspose.app/cells/viewer`
 
 This file contains a data table of sales achieved by a fictitious
 organization. In order to automate the file, we perform the following
@@ -654,8 +609,7 @@ Let\'s start this walk-through by executing the following steps:
 11. To open the workbook, drag the **Excel advanced: Open** action just
     below line **2**.
 
-12. Set the following properties for **Excel
-    advanced: Open** action on line **3**:
+12. Set the following properties for **Excel advanced: Open** action on line **3**:
 
     **Session name**: `xl_data`
 
@@ -695,16 +649,16 @@ is named `Data`:
     `Amount`, drag the **Excel advanced: Insert table column**
     action just below line **4**.
 
-2.  Set the following properties for the **Excel advanced: Insert table
-    column** action on line **5**:
+2.  Set the following properties for the **Excel advanced: Insert table column** action on line **5**:
 
-    **Session name**: `xl_data`
 
     **Table name**: `Data`
 
     **Column name**: `Amount`
 
     **Column position**: `5`
+
+    **Session name**: `xl_data`
 
     The properties should look like this:
 
@@ -773,13 +727,13 @@ should be sorted in ascending order:
 2.  Set the following properties for the **Excel advanced: Sort table**
     action on line **9**:
 
-    **Session name**: `xl_data`
-
     **Table name**: `Data`
 
     **Sort for**: **Column name** - `Segment`
 
     **Sort order**: **Text** - **A-to-Z**
+
+    **Session name**: `xl_data`
 
     The properties should look like this:
 
@@ -816,23 +770,21 @@ to store the cell address:
 3.  Set the following properties for the **Excel advanced: Find next
     empty cell** action on line **11**:
 
-    **Session name**: `xl_data`
-
     **Transverse by**: **column**
 
     **Start from**: **specific cell**
 
     **Cell address**: `E1`
 
-    **Assign the output to variable**: **strTotalCell - String**
+    **Assign the output to variable**: **strTotalCell**
+
+    **Session name**: `xl_data`
 
     The properties should look like this:
 
     
     ![](./images/Figure_11.29_B15646.jpg)
     
-
-
 
 4.  Click on **Save**.
 
@@ -843,12 +795,12 @@ to store the cell address:
 6.  Set the following properties for the **Excel advanced: Set cell
     formula** action on line **12**:
 
-    **Session name**: `xl_data`
-
     **Set cell formula for**: **Specific cell** --
     `$strTotalCell$`
 
     **Enter formula for specific cell**: `=SUM(Data[Amount])`
+
+    **Session name**: `xl_data`
 
     The properties should look like this:
 
