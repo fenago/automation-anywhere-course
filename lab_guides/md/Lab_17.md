@@ -1,28 +1,7 @@
 Lab 17: Running External Scripts 
-===========================================================
-
-
-Previously, we looked at building modular bots and how to design
-efficient bots with reusable sub bots. The topics covered the approach
-to take when building modular bots, how to run sub bots from within the
-main bot, and also how you would pass parameters between these bots.
-There was also an extensive practical walk-through based on a real-life
-business scenario. A lot of valuable skills and experience were gained
-in the last lab.
-
-In this lab, you will learn about how to expand on Automation
-Anywhere capabilities by running external components. There may be
-instances where you think a task cannot be easily automated using the
-actions available or it would take too many actions to achieve the
-required results. In these cases, it may prove easier to run a script
-such as a VBScript or a Python script. Well, Automation Anywhere allows
-you to run these as part of your overall RPA solution. You will learn
-how to run these scripts, including how to pass and receive values from
-them.
+=================================
 
 In this lab, we will be using the following packages:
-
-
 
 
 ![](./images/Figure_17.1_B15646.jpg)
@@ -373,7 +352,7 @@ syntax:
 
 
 ```
-WScript.Arguments(0)Copy
+WScript.Arguments(0)
 ```
 
 
@@ -385,7 +364,7 @@ at `0`. The contents of the script file are as follows:
 ```
 strValue01 = WScript.Arguments(0)
 strValue02 = WScript.Arguments(1)
-msgbox "Hello " & strValue01 & " " & strValue02,,"Input Parameters"Copy
+msgbox "Hello " & strValue01 & " " & strValue02,,"Input Parameters"
 ```
 
 

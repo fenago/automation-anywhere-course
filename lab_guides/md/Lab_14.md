@@ -5,21 +5,12 @@ In this lab, we will be using the following packages:
 
 ![](./images/Figure_14.1_B15646.jpg)
 
-Just as we discovered the `Dictionary` variable type for email
-in the preceding lab, Automation Anywhere also has a built-in
-dictionary for PDF files. You will also learn how to use this dictionary
-in order to get document properties, such as the *author* and the
-*filename*. All the files used for the walk-throughs are available in
-the GitHub repository.
-
 In this lab, we will cover the following topics:
 
 -   Extracting text and images
 -   Splitting and merging documents
 -   Encrypting and decrypting documents
 -   Using the PDF dictionary
-
-
 
 
 
@@ -36,8 +27,6 @@ requirements are necessary:
 -   Successful log-on to Automation Anywhere  Community Edition
 -   A successfully registered local device
 -   Successfully downloaded sample data from GitHub
-
-
 
 
 
@@ -83,14 +72,9 @@ Let\'s start this walk-through by executing the following steps:
 5.  Add a new **Comment** action as `"---------------------"`
     on line **3**, and click on **Save**. Your initial development
     interface should look as in the following screenshot:
-
     
-    ![Figure 14.2 -- Development
-    interface](./images/Figure_14.2_B15646.jpg)
+    ![](./images/Figure_14.2_B15646.jpg)
     
-
-
-
 6.  To extract all the text from our PDF file, add the **PDF: Extract
     text** action just below line **2** so that you can start to set the
     properties.
@@ -110,11 +94,8 @@ Let\'s start this walk-through by executing the following steps:
     screenshot:
 
     
-    ![Figure 14.3 -- PDF: Extract text -- file
-    property](./images/Figure_14.3_B15646.jpg)
+    ![](./images/Figure_14.3_B15646.jpg)
     
-
-
 
 8.  Click on **Save**.
 
@@ -819,7 +800,7 @@ Using the PDF dictionary
 ========================
 
 
-As you have been progressing through the walk-throughs, you may have
+As you have been progressing through the lab, you may have
 noticed an additional property at the bottom of
 the properties pane for all the actions referring to the
 `Dictionary` variable. Automation Anywhere has a pre-built
@@ -828,14 +809,7 @@ document your bot reads, the `Dictionary` variable will store
 the following information:
 
 
-
-
-![Figure 14.34 -- PDF
-dictionary](./images/Figure_14.34_B15646.jpg)
-
-
-
-
+![](./images/Figure_14.34_B15646.jpg)
 
 
 In the following walk-through, you will modify the last **PDF: Decrypt
@@ -850,11 +824,7 @@ Let\'s start this walk-through by executing the following steps:
     `dctPDF` and set **Type** to be **Dictionary** and
     **Subtype** to be **String**, as follows:
 
-    
-    ![Figure 14.35 -- Creating a Dictionary variable
-    type](./images/Figure_14.35_B15646.jpg)
-    
-
+    ![](./images/Figure_14.35_B15646.jpg)
 
 
 2.  To assign the file properties to our newly
@@ -868,11 +838,8 @@ Let\'s start this walk-through by executing the following steps:
     The properties should look as in the following screenshot:
 
     
-    ![Figure 14.36 -- Assigning the PDF dictionary to
-    variable](./images/Figure_14.36_B15646.jpg)
+    ![](./images/Figure_14.36_B15646.jpg)
     
-
-
 
 3.  Click on **Save**.
 
@@ -906,8 +873,7 @@ Let\'s start this walk-through by executing the following steps:
     screenshot:
 
     
-    ![Figure 14.38 -- Development
-    interface](./images/Figure_14.38_B15646.jpg)
+    ![](./images/Figure_14.38_B15646.jpg)
     
 
 
@@ -919,10 +885,7 @@ Let\'s start this walk-through by executing the following steps:
 
 
 
-![Figure 14.39 -- Output message
-box](./images/Figure_14.39_B15646.jpg)
-
-
+![](./images/Figure_14.39_B15646.jpg)
 
 
 
@@ -942,16 +905,9 @@ Summary
 
 
 In this lab, you have learned how to add automation to your
-PDF-related tasks. The walk-throughs have enabled you to build a bot
+PDF-related tasks. The lab have enabled you to build a bot
 that performs many actions against PDF documents. This has included
 extracting text and images from PDF documents, as well as splitting and
 merging multiple documents. This lab also demonstrated how to
 encrypt and decrypt files and how to get access to the document
 properties by using a `Dictionary` type variable.
-
-In the next lab, we will continue working with applications and
-automation. You will learn how to use RPA to help automate
-database-related manual tasks. You will also learn about connecting to
-databases. The walk-throughs will also explore how to perform SQL
-against databases, including `Insert` and `Delete`
-statements.
